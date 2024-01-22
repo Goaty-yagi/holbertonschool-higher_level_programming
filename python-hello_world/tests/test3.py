@@ -2,7 +2,8 @@ import unittest
 import subprocess
 import os
 
-filename = "5-print_string.py"
+
+filename = "3-print_number.py"
 
 
 class TestScriptOutput(unittest.TestCase):
@@ -25,7 +26,7 @@ class TestScriptOutput(unittest.TestCase):
         script_output = self.run_script(filename)
 
         # Define the expected output based on the script
-        expected_output = "Holberton SchoolHolberton SchoolHolberton School\nHolberton"
+        expected_output = '98 Battery street'
 
         # Assert that the actual output matches the expected output
         self.assertEqual(script_output, expected_output)
@@ -43,11 +44,11 @@ class TestScriptOutput(unittest.TestCase):
         # Count the lines using splitlines() method
         lines = script_content.splitlines()
 
-        expected_line_count = 5
+        expected_line_count = 3
 
-        # Assert that the actual line count matches equal or less than the expected line count
-        self.assertLessEqual(len(lines), expected_line_count,
-                             "Line count mismatch")
+        # Assert that the actual line count matches the expected line count
+        self.assertEqual(len(lines), expected_line_count,
+                         "Line count mismatch")
 
 
 if __name__ == "__main__":
