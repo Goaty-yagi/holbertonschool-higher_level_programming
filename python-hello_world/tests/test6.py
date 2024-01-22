@@ -2,7 +2,7 @@ import unittest
 import subprocess
 
 
-filename = "5-print_string.py"
+filename = "6-concat.py"
 
 
 class TestScriptOutput(unittest.TestCase):
@@ -21,7 +21,7 @@ class TestScriptOutput(unittest.TestCase):
         script_output = self.run_script(filename)
 
         # Define the expected output based on the script
-        expected_output = "Holberton SchoolHolberton SchoolHolberton School\nHolberton"
+        expected_output = 'Welcome to Holberton School!'
 
         # Assert that the actual output matches the expected output
         self.assertEqual(script_output, expected_output)
@@ -35,8 +35,8 @@ class TestScriptOutput(unittest.TestCase):
 
         expected_line_count = 5
 
-        # Assert that the actual line count matches equal or less than the expected line count
-        self.assertLessEqual(len(lines), expected_line_count,
+        # Assert that the actual line count matches the expected line count
+        self.assertEqual(len(lines), expected_line_count,
                          "Line count mismatch")
 
 
