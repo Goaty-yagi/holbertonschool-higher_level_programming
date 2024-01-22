@@ -61,6 +61,9 @@ print(f"{name} is {age} years old.")
 height = 1.754454654644
 print("{} has a height of {:.2f} meters.".format(name, height))
 
+# Without using the format method
+print(f"{name} has a height of {height:.2f} meters.")
+
 # Combining text and variables
 print("The result is:", name)
 ```
