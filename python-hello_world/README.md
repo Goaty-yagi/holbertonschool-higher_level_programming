@@ -25,3 +25,21 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - Description: Write a Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
 - Requirement: 
 -- Use the function print
+
+### 1. Print integer
+
+- File: `3-print_number.py`
+- Description: Complete this source code in order to print the integer stored in the variable number, followed by Battery street, followed by a new line.
+- Requirement: 
+-- You can find the source
+```python
+#!/usr/bin/python3
+number = 98
+# YOUR CODE GOES HERE. PLEASE REMOVE THIS LINE
+```
+-- The output of the script should be:
+--- the number, followed by Battery street,
+--- followed by a new line
+-- You are not allowed to cast the variable number into a string
+-- Your code must be 3 lines long
+-- You have to use f-strings tips
