@@ -1,6 +1,6 @@
 import unittest
 import subprocess
-
+import os
 
 filename = "4-print_float.py"
 
@@ -16,6 +16,10 @@ class TestScriptOutput(unittest.TestCase):
 
         return script_output
 
+    def test_file_exist(self):
+        self.assertTrue(os.path.exists(filename),
+                        f"File '{filename}' does not exist")
+
     def test_script_output(self):
 
         script_output = self.run_script(filename)
@@ -25,6 +29,12 @@ class TestScriptOutput(unittest.TestCase):
 
         # Assert that the actual output matches the expected output
         self.assertEqual(script_output, expected_output)
+
+    def test_is_executable(self):
+
+        is_exist = os.access(filename, os.X_OK)
+        # Check if the executable file is marked as executable
+        self.assertTrue(is_exist, f"{is_exist} should be executable")
 
     def test_line_count(self):
         with open(filename, 'r') as file:
