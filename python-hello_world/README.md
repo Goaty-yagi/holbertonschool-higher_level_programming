@@ -78,3 +78,20 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
   -- followed by a new line
 - You are not allowed to cast the variable number into a string
 - You have to use f-strings tips
+
+### 4. Play with strings
+
+**File:** `6-concat.py`
+**Description:** Complete this source code to print Welcome to Holberton School!
+**Requirement:** 
+- You can find the source
+  ```python
+     #!/usr/bin/python3
+     str1 = "Holberton"
+     str2 = "School"
+     # YOUR CODE GOES HERE. PLEASE REMOVE THIS LINE
+     print(f"Welcome to {str1}!")
+  ```
+- You are not allowed to use any loops or conditional statements.
+- You have to use the variables str1 and str2 in your new line of code
+- Your program should be exactly 5 lines long
