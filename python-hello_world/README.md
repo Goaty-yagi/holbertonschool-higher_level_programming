@@ -1,10 +1,10 @@
-# python-hello_world
+# python-hello,world
 
 This project contains Python practice exercises related to print, index, and slicing.
 
 ## Learning Objectives
 
-This project is based on the learning objectives - see the [LEARNING_OBJECTIVES](hhttps://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/LEANING_OBJECTIVES.md) file for details.
+This project is based on the learning objectives - see the [LEARNING_OBJECTIVES](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/LEANING_OBJECTIVES.md) file for details.
 
 ## Requirements
 - Allowed editors: vi, vim, emacs
