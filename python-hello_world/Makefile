@@ -3,7 +3,7 @@ PCSTYLE = pycodestyle
 SRC = $(wildcard *.py)
 
 TEST_DIR = tests
-TEST_FILES = test2 test3 test4 test5 test6 test7 test8
+TEST_FILES = test2 test3 test4 test5 test6 test7 test8 test9
 BINARIES = $(TEST_FILES:%=%)
 
 all: $(BINARIES)

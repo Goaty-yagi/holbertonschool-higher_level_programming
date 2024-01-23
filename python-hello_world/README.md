@@ -119,20 +119,25 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 
 ### 6. Create a new sentence
 
-**File:** `7-edges.py`
-**Description:** Complete this source code
+**File:** `8-concat_edges.py`
+**Description:** Complete this source code to print object-oriented programming with Python, followed by a new line.
 **Requirement:** 
 - You can find the source
   ```python
-     #!/usr/bin/python3
-     word = "Holberton"
-     # YOUR CODE GOES HERE. PLEASE REMOVE THIS LINE
-     print(f"First 3 letters: {word_first_3}")
-     print(f"Last 2 letters: {word_last_2}")
-     print(f"Middle word: {middle_word}")
+    #!/usr/bin/python3
+    str = "Python is an interpreted, interactive, object-oriented programming\
+    language that combines remarkable power with very clear syntax"
+  　# YOUR CODE GOES HERE. PLEASE REMOVE THIS LINE
+  　print(str)
   ```
 - You are not allowed to use any loops or conditional statements
-- Your program should be exactly 8 lines long
-- word_first_3 should contain the first 3 letters of the variable word
-- word_last_2 should contain the last 2 letters of the variable word
-- middle_word should contain the value of the variable word without the first and last letters
+- Your program should be exactly 5 lines long
+- You are not allowed to create new variables
+- You are not allowed to use string literals
+
+### 7. Easter Egg
+
+**File:** `9-easter_egg.py`
+**Description:** Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
+**Requirement:** 
+- Your script should be maximum 98 characters long
