@@ -127,7 +127,7 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You are not allowed to import any module
 
 
-### Write a function that checks for lowercase character.
+### 7. islower
 
 **File:** `7-islower.py`
 **Description:** Write a function that checks for lowercase character.
@@ -137,5 +137,18 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - Returns False otherwise
 - You are not allowed to import any module
 - You are not allowed to use str.upper() and str.isupper()
+
+
+### 8. To uppercase
+
+**File:** `8-uppercase.py`
+**Description:** Write a function that checks for lowercase character.
+**Requirement:** 
+- Prototype: def uppercase(str):
+- You can only use no more than 2 print functions with string format
+- You can only use one loop in your code
+- You are not allowed to import any module
+- You are not allowed to use str.upper() and str.isupper()
+
 
 

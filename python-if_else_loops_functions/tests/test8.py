@@ -4,11 +4,11 @@ import os
 from utils import use_method, get_original_line, run_script, run_pycodestyle, count_constructs, count_variable_declarations
 
 
-filename = "7-islower.py"
-main_file = "7-main.py"
+filename = "8-uppercase.py"
+main_file = "8-main.py"
 
 
-class TestTask7(unittest.TestCase):
+class TestTask8(unittest.TestCase):
     def test_file_exist(self):
         """ Testing the target file exists. """
 
@@ -46,9 +46,17 @@ class TestTask7(unittest.TestCase):
         """ Testing a specific file output is expected. """
 
         script_output = run_script(main_file)
-        expected_output = "a is lower\nH is upper\nA is upper\n3 is upper\ng is lower"
+        expected_output = "BEST\nBEST SCHOOL 98 BATTERY STREET"
         self.assertEqual(script_output, expected_output)
 
+    def test_count_print(self):
+        """ Testing  a number of print function in use in the file. """
+
+        target_construct = "print"
+        count_obj = count_constructs(filename, [target_construct])
+        expected_count = 2
+        self.assertLessEqual(count_obj[target_construct], expected_count,
+                             "There should be less than {expected_count} print statement.")
 
     def test_count_import(self):
         """ Testing if import is used in the file. """
@@ -58,7 +66,16 @@ class TestTask7(unittest.TestCase):
         expected_count = 0
         self.assertEqual(count_obj[target_construct], expected_count,
                          "There should be exactly no import statement.")
+    
+    def test_count_loop(self):
+        """ Testing  a number of for or while loop in use in the file. """
 
+        target_constructs = ["for", "while"]
+        count_obj = count_constructs(filename, target_constructs)
+        expected_count = 1
+        total_count = count_obj["for"] + count_obj["while"]
+        self.assertLessEqual(total_count, expected_count,
+                             "There should be exactly one loop statement.")
 
     def test_method_not_in_use(self):
         """ Testing the method is not used in the file. """
