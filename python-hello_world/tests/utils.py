@@ -1,3 +1,24 @@
+import subprocess
+
+def run_pycodestyle(file_path):
+    """ Run pycodestyle on the specified script and return the result. """
+    command = ["pycodestyle", file_path]
+    result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+    return result
+
+
+def run_script(file_path, executable="python3"):
+    """ Execute the file_path, and return the output. """
+
+    command = [executable, file_path]
+    result = subprocess.run(
+        command, stdout=subprocess.PIPE, text=True)
+    script_output = result.stdout.strip()
+
+    return script_output
+
+
 def replace_line(file_path, line_number, new_code):
     with open(file_path, 'r') as file:
         lines = file.readlines()
