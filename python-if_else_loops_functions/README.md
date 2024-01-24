@@ -151,4 +151,14 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You are not allowed to use str.upper() and str.isupper()
 
 
+### 9. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important
+
+**File:** `9-print_last_digit.py`
+**Description:** Write a function that checks for lowercase character.
+**Requirement:** 
+- Prototype: def print_last_digit(number):
+- Returns the value of the last digit
+- You are not allowed to import any module
+
+
 

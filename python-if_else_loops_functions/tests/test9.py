@@ -4,8 +4,8 @@ import os
 from utils import use_method, get_original_line, run_script, run_pycodestyle, count_constructs, count_variable_declarations
 
 
-filename = "8-uppercase.py"
-main_file = "8-main.py"
+filename = "9-print_last_digit.py"
+main_file = "9-main.py"
 
 
 class TestTask8(unittest.TestCase):
@@ -46,17 +46,9 @@ class TestTask8(unittest.TestCase):
         """ Testing a specific file output is expected. """
 
         script_output = run_script(main_file)
-        expected_output = "BEST\n\nBEST SCHOOL 98 BATTERY STREET"
+        expected_output = "8044"
         self.assertEqual(script_output, expected_output)
 
-    def test_count_print(self):
-        """ Testing  a number of print function in use in the file. """
-
-        target_construct = "print"
-        count_obj = count_constructs(filename, [target_construct])
-        expected_count = 2
-        self.assertLessEqual(count_obj[target_construct], expected_count,
-                             "There should be less than {expected_count} print statement.")
 
     def test_count_import(self):
         """ Testing if import is used in the file. """
@@ -66,29 +58,6 @@ class TestTask8(unittest.TestCase):
         expected_count = 0
         self.assertEqual(count_obj[target_construct], expected_count,
                          "There should be exactly no import statement.")
-    
-    def test_count_loop(self):
-        """ Testing  a number of for or while loop in use in the file. """
-
-        target_constructs = ["for", "while"]
-        count_obj = count_constructs(filename, target_constructs)
-        expected_count = 1
-        total_count = count_obj["for"] + count_obj["while"]
-        self.assertLessEqual(total_count, expected_count,
-                             "There should be exactly one loop statement.")
-
-    def test_method_not_in_use(self):
-        """ Testing the method is not used in the file. """
-
-        method_name = "upper"
-        has_format_method = use_method(filename, method_name)
-        self.assertFalse(has_format_method,
-                        f"The method '{method_name}' is not used in the script.")
-
-        method_name = "isupper"
-        has_format_method = use_method(filename, method_name)
-        self.assertFalse(has_format_method,
-                        f"The method '{method_name}' is not used in the script.")
 
 
     def test_format_in_use(self):
