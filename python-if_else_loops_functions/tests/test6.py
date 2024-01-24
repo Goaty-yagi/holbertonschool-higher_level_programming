@@ -4,10 +4,10 @@ import os
 from utils import use_method, get_original_line, run_script, run_pycodestyle, count_constructs, count_variable_declarations
 
 
-filename = "5-print_comb2.py"
+filename = "6-print_comb3.py"
 
 
-class TestTask5(unittest.TestCase):
+class TestTask6(unittest.TestCase):
     def test_file_exist(self):
         """ Testing the target file exists. """
 
@@ -51,20 +51,15 @@ class TestTask5(unittest.TestCase):
         """ Testing a specific file output is expected. """
 
         script_output = run_script(filename)
-        lines = script_output.strip().split(' ')
-        for i in range(100):
-            if i < 10:
-                self.assertEqual(lines[i], "0{},".format(i))
-            else:
-                self.assertEqual(lines[i], "{}{}".format(
-                    i, "," if i != 99 else ""))
+        expected_output = "01, 02, 03, 04, 05, 06, 07, 08, 09, 12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 34, 35, 36, 37, 38, 39, 45, 46, 47, 48, 49, 56, 57, 58, 59, 67, 68, 69, 78, 79, 89"
+        self.assertEqual(script_output, expected_output)
 
     def test_count_print(self):
         """ Testing  a number of print function in use in the file. """
 
         target_construct = "print"
         count_obj = count_constructs(filename, [target_construct])
-        expected_count = 2
+        expected_count = 3
         self.assertLessEqual(count_obj[target_construct], expected_count,
                              "There should be less than {expected_count} print statement.")
 
@@ -73,10 +68,10 @@ class TestTask5(unittest.TestCase):
 
         target_constructs = ["for", "while"]
         count_obj = count_constructs(filename, target_constructs)
-        expected_count = 1
+        expected_count = 2
         total_count = count_obj["for"] + count_obj["while"]
-        self.assertEqual(total_count, expected_count,
-                         "There should be exactly one loop statement.")
+        self.assertLessEqual(total_count, expected_count,
+                             "There should be exactly one loop statement.")
 
     def test_count_import(self):
         """ Testing if import is used in the file. """
@@ -100,9 +95,8 @@ class TestTask5(unittest.TestCase):
 
         method_name = "format"
         has_format_method = use_method(filename, method_name)
-        expected = True
-        self.assertEqual(has_format_method, expected,
-                         f"The method '{method_name}' is not used in the script.")
+        self.assertTrue(has_format_method,
+                        f"The method '{method_name}' is not used in the script.")
 
 
 if __name__ == "__main__":

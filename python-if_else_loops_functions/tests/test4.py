@@ -7,7 +7,7 @@ from utils import use_method, get_original_line, run_script, run_pycodestyle, co
 filename = "4-print_hexa.py"
 
 
-class TestTask3(unittest.TestCase):
+class TestTask4(unittest.TestCase):
     def test_file_exist(self):
         """ Testing the target file exists. """
 
