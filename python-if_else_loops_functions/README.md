@@ -115,7 +115,7 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 **File:** `6-print_comb3.py`
 **Description:** Write a program that prints all possible different combinations of two digits.
 **Requirement:** 
-- Numbers must be separated by ,, followed by a space
+- Numbers must be separated by "," ,followed by a space
 - The two digits must be different
 - 01 and 10 are considered the same combination of the two digits 0 and 1
 - Print only the smallest combination of two digits
@@ -125,5 +125,17 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You can only use no more than 2 loops in your code
 - You are not allowed to store numbers or strings in a variable
 - You are not allowed to import any module
+
+
+### Write a function that checks for lowercase character.
+
+**File:** `7-islower.py`
+**Description:** Write a function that checks for lowercase character.
+**Requirement:** 
+- Prototype: def islower(c):
+- Returns True if c is lowercase
+- Returns False otherwise
+- You are not allowed to import any module
+- You are not allowed to use str.upper() and str.isupper()
 
 
