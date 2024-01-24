@@ -54,7 +54,7 @@ def use_method(file_path, method_name):
     tree = ast.parse(script_content)
 
     for node in ast.walk(tree):
-        # ast.Attribute Represents an attribute access or method invocation in the AST.
+        # ast.Attribute represents an attribute access or method invocation in the AST.
         if isinstance(node, ast.Attribute) and node.attr == method_name:
             return True
 

@@ -16,7 +16,7 @@ class TestScriptOutput(unittest.TestCase):
         return script_output
 
     def test_negative_num(self):
-        """ Test positive number and the last figit is less than 6"""
+        """ Test positive number and the last digit is less than 6"""
         str = 'number = -3472\n'
         line_num = 4
         original_line = get_original_line(filename, line_num)
