@@ -3,7 +3,6 @@ import ast
 import subprocess
 
 
-
 def run_pycodestyle(file_path):
     """ Run pycodestyle on the specified script and return the result. """
     command = ["pycodestyle", file_path]

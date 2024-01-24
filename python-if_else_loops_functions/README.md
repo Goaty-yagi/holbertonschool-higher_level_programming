@@ -73,3 +73,15 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You are not allowed to import any module
 
 
+### 3. When I was having that alphabet soup, I never thought that it would pay off
+
+**File:** `3-print_alphabt.py`
+**Description:** Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
+**Requirement:** 
+- Print all the letters except q and e
+- You can only use one print function with string format
+- You can only use one loop in your code
+- You are not allowed to store characters in a variable
+- You are not allowed to import any module
+
+
