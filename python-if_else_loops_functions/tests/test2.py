@@ -2,7 +2,7 @@ import unittest
 import subprocess
 import os
 
-from utils import count_constructs, count_variable_declarations
+from utils import count_constructs, count_variable_declarations, use_method
 
 filename = "2-print_alphabet.py"
 
@@ -30,6 +30,7 @@ class TestScriptOutput(unittest.TestCase):
         self.assertEqual(total_count, expected_count,
                          "There should be exactly one loop statement.")
 
+
     def test_count_import(self):
         target_construct = "import"
         count_obj = count_constructs(filename, [target_construct])
@@ -42,6 +43,15 @@ class TestScriptOutput(unittest.TestCase):
         expected_count = 0
         self.assertEqual(variable_count, expected_count,
                          f"Expected variable declaration count: {expected_count}")
+
+
+    def test_format_in_use(self):
+        method_name = "format"
+        has_format_method = use_method(filename, method_name)
+        expected = True
+        self.assertEqual(has_format_method, expected,
+                         f"The method '{method_name}' is not used in the script.")
+
 
     def test_file_exist(self):
         self.assertTrue(os.path.exists(filename),

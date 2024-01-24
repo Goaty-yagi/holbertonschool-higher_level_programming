@@ -38,14 +38,24 @@ def count_constructs(file_path, constructs):
 def count_variable_declarations(file_path):
     with open(file_path, 'r') as script_file:
         script_content = script_file.read()
-    tree = ast.parse(script_content)
-
+    tree = ast.parse(script_content)  # generate an abstract syntax tree
     variable_count = 0
 
     for node in ast.walk(tree):
-        if isinstance(node, ast.Assign):
-            for target in node.targets:
-                if isinstance(target, ast.Name):
-                    variable_count += 1
+        if isinstance(node, ast.Assign): # ast.Assign representation of the assignment like statement: a = 10
+            variable_count += 1
 
     return variable_count
+
+
+def use_method(file_path, method_name):
+    with open(file_path, 'r') as script_file:
+        script_content = script_file.read()
+    tree = ast.parse(script_content)
+
+    for node in ast.walk(tree):
+        # ast.Attribute Represents an attribute access or method invocation in the AST.
+        if isinstance(node, ast.Attribute) and node.attr == method_name:
+            return True
+
+    return False
