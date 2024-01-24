@@ -8,7 +8,7 @@ def uppercase(str):
         current = ord(str[counter])
         separator = "" if counter != len(str) - 1 else "\n"
         if 97 <= current <= 122:
-            print(chr(current - 32), end=separator)
+            print("{}".format(chr(current - 32)), end=separator)
         else:
-            print(str[counter], end=separator)
+            print("{}".format(str[counter]), end=separator)
         counter = counter + 1

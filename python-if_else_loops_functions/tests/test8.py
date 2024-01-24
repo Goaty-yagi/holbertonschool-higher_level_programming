@@ -91,5 +91,14 @@ class TestTask8(unittest.TestCase):
                         f"The method '{method_name}' is not used in the script.")
 
 
+    def test_format_in_use(self):
+        """ Testing the format method is used in the file. """
+
+        method_name = "format"
+        has_format_method = use_method(filename, method_name)
+        self.assertTrue(has_format_method,
+                        f"The method '{method_name}' is not used in the script.")
+
+
 if __name__ == "__main__":
     unittest.main()
