@@ -1,3 +1,1 @@
-def compare_output(actual, expected):
-    print("\nExpected output: ", expected)
-    print("  Actual output: ", actual)
+from tests.printer import compare_output

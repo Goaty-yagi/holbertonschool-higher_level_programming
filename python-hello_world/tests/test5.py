@@ -50,6 +50,7 @@ class TestScriptOutput(unittest.TestCase):
         expected_line = "#!/usr/bin/python3\n"
         self.assertEqual(first_line, expected_line)
 
+
     def test_script_output(self):
 
         script_output = run_script(filename)

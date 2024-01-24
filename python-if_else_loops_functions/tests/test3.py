@@ -4,10 +4,10 @@ import os
 from utils import use_method, get_original_line, run_script, run_pycodestyle, count_constructs, count_variable_declarations
 
 
-filename = "2-print_alphabet.py"
+filename = "3-print_alphabt.py"
 
 
-class TestTask2(unittest.TestCase):
+class TestTask3(unittest.TestCase):
     def test_file_exist(self):
         """ Testing the target file exists. """
 
@@ -52,13 +52,13 @@ class TestTask2(unittest.TestCase):
         self.assertEqual(first_line, expected_line)
 
 
-    def test_acript_output(self):
+    def test_script_output(self):
         """ Testing a specific file output is expected. """
 
         import string
 
         script_output = run_script(filename)
-        expected_output = string.ascii_lowercase
+        expected_output = "abcdfghijklmnoprstuvwxyz"
 
         self.assertEqual(script_output, expected_output)
 

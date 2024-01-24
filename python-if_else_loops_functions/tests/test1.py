@@ -40,7 +40,7 @@ class TestTask1(unittest.TestCase):
                          f"pycodestyle check failed:\n{result.stdout}")
 
     def test_first_line(self):
-        """ Testing  the first line a specific file is the same as the requirement """
+        """ Testing the first line of a specific file is expected. """
 
         first_line = get_original_line(filename, 1)
         expected_line = "#!/usr/bin/python3\n"
@@ -48,7 +48,7 @@ class TestTask1(unittest.TestCase):
 
     def test_negative_num(self):
         """ Test positive number and the last digit is less than 6"""
-        
+
         str = 'number = -3472\n'
         line_num = 4
         original_line = get_original_line(filename, line_num)

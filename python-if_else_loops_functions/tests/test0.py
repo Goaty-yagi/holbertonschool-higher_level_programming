@@ -41,7 +41,7 @@ class TestTask0(unittest.TestCase):
                          f"pycodestyle check failed:\n{result.stdout}")
 
     def test_first_line(self):
-        """ Testing  the first line a specific file is the same as the requirement """
+        """ Testing the first line of a specific file is expected. """
 
         first_line = get_original_line(filename, 1)
         expected_line = "#!/usr/bin/python3\n"
