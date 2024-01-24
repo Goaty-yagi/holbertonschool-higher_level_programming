@@ -4,7 +4,7 @@ import os
 from utils import use_method, get_original_line, run_script, run_pycodestyle, count_constructs, count_variable_declarations
 
 
-filename = "3-print_alphabt.py"
+filename = "4-print_hexa.py"
 
 
 class TestTask3(unittest.TestCase):
@@ -14,13 +14,11 @@ class TestTask3(unittest.TestCase):
         self.assertTrue(os.path.exists(filename),
                         f"File '{filename}' does not exist")
 
-
     def test_is_executable(self):
         """ Testing the target file is executable. """
 
         is_executable = os.access(filename, os.X_OK)
         self.assertTrue(is_executable, f"{filename} should be executable")
-
 
     def test_readme_exist(self):
         """ Testing README.md exists in the current dir, and has contents. """
@@ -34,7 +32,6 @@ class TestTask3(unittest.TestCase):
         self.assertTrue(len(script_content),
                         f"File '{readme}' does not have contents")
 
-
     def test_pycode_style(self):
         """ Testing a specific file meets pep8 requirements. """
 
@@ -43,7 +40,6 @@ class TestTask3(unittest.TestCase):
         self.assertEqual(result.returncode, 0,
                          f"pycodestyle check failed:\n{result.stdout}")
 
-
     def test_first_line(self):
         """ Testing the first line of a specific file is expected. """
 
@@ -51,14 +47,13 @@ class TestTask3(unittest.TestCase):
         expected_line = "#!/usr/bin/python3\n"
         self.assertEqual(first_line, expected_line)
 
-
     def test_script_output(self):
         """ Testing a specific file output is expected. """
 
         script_output = run_script(filename)
-        expected_output = "abcdfghijklmnoprstuvwxyz"
-
-        self.assertEqual(script_output, expected_output)
+        lines = script_output.strip().split('\n')
+        for i in range(99):
+            self.assertEqual(lines[i], "{} = {}".format(i, hex(i)))
 
 
     def test_count_print(self):
@@ -69,7 +64,6 @@ class TestTask3(unittest.TestCase):
         expected_count = 1
         self.assertEqual(count_obj[target_construct], expected_count,
                          "There should be exactly one print statement.")
-
 
     def test_count_loop(self):
         """ Testing  a number of for or while loop in use in the file. """
@@ -91,7 +85,6 @@ class TestTask3(unittest.TestCase):
         self.assertEqual(count_obj[target_construct], expected_count,
                          "There should be exactly no import statement.")
 
-
     def test_variable_declarations(self):
         """ Testing if variable is declared in the file. """
 
@@ -99,7 +92,6 @@ class TestTask3(unittest.TestCase):
         expected_count = 0
         self.assertEqual(variable_count, expected_count,
                          f"Expected variable declaration count: {expected_count}")
-
 
     def test_format_in_use(self):
         """ Testing the format method is used in the file. """
