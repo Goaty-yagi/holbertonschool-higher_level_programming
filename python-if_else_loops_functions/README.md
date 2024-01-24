@@ -160,5 +160,14 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - Returns the value of the last digit
 - You are not allowed to import any module
 
+### 10. a + b
+
+**File:** `10-add.py`
+**Description:** Write a function that adds two integers and returns the result.
+**Requirement:** 
+- Prototype: def add(a, b):
+- Returns the value of a + b
+- You are not allowed to import any module
+
 
 
