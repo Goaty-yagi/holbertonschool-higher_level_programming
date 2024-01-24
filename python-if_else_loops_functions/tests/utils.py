@@ -1,5 +1,25 @@
 import re
 import ast
+import subprocess
+
+
+
+def run_pycodestyle(file_path):
+    """ Run pycodestyle on the specified script and return the result. """
+    command = ["pycodestyle", file_path]
+    result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+    return result
+
+def run_script(file_path, executable="python3"):
+    """ Execute the file_path, and return the output. """
+
+    command = [executable, file_path]
+    result = subprocess.run(
+        command, stdout=subprocess.PIPE, text=True)
+    script_output = result.stdout.strip()
+
+    return script_output
 
 
 def replace_line(file_path, line_number, new_code):
@@ -19,7 +39,6 @@ def replace_line(file_path, line_number, new_code):
 def get_original_line(file_path, line_number):
     with open(file_path, 'r') as file:
         lines = file.readlines()
-
     if 0 < line_number <= len(lines):
         return lines[line_number - 1]
 
@@ -42,7 +61,8 @@ def count_variable_declarations(file_path):
     variable_count = 0
 
     for node in ast.walk(tree):
-        if isinstance(node, ast.Assign): # ast.Assign representation of the assignment like statement: a = 10
+        # ast.Assign representation of the assignment like statement: a = 10
+        if isinstance(node, ast.Assign):
             variable_count += 1
 
     return variable_count
