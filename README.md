@@ -15,6 +15,9 @@ This repository is designed to provide hands-on practice for higher-level progra
 
 - **Python - Hello, World:** Explore a wide range of exercises covering fundamental syntax, data structures, algorithms, and more.
 
+- **Python - if/else, loops, functions:** This project serves as a playground for mastering Python fundamentals, focusing on essential concepts such as if/else statements, loops, and functions.
+
+- **Python - import & modules:** This project includes a comprehensive practice to understanding and harnessing the power of Python's import system and modules.
 
 
 ## Getting Started
