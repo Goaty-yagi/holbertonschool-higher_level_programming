@@ -1,7 +1,9 @@
 import unittest
 import os
+import sys, io
 
-from utils import replace_line, count_constructs, get_original_line, run_script, run_pycodestyle, use_method
+from utils import count_constructs, get_original_line, run_script, run_pycodestyle, use_method
+
 
 filename = "0-add.py"
 
@@ -52,6 +54,25 @@ class TestTask0(unittest.TestCase):
         script_output = run_script(filename)
         expected_output = "1 + 2 = 3"
         self.assertEqual(script_output, expected_output)
+
+    def test_imported_script(self):
+        sys.path.append(os.path.abspath(
+            os.path.join(os.path.dirname(__file__), "..")))
+        captured_output = io.StringIO()
+        sys.stdout = captured_output
+
+        try:
+            # Import the script dynamically
+            module_name = '0-add'
+            __import__(module_name)
+            # capture output
+
+            expected_output = ""
+            self.assertEqual(captured_output.getvalue(), expected_output)
+
+        finally:
+            # Restore sys.stdout to its original value
+            sys.stdout = sys.__stdout__
 
     def test_count_star(self):
         """ Testing if import * is used in the file. """
