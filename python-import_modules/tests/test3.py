@@ -1,14 +1,15 @@
 import unittest
 import os
-import sys, io
+import sys
+import io
 
 from utils import count_constructs, get_original_line, run_script, run_pycodestyle, use_method
 
 
-filename = "2-args.py"
+filename = "3-infinite_add.py"
 
 
-class TestTask2(unittest.TestCase):
+class TestTask3(unittest.TestCase):
     def test_file_exist(self):
         """ Testing the target file exists. """
 
@@ -50,24 +51,25 @@ class TestTask2(unittest.TestCase):
 
     def test_script_output(self):
         """ Testing a specific file output is expected. """
-        args = ["Hello", "Welcome", "To", "The", "Best", "School"]
+        
+        args = ["79", "10",  "-40", "-300", "89"]
         script_output = run_script(filename, args)
-        expected_output = "6 arguments:\n1: Hello\n2: Welcome\n3: To\n4: The\n5: Best\n6: School"
+        expected_output = "-162"
         self.assertEqual(script_output, expected_output)
-    
+
     def test_no_arg(self):
         """ Testing a specific file output without arg. """
 
         script_output = run_script(filename)
-        expected_output = "0 arguments."
+        expected_output = "0"
         self.assertEqual(script_output, expected_output)
 
     def test_one_arg(self):
         """ Testing a specific file output with 1 arg. """
 
-        args = ["Hello"]
+        args = [9]
         script_output = run_script(filename, args)
-        expected_output = "1 argument:\n1: Hello"
+        expected_output = "9"
         self.assertEqual(script_output, expected_output)
 
     def test_imported_script(self):
@@ -78,7 +80,7 @@ class TestTask2(unittest.TestCase):
 
         try:
             # Import the script dynamically
-            module_name = '2-args'
+            module_name = '3-infinite_add'
             __import__(module_name)
             # capture output
 

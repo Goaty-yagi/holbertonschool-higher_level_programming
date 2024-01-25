@@ -8,7 +8,7 @@ from utils import count_constructs, get_original_line, run_script, run_pycodesty
 filename = "1-calculation.py"
 
 
-class TestTask0(unittest.TestCase):
+class TestTask1(unittest.TestCase):
     def test_file_exist(self):
         """ Testing the target file exists. """
 
