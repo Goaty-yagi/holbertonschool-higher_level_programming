@@ -1,14 +1,22 @@
 import unittest
 import os
+import sys
 
 from utils import use_method, get_original_line, run_script, run_pycodestyle, count_constructs, count_variable_declarations
 
 
-filename = "9-print_last_digit.py"
-main_file = "9-main.py"
+filename = "10-add.py"
 
+# Add the parent directory to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-class TestTask9(unittest.TestCase):
+# Use __import__ for relative import
+module_name = '10-add'
+module = __import__(module_name, fromlist=['add'])
+
+add = module.add
+
+class TestTask10(unittest.TestCase):
     def test_file_exist(self):
         """ Testing the target file exists. """
 
@@ -43,11 +51,11 @@ class TestTask9(unittest.TestCase):
         self.assertEqual(first_line, expected_line)
 
     def test_script_output(self):
-        """ Testing a specific file output is expected. """
+        """ Testing a return value. """
 
-        script_output = run_script(main_file)
-        expected_output = "8044"
-        self.assertEqual(script_output, expected_output)
+        result = add(1,4)
+        expected_output = 5
+        self.assertEqual(result, expected_output)
 
 
     def test_count_import(self):
@@ -59,14 +67,6 @@ class TestTask9(unittest.TestCase):
         self.assertEqual(count_obj[target_construct], expected_count,
                          "There should be exactly no import statement.")
 
-
-    def test_format_in_use(self):
-        """ Testing the format method is used in the file. """
-
-        method_name = "format"
-        has_format_method = use_method(filename, method_name)
-        self.assertTrue(has_format_method,
-                        f"The method '{method_name}' is not used in the script.")
 
 
 if __name__ == "__main__":
