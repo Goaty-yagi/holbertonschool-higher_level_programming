@@ -10,10 +10,10 @@ def run_pycodestyle(file_path):
 
     return result
 
-def run_script(file_path, executable="python3"):
+def run_script(file_path, args=[], executable="python3"):
     """ Execute the file_path, and return the output. """
 
-    command = [executable, file_path]
+    command = [executable, file_path] + args
     result = subprocess.run(
         command, stdout=subprocess.PIPE, text=True)
     script_output = result.stdout.strip()
