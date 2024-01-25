@@ -5,7 +5,7 @@ import sys, io
 from utils import count_constructs, get_original_line, run_script, run_pycodestyle, use_method
 
 
-filename = "0-add.py"
+filename = "1-calculation.py"
 
 
 class TestTask0(unittest.TestCase):
@@ -52,7 +52,7 @@ class TestTask0(unittest.TestCase):
         """ Testing a specific file output is expected. """
 
         script_output = run_script(filename)
-        expected_output = "1 + 2 = 3"
+        expected_output = "10 + 5 = 15\n10 - 5 = 5\n10 * 5 = 50\n10 / 5 = 2"
         self.assertEqual(script_output, expected_output)
 
     def test_imported_script(self):
@@ -63,7 +63,7 @@ class TestTask0(unittest.TestCase):
 
         try:
             # Import the script dynamically
-            module_name = '0-add'
+            module_name = '1-calculation'
             __import__(module_name)
             # capture output
 
