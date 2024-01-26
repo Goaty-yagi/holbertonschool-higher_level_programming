@@ -42,3 +42,15 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You are not allowed to import any module
 - You are not allowed to use try/except
 
+
+### 2. Replace element
+
+**File:** `2-replace_in_list.py`
+**Description:** Write a function that replaces an element of a list at a specific position.
+**Requirement:** 
+- Prototype: def replace_in_list(my_list, idx, element):
+- If idx is negative, the function should not modify anything, and returns the original list
+- If idx is out of range (> of number of element in my_list), the function should not modify anything, and returns the original list
+- You are not allowed to import any module
+- You are not allowed to use try/except
+

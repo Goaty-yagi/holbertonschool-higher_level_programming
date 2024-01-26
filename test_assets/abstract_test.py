@@ -92,6 +92,13 @@ class AbstractTest(unittest.TestCase):
         self.assertEqual(count_obj[target], 0,
                          f"There shouldn't be <{target}> statement in use.")
 
+    def construct_not_in_use(self, path, target):
+        """ Testing number of construct in use in the file. """
+
+        count_obj = count_constructs(path, [target])
+        self.assertGreaterEqual(count_obj[target], 1,
+                         f"There shouldn be <{target}> statement in use.")
+
     def method_in_use(self, path, method_name):
         """ Testing the format method is used in the file. """
 
