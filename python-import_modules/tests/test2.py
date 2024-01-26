@@ -1,111 +1,54 @@
 import unittest
-import os
-import sys, io
 
-from utils import count_constructs, get_original_line, run_script, run_pycodestyle, use_method
-
+from parent_test import ParentTest
 
 filename = "2-args.py"
 
 
-class TestTask2(unittest.TestCase):
-    def test_file_exist(self):
-        """ Testing the target file exists. """
+class TestTask2(ParentTest):
+    def test_common_test(self):
+        """ Testing a common stuff. check abstract_test/commontest"""
 
-        self.assertTrue(os.path.exists(filename),
-                        f"File '{filename}' does not exist")
+        self.common_test(filename)
 
-    def test_is_executable(self):
-        """ Testing the target file is executable. """
-
-        is_executable = os.access(filename, os.X_OK)
-        self.assertTrue(is_executable, f"{filename} should be executable")
-
-    def test_readme_exist(self):
-        """ Testing README.md exists in the current dir, and has contents. """
-
-        readme = "README.md"
-        self.assertTrue(os.path.exists(readme),
-                        f"File '{readme}' does not exist")
-        with open(readme, 'r') as script_file:
-            script_content = script_file.read()
-
-        self.assertTrue(len(script_content),
-                        f"File '{readme}' does not have contents")
-
-    def test_pycode_style(self):
-        """ Testing  a specific file meet pep8 requirements """
-
-        result = run_pycodestyle(filename)
-        # Check if pycodestyle result is successful (exit code 0)
-        self.assertEqual(result.returncode, 0,
-                         f"pycodestyle check failed:\n{result.stdout}")
-
-    def test_first_line(self):
-        """ Testing the first line of a specific file is expected. """
-
-        first_line = get_original_line(filename, 1)
-        expected_line = "#!/usr/bin/python3\n"
-        self.assertEqual(first_line, expected_line)
-
-    def test_script_output(self):
-        """ Testing a specific file output is expected. """
-        args = ["Hello", "Welcome", "To", "The", "Best", "School"]
-        script_output = run_script(filename, args)
-        expected_output = "6 arguments:\n1: Hello\n2: Welcome\n3: To\n4: The\n5: Best\n6: School"
-        self.assertEqual(script_output, expected_output)
-    
-    def test_no_arg(self):
-        """ Testing a specific file output without arg. """
-
-        script_output = run_script(filename)
-        expected_output = "0 arguments."
-        self.assertEqual(script_output, expected_output)
-
-    def test_one_arg(self):
-        """ Testing a specific file output with 1 arg. """
-
-        args = ["Hello"]
-        script_output = run_script(filename, args)
-        expected_output = "1 argument:\n1: Hello"
-        self.assertEqual(script_output, expected_output)
 
     def test_imported_script(self):
-        sys.path.append(os.path.abspath(
-            os.path.join(os.path.dirname(__file__), "..")))
-        captured_output = io.StringIO()
-        sys.stdout = captured_output
-
-        try:
-            # Import the script dynamically
-            module_name = '2-args'
-            __import__(module_name)
-            # capture output
-
-            expected_output = ""
-            self.assertEqual(captured_output.getvalue(), expected_output)
-
-        finally:
-            # Restore sys.stdout to its original value
-            sys.stdout = sys.__stdout__
+        module = "2-args"
+        path = self.path
+        self.imported_script(module, path)
 
     def test_count_star(self):
         """ Testing if import * is used in the file. """
 
         target_construct = "import *"
-        count_obj = count_constructs(filename, [target_construct])
-        expected_count = 0
-        self.assertEqual(count_obj[target_construct], expected_count,
-                         f"There shouldn't be <{target_construct}> statement in use.")
+        self.construct_in_use(filename, target_construct)
 
     def test_format_in_use(self):
         """ Testing the format method is used in the file. """
 
         method_name = "format"
-        has_format_method = use_method(filename, method_name)
-        expected = True
-        self.assertEqual(has_format_method, expected,
-                         f"The method '{method_name}' is not used in the script.")
+        self.method_in_use(filename, method_name)
+
+    def test_script_output(self):
+        """ Testing a specific file output is expected. """
+
+        args = ["Hello", "Welcome", "To", "The", "Best", "School"]
+        expected_output = "6 arguments:\n1: Hello\n2: Welcome\n3: To\n4: The\n5: Best\n6: School"
+        self.script_output_expected(filename, expected_output, args)
+    
+    def test_no_arg(self):
+        """ Testing a specific file output without arg. """
+
+        expected_output = "0 arguments."
+        self.script_output_expected(filename, expected_output)
+
+    def test_one_arg(self):
+        """ Testing a specific file output with 1 arg. """
+
+        args = ["Hello"]
+        expected_output = "1 argument:\n1: Hello"
+        self.script_output_expected(filename, expected_output, args)
+
 
 
 if __name__ == "__main__":

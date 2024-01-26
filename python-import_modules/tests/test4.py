@@ -1,88 +1,49 @@
 import unittest
-import os
-import sys
-import io
 
-from utils import count_constructs, get_original_line, run_script, run_pycodestyle, use_method
-
+from parent_test import ParentTest
 
 filename = "4-hidden_discovery.py"
+module_name = "4-hidden_discovery"
 
 
-class TestTask4(unittest.TestCase):
-    def test_file_exist(self):
-        """ Testing the target file exists. """
+class TestTask4(ParentTest):
+    def test_common_test(self):
+        """ Testing a common stuff. check abstract_test/commontest"""
 
-        self.assertTrue(os.path.exists(filename),
-                        f"File '{filename}' does not exist")
-
-    def test_is_executable(self):
-        """ Testing the target file is executable. """
-
-        is_executable = os.access(filename, os.X_OK)
-        self.assertTrue(is_executable, f"{filename} should be executable")
-
-    def test_readme_exist(self):
-        """ Testing README.md exists in the current dir, and has contents. """
-
-        readme = "README.md"
-        self.assertTrue(os.path.exists(readme),
-                        f"File '{readme}' does not exist")
-        with open(readme, 'r') as script_file:
-            script_content = script_file.read()
-
-        self.assertTrue(len(script_content),
-                        f"File '{readme}' does not have contents")
-
-    def test_pycode_style(self):
-        """ Testing  a specific file meet pep8 requirements """
-
-        result = run_pycodestyle(filename)
-        # Check if pycodestyle result is successful (exit code 0)
-        self.assertEqual(result.returncode, 0,
-                         f"pycodestyle check failed:\n{result.stdout}")
-
-    def test_first_line(self):
-        """ Testing the first line of a specific file is expected. """
-
-        first_line = get_original_line(filename, 1)
-        expected_line = "#!/usr/bin/python3\n"
-        self.assertEqual(first_line, expected_line)
-
-    def test_script_output(self):
-        """ Testing a specific file output is expected. """
-        
-        script_output = run_script(filename)
-        expected_output = "my_secret_santa\nprint_hidden\nprint_school"
-        self.assertEqual(script_output, expected_output)
+        self.common_test(filename)
 
     def test_imported_script(self):
-        sys.path.append(os.path.abspath(
-            os.path.join(os.path.dirname(__file__), "..")))
-        captured_output = io.StringIO()
-        sys.stdout = captured_output
-
-        try:
-            # Import the script dynamically
-            module_name = '4-hidden_discovery'
-            __import__(module_name)
-            # capture output
-
-            expected_output = ""
-            self.assertEqual(captured_output.getvalue(), expected_output)
-
-        finally:
-            # Restore sys.stdout to its original value
-            sys.stdout = sys.__stdout__
+        module = module_name
+        path = self.path
+        self.imported_script(module, path)
 
     def test_count_star(self):
         """ Testing if import * is used in the file. """
 
         target_construct = "import *"
-        count_obj = count_constructs(filename, [target_construct])
-        expected_count = 0
-        self.assertEqual(count_obj[target_construct], expected_count,
-                         f"There shouldn't be <{target_construct}> statement in use.")
+        self.construct_in_use(filename, target_construct)
+
+    def test_script_output(self):
+        """ Testing a specific file output is expected. """
+
+        expected_output = "my_secret_santa\nprint_hidden\nprint_school"
+        self.script_output_expected(filename, expected_output)
+
+    def test_script_output2(self):
+        """ Testing a line in the file is modified and output is expected. """
+        
+        line = "    with open('hidden_4_bis.pyc', 'rb') as f:\n"
+        line_num = 6
+        expected_output = "my_secret_santa\nprint_hidden\nprint_school\ntest_betty"
+        self.replace_line_test(filename, expected_output, line, line_num)
+
+    def test_script_output3(self):
+        """ Testing a line in the file is modified and output is expected. """
+        
+        line = "    with open('hidden_4_empty.pyc', 'rb') as f:\n"
+        line_num = 6
+        expected_output = ""
+        self.replace_line_test(filename, expected_output, line, line_num)
 
 
 if __name__ == "__main__":
