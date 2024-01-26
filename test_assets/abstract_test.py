@@ -125,3 +125,16 @@ class AbstractTest(unittest.TestCase):
         script_output = run_script(path)
         self.assertEqual(script_output, expected)
         replace_line(path, line_num, original_line)
+
+    def line_count(self, path, expected):
+        """ Testing line number of the file is expected. """
+
+        with open(path, 'r') as file:
+            script_content = file.read()
+
+        # Count the lines using splitlines() method
+        lines = script_content.splitlines()
+
+        # Assert that the actual line count matches the expected line count
+        self.assertEqual(len(lines), expected,
+                         "Line count mismatch")

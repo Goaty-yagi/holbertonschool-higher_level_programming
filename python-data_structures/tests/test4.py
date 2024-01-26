@@ -31,7 +31,7 @@ class TestTask4(ParentTest):
         expected_output = "[1, 2, 3, 9, 5]\n[1, 2, 3, 4, 5]"
         self.script_output_expected("4-main.py", expected_output)
 
-    def test_count_star(self):
+    def test_count_import(self):
         """ Testing if import is used in the file. """
         
         target_construct = "import"

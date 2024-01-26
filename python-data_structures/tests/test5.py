@@ -4,7 +4,7 @@ from parent_test import ParentTest
 
 filename = "5-no_c.py"
 
-class TestTask4(ParentTest):
+class TestTask5(ParentTest):
     def test_common_test(self):
         """ Testing a common stuff. check abstract_test/commontest"""
 
@@ -29,7 +29,7 @@ class TestTask4(ParentTest):
         expected_output = "Best Shool\nhiago\n is fun!"
         self.script_output_expected("5-main.py", expected_output)
 
-    def test_count_star(self):
+    def test_count_import(self):
         """ Testing if import is used in the file. """
         
         target_construct = "import"

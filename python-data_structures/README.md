@@ -164,3 +164,19 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You are not allowed to use pop()
 - You are not allowed to import any module
 
+
+### 12. Switch
+
+**File:** `12-switch.py`
+**Description:** Complete the source code in order to switch value of a and b.
+**Requirement:** 
+- You can find the source code
+```python
+#!/usr/bin/python3
+a = 89
+b = 10
+# YOUR CODE GOES HERE. PLEASE REMOVE THIS LINE
+print("a={:d} - b={:d}".format(a, b))
+```
+- Your code should be inserted where the comment is (line 4)
+- Your program should be exactly 5 lines long
