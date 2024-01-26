@@ -21,16 +21,17 @@ class TestTask0(ParentTest):
         self.replace_line_test(module, expected, line, line_num)
 
     def test_count_star(self):
-        """ Testing if import * is used in the file. """
+        """ Testing if import is used in the file. """
 
         target_construct = "import"
         self.construct_in_use(filename, target_construct)
 
     def test_format_in_use(self):
-        """ Testing the format method is used in the file. """
+        """ Testing the format method is used with :d in the file. """
 
         method_name = "format"
         self.method_in_use(filename, method_name)
+        
 
 if __name__ == "__main__":
     unittest.main()
