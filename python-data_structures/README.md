@@ -19,3 +19,15 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 
 ## Practice Exercises
 
+### 0. Print a list of integers
+
+**File:** `0-print_list_integer.py`
+**Description:** Write a function that prints all integers of a list.
+**Requirement:** 
+- Prototype: def print_list_integer(my_list=[]):
+- Format: one integer per line.
+- You are not allowed to import any module
+- You can assume that the list only contains integers
+- You are not allowed to cast integers into strings
+- You have to use str.format() to print integers
+
