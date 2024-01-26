@@ -107,6 +107,14 @@ class AbstractTest(unittest.TestCase):
         self.assertEqual(has_format_method, expected,
                          f"The method '{method_name}' is not used in the script.")
 
+    def method_not_in_use(self, path, method_name):
+        """ Testing the format method is used in the file. """
+
+        has_format_method = use_method(path, method_name)
+        expected = False
+        self.assertEqual(has_format_method, expected,
+                         f"The method '{method_name}' is used in the script.")
+
     def replace_line_test(self, path, expected, line, line_num):
         """ Testing the behavior of a script(mainly for script not function) 
         when a specific line in the script file is modified, still print as expected. """
