@@ -123,3 +123,12 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - If a tuple is bigger than 2, use only the first 2 integers
 
 
+### 8. More returns!
+
+**File:** `8-multiple_returns.py`
+**Description:** Write a function that returns a tuple with the length of a string and its first character.
+**Requirement:** 
+- Prototype: def multiple_returns(sentence):
+- If the sentence is empty, the first character should be equal to None
+- You are not allowed to import any module
+
