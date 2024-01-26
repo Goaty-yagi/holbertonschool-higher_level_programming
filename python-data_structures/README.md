@@ -79,3 +79,14 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You are not allowed to import any module
 - You are not allowed to use try/excepts
 
+
+### 5. Can you C me now?
+
+**File:** `5-no_c.py`
+**Description:** Write a function that removes all characters c and C from a string.
+**Requirement:** 
+- Prototype: def no_c(my_string):
+- The function should return the new string
+- You are not allowed to import any module
+- You are not allowed to use str.replace()
+
