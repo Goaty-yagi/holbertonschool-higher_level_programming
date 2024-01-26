@@ -3,7 +3,7 @@ import string
 
 
 if __name__ == "__main__":
-    with open("hidden_4.pyc", 'rb') as f:
+    with open("hidden_4_bis.pyc", 'rb') as f:
         line = f.read()
     array = []
     is_checking = 0
