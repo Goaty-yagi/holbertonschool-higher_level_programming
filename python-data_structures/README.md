@@ -154,3 +154,13 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - The new list should have the same size as the original list
 - You are not allowed to import any module
 
+### 11. Delete at
+
+**File:** `11-delete_at.py`
+**Description:** Write a function that deletes the item at a specific position in a list.
+**Requirement:** 
+- Prototype: def delete_at(my_list=[], idx=0):
+- If idx is negative or out of range, nothing change (returns the same list)
+- You are not allowed to use pop()
+- You are not allowed to import any module
+
