@@ -8,7 +8,7 @@ from parent_test import ParentTest
 filename = "11-delete_at.py"
 
 
-class TestTask10(ParentTest):
+class TestTask11(ParentTest):
     def test_common_test(self):
         """ Testing a common stuff. check abstract_test/commontest"""
 
@@ -48,8 +48,8 @@ class TestTask10(ParentTest):
         target_construct = "import"
         self.construct_in_use(filename, target_construct)
 
-    def max_not_in_use(self):
-        method = "max"
+    def pop_not_in_use(self):
+        method = "pop"
         self.method_not_in_use(filename, method)
 
 

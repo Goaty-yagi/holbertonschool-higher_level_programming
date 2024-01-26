@@ -11,7 +11,7 @@ class TestTask1(ParentTest):
 
         self.common_test(filename)
 
-    def test_script_output(self):
+    def test_return_value(self):
         """ Testing a return value is expected. """
         sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
@@ -24,7 +24,7 @@ class TestTask1(ParentTest):
         
         self.assertEqual(result, expected)
 
-    def test_script_output2(self):
+    def test_return_value1(self):
         """ Testing a return value is None. """
         sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
@@ -37,7 +37,7 @@ class TestTask1(ParentTest):
         
         self.assertEqual(result, expected)
 
-    def test_script_output2(self):
+    def test_return_value2(self):
         """ Testing a return value is None. """
         sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
@@ -50,7 +50,7 @@ class TestTask1(ParentTest):
         
         self.assertEqual(result, expected)
 
-    def test_count_star(self):
+    def test_count_import(self):
         """ Testing if import is used in the file. """
         
         target_construct = "import"

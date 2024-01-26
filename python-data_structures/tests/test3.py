@@ -5,7 +5,7 @@ from parent_test import ParentTest
 filename = "3-print_reversed_list_integer.py"
 module = "3-main.py"
 
-class TestTask0(ParentTest):
+class TestTask3(ParentTest):
     def test_common_test(self):
         """ Testing a common stuff. check abstract_test/commontest"""
 
@@ -20,7 +20,7 @@ class TestTask0(ParentTest):
         
         self.replace_line_test(module, expected, line, line_num)
 
-    def test_count_star(self):
+    def test_count_import(self):
         """ Testing if import is used in the file. """
 
         target_construct = "import"
