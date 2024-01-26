@@ -54,3 +54,16 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You are not allowed to import any module
 - You are not allowed to use try/except
 
+
+### 3. Print a list of integers... in reverse!
+
+**File:** `3-print_reversed_list_integer.py`
+**Description:** Write a function that prints all integers of a list, in reverse order.
+**Requirement:** 
+- Prototype: def print_reversed_list_integer(my_list=[]):
+- Format: one integer per line.
+- You are not allowed to import any module
+- You can assume that the list only contains integers
+- You are not allowed to cast integers into strings
+- You have to use str.format() to print integers
+
