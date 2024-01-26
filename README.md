@@ -19,6 +19,9 @@ This repository is designed to provide hands-on practice for higher-level progra
 
 - **Python - import & modules:** This project includes a comprehensive practice to understanding and harnessing the power of Python's import system and modules.
 
+- **Python - Data Structures: Lists, Tuples:** This repository contains Python code examples and explanations for working with two fundamental data structures: Lists and Tuples.
+
+
 
 ## Getting Started
 

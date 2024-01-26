@@ -4,7 +4,7 @@ import sys
 import io
 import importlib
 
-from utils import count_constructs, get_original_line, run_script, run_pycodestyle, use_method, replace_line
+from .utils import count_constructs, get_original_line, run_script, run_pycodestyle, use_method, replace_line
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
 
