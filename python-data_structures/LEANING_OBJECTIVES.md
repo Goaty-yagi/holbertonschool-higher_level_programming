@@ -199,6 +199,17 @@ single_element_tuple = (42,)
 # Tuple comprehension to create a tuple of squares
 squares_tuple = tuple(x**2 for x in range(1, 6))
 
+# Tuple creation with +
+tuple_a = (1, 2, 3)
+tuple_b = ('a', 'b', 'c')
+concatenated_tuple = tuple_a + tuple_b
+# Result: (1, 2, 3, 'a', 'b', 'c')
+
+# Tuple repetitions
+repeated_tuple = tuple_a * 3
+# Result: (1, 2, 3, 1, 2, 3, 1, 2, 3)
+
+
 ```
 
 - Accessing Elements:
