@@ -28,9 +28,11 @@ This project follows the conventional commits specification for commit messages.
 ## Commit Message Format
 
 Each commit message should have the following format:
-`<type>(<scope>): <description>`
-`[optional body]`
-`[optional footer]`
+```bash
+<type>(<scope>): <description>
+[optional body]
+[optional footer]
+```
 
 
 - **type:** The type of change (e.g., feat, fix, docs).
