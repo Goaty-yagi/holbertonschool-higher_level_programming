@@ -2,6 +2,11 @@
 
 This project includes a comprehensive practice to understanding and harnessing the power of Python's import system and modules.
 
+## Table of Contents
+- [Learning Objectives](#learning-objectives)
+- [Requirements](#requirements)
+- [Practice Exercises](#practice-exercises)
+- [Tests](#tests)
 ## Learning Objectives
 
 This project is based on the learning objectives - see the [LEARNING_OBJECTIVES](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/LEANING_OBJECTIVES.md) file for details.
@@ -20,9 +25,9 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 
 ### 0. Import a simple function from a simple file
 
-**File:** `0-add.py`
-**Description:** Write a program that imports the function def add(a, b): from the file add_0.py and prints the result of the addition 1 + 2 = 3.
-**Requirement:** 
+**File:** [0-add.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-import_modules/0-add.py)<br>
+**Description:** Write a program that imports the function def add(a, b): from the file add_0.py and prints the result of the addition 1 + 2 = 3.<br>
+**Requirement:** <br>
 - You have to use print function with string format to display integers
 - You have to assign:
 -- the value 1 to a variable called a
@@ -37,9 +42,9 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 
 ### 1. My first toolbox!
 
-**File:** `1-calculation.py`
-**Description:** Write a program that imports functions from the file calculator_1.py, does some Maths, and prints the result.
-**Requirement:** 
+**File:** [1-calculation.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-import_modules/1-calculation.py)<br>
+**Description:** Write a program that imports functions from the file calculator_1.py, does some Maths, and prints the result.<br>
+**Requirement:** <br>
 - Do not use the function print (with string format to display integers) more than 4 times
 - You have to define:
 -- the value 10 to a variable a
@@ -53,9 +58,9 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 
 ### 2. How to make a script dynamic!
 
-**File:** `2-args.py`
-**Description:** Write a program that prints the number of and the list of its arguments.
-**Requirement:** 
+**File:** [2-args.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-import_modules/2-args.py)<br>
+**Description:** Write a program that prints the number of and the list of its arguments.<br>
+**Requirement:** <br>
 - The output should be:
 -- Number of argument(s) followed by argument (if number is one) or arguments (otherwise), followed by
 -- : (or . if no arguments were passed) followed by
@@ -69,9 +74,9 @@ the position of the argument (starting at 1) followed by :, followed by the argu
 
 ### 3. Infinite addition
 
-**File:** `3-infinite_add.py`
-**Description:** Write a program that prints the result of the addition of all arguments.
-**Requirement:** 
+**File:** [3-infinite_add.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-import_modules/3-infinite_add.py)<br>
+**Description:** Write a program that prints the result of the addition of all arguments.<br>
+**Requirement:** <br>
 - The output should be the result of the addition of all arguments, followed by a new line
 - You can cast arguments into integers by using int() (you can assume that all arguments can be casted into integers)
 - Your code should not be executed when imported
@@ -79,9 +84,9 @@ the position of the argument (starting at 1) followed by :, followed by the argu
 
 ### 4. Who are you?
 
-**File:** `4-hidden_discovery.py`
-**Description:** Write a program that prints all the names defined by the compiled module hidden_4.pyc (please download it locally in your sandbox using curl).
-**Requirement:** 
+**File:** [4-hidden_discovery.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-import_modules/4-hidden_discovery.py)<br>
+**Description:** Write a program that prints all the names defined by the compiled module hidden_4.pyc (please download it locally in your sandbox using curl).<br>
+**Requirement:** <br>
 - You should print one name per line, in alpha order
 - You should print only names that do not start with __
 - Your code should not be executed when imported
@@ -90,11 +95,26 @@ the position of the argument (starting at 1) followed by :, followed by the argu
 
 ### 5. Everything can be imported
 
-**File:** `5-variable_load.py`
-**Description:** Write a program that imports the variable a from the file variable_load_5.py and prints its value.
-**Requirement:** 
+**File:** [5-variable_load.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-import_modules/5-variable_load.py)<br>
+**Description:** Write a program that imports the variable a from the file variable_load_5.py and prints its value.<br>
+**Requirement:** <br>
 - You are not allowed to use * for importing or __import__
 - Your code should not be executed when imported
+
+
+## Tests
+This project includes a comprehensive suite of tests to ensure the reliability and functionality of the codebase. These tests cover various aspects, including unit tests.<br>
+
+### [Running Tests](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-if_else_loops_functions/tests)
+ There are two ways to run the tests.
+
+- 1, Run the following command in the root dir.<br>
+   `python3 <path of the test> ` ex) `python3 tests/test0.py`
+- 2, Run with Makefile command.
+  This project includes Makefile to automate testing processes.<br>
+  `make` command run the all test files in the tests directory.<br>
+  `make filename without py` such as `make test4` run the specific test file.<br>
+- **Install make:** install make with `apt-get install make` (if necessary)
 
 
 

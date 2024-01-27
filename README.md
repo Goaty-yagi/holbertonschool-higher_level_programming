@@ -5,10 +5,14 @@ Welcome to the Holberton School Higher Level Programming Practice Repository! ðŸ
 This repository is designed to provide hands-on practice for higher-level programming concepts, with a focus on languages like Python. Whether you're a Holberton School student or an enthusiast eager to enhance your programming skills, you'll find a variety of exercises, projects, and challenges to sharpen your proficiency in Python.
 
 ## Table of Contents
-
+- [Conventional Commits](#conventional-commits)
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Bugs](#bugs)
+
+## Conventional Commits
+This project follows the conventional commits specification for commit messages.
+You can find more details from [Conventional Commits](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/CONVENTIONAL_COMMITS.md).
 
 ## Features
 
