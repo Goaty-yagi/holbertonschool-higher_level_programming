@@ -1,10 +1,10 @@
-# python-hello,world
+# Python-hello,world
 
 This project contains Python practice exercises related to print, index, and slicing.
 
 ## Learning Objectives
 
-This project is based on the learning objectives - see the [LEARNING_OBJECTIVES](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/LEANING_OBJECTIVES.md) file for details.
+This project is based on the learning objectives - see the [LEARNING_OBJECTIVES](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-hello_world/LEANING_OBJECTIVES.md) file for details.
 
 ## Requirements
 - Allowed editors: vi, vim, emacs
@@ -19,18 +19,18 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 
 ## Practice Exercises
 
-### 0. Hello, print
+### [0. Hello, print](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-hello_world/2-print.py)
 
-**File:** `2-print.py`
-**Description:** Write a Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
-**Requirement:** 
+**File:** `2-print.py`<br>
+**Description:** Write a Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.<br>
+**Requirement:** <br>
 -Use the function print
 
-### 1. Print integer
+### [1. Print integer](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-hello_world/3-print_number.py)
 
-**File:** `3-print_number.py`
-**Description**: Complete this source code in order to print the integer stored in the variable number, followed by Battery street, followed by a new line.
-**Requirement:**
+**File:** `3-print_number.py`<br>
+**Description**: Complete this source code in order to print the integer stored in the variable number, followed by Battery street, followed by a new line.<br>
+**Requirement:**<br>
 - You can find the source
   ```python
      #!/usr/bin/python3
@@ -43,11 +43,12 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You are not allowed to cast the variable number into a string
 - Your code must be 3 lines long
 - You have to use f-strings tips
-### 2. Print float
+- 
+### [2. Print float](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-hello_world/4-print_float.py)
 
-**File:** `4-print_float.py`
-**Description:** Complete the source code in order to print the float stored in the variable number with a precision of 2 digits.
-**Requirement:** 
+**File:** `4-print_float.py`<br>
+**Description:** Complete the source code in order to print the float stored in the variable number with a precision of 2 digits.<br>
+**Requirement:** <br>
 - You can find the source
   ```python
      #!/usr/bin/python3
@@ -60,11 +61,11 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You are not allowed to cast the variable number into a string
 - You have to use f-strings tips
 
-### 3. Print string
+### [3. Print string](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-hello_world/5-print_string.py)
 
-**File:** `5-print_string.py`
-**Description:** Complete this source code in order to print 3 times a string stored in the variable str, followed by its first 9 characters.
-**Requirement:** 
+**File:** `5-print_string.py`<br>
+**Description:** Complete this source code in order to print 3 times a string stored in the variable str, followed by its first 9 characters.<br>
+**Requirement:** <br>
 - You can find the source
   ```python
      #!/usr/bin/python3
@@ -79,11 +80,11 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You are not allowed to cast the variable number into a string
 - You have to use f-strings tips
 
-### 4. Play with strings
+### [4. Play with strings](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-hello_world/6-concat.py)
 
-**File:** `6-concat.py`
-**Description:** Complete this source code to print Welcome to Holberton School!
-**Requirement:** 
+**File:** `6-concat.py`<br>
+**Description:** Complete this source code to print Welcome to Holberton School!<br>
+**Requirement:** <br>
 - You can find the source
   ```python
      #!/usr/bin/python3
@@ -96,11 +97,11 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You have to use the variables str1 and str2 in your new line of code
 - Your program should be exactly 5 lines long
 
-### 5. Copy - Cut - Paste
+### [5. Copy - Cut - Paste](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-hello_world/7-edges.py)
 
-**File:** `7-edges.py`
-**Description:** Complete this source code
-**Requirement:** 
+**File:** `7-edges.py`<br>
+**Description:** Complete this source code<br>
+**Requirement:** <br>
 - You can find the source
   ```python
      #!/usr/bin/python3
@@ -117,11 +118,11 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - middle_word should contain the value of the variable word without the first and last letters
 
 
-### 6. Create a new sentence
+### [6. Create a new sentence](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-hello_world/8-concat_edges.py)
 
-**File:** `8-concat_edges.py`
-**Description:** Complete this source code to print object-oriented programming with Python, followed by a new line.
-**Requirement:** 
+**File:** `8-concat_edges.py`<br>
+**Description:** Complete this source code to print object-oriented programming with Python, followed by a new line.<br>
+**Requirement:** <br>
 - You can find the source
   ```python
     #!/usr/bin/python3
@@ -135,9 +136,27 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You are not allowed to create new variables
 - You are not allowed to use string literals
 
-### 7. Easter Egg
+### [7. Easter Egg](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-hello_world/9-easter_egg.py)
 
-**File:** `9-easter_egg.py`
-**Description:** Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
-**Requirement:** 
+**File:** `9-easter_egg.py`<br>
+**Description:** Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.<br>
+**Requirement:** <br>
 - Your script should be maximum 98 characters long
+
+
+## Tests
+This project includes a comprehensive suite of tests to ensure the reliability and functionality of the codebase. These tests cover various aspects, including unit tests.<br>
+
+### [Running Tests](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-hello_world/tests)
+ There are two ways to run the tests.
+
+- 1, Run the following command in the root dir.<br>
+   `python3 <path of the test> ` ex) `python3 tests/test0.py`
+- 2, Run with Makefile command.
+  This project includes Makefile to automate testing processes.<br>
+  `make` command run the all test files in the tests directory.<br>
+  `make filename without py` such as `make test4` run the specific test file.<br>
+- **Install make:** install make with `apt-get install make` (if necessary)
+
+
+
