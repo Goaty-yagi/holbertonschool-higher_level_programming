@@ -1,10 +1,10 @@
 # Learning Objectives
 
-- How to use the Python interpreter
-- How to print text and variables using print
-- How to use strings
-- What are indexing and slicing in Python
-- What is the official Python coding style and how to check your code with pycodestyle
+- [How to Use the Python Interpreter](#how-to-use-the-python-interpreter)
+- [How to print text and variables using print](#how-to-print-text-and-variables-using-print)
+- [How to use strings](#how-to-use-strings)
+- [What are indexing and slicing in Python](#what-are-indexing-and-slicing-in-python)
+- [What is the official Python coding style and how to check your code with pycodestyle](#what-is-the-official-python-coding-style-and-how-to-check-your-code-with-pycodestyle)
 
 ## 1, How to use the Python interpreter
 
