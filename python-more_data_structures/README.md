@@ -74,3 +74,12 @@ Each value should be the square of the value of the input
 - Prototype: def only_diff_elements(set_1, set_2):
 - You are not allowed to import any module
 
+
+### 5. Number of keys
+
+**File:** [5-number_keys.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-more_data_structures/5-number_keys.py)<br>
+**Description:** Write a function that returns the number of keys in a dictionary.<br>
+**Requirement:** <br>
+- Prototype: def number_keys(a_dictionary):
+- You are not allowed to import any module
+
