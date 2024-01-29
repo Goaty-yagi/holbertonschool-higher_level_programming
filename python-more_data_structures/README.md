@@ -109,3 +109,14 @@ Each value should be the square of the value of the input
 - If a key doesn’t exist in the dictionary, it will be created
 - You are not allowed to import any module
 
+
+### 8. Simple delete by key
+
+**File:** [8-simple_delete.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-more_data_structures/8-simple_delete.py)<br>
+**Description:** Write a function that deletes a key in a dictionary.<br>
+**Requirement:** <br>
+- Prototype: def simple_delete(a_dictionary, key=""):
+- key argument will be always a string
+- If a key doesn’t exist, the dictionary won’t change
+- You are not allowed to import any module
+
