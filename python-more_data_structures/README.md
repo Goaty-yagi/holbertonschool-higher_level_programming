@@ -49,4 +49,13 @@ Each value should be the square of the value of the input
 - replace is the new element
 - You are not allowed to import any module
 
+### 2. Unique addition
+
+**File:** [2-uniq_add.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-more_data_structures/2-uniq_add.py)<br>
+**Description:** Write a function that adds all unique integers in a list (only once for each integer).<br>
+**Requirement:** <br>
+- Prototype: def uniq_add(my_list=[]):
+- You are not allowed to import any module
+
+
 
