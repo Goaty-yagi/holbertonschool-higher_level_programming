@@ -155,3 +155,8 @@ class AbstractTest(unittest.TestCase):
 
         self.assertFalse(result, f"function {specifier} is not used.")
 
+    def error_handling(self, function, error_type):
+        # Testing that the function raises expected error
+        with self.assertRaises(error_type):
+            function()
+
