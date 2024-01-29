@@ -5,7 +5,7 @@ import io
 import importlib
 import ast
 
-from .utils import use_function, count_constructs, get_original_line, run_script, run_pycodestyle, use_method, replace_line
+from .utils import use_function,is_format_method_used_with_specifier, count_constructs, get_original_line, run_script, run_pycodestyle, use_method, replace_line
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
 
@@ -149,4 +149,7 @@ class AbstractTest(unittest.TestCase):
         result = use_function(path, function_name)
 
         self.assertFalse(result, f"function {function_name} is used.")
+
+    def format_with_specifier(self, path, specifier):
+        is_format_method_used_with_specifier(path, specifier)
 

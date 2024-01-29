@@ -40,3 +40,19 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You are not allowed to import any module
 - You are not allowed to use len()
 
+
+### 1. Safe printing of an integers list
+
+**File:** [1-safe_print_integer.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-data_structures/1-safe_print_integer.py)<br>
+**Description:** Write a function that prints an integer with "{:d}".format().<br>
+**Requirement:** <br>
+- Prototype: def safe_print_integer(value):
+- value can be any type (integer, string, etc.)
+- The integer should be printed followed by a new line
+- Returns True if value has been correctly printed (it means the value is an integer)
+- Otherwise, returns False
+- You have to use try: / except:
+- You have to use "{:d}".format() to print as integer
+- You are not allowed to import any module
+- You are not allowed to use type()
+
