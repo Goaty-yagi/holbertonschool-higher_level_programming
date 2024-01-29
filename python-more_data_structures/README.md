@@ -65,3 +65,12 @@ Each value should be the square of the value of the input
 - Prototype: def common_elements(set_1, set_2):
 - You are not allowed to import any module
 
+
+### 4. Only differents
+
+**File:** [4-only_diff_elements.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-more_data_structures/4-only_diff_elements.py)<br>
+**Description:** Write a function that returns a set of all elements present in only one set.<br>
+**Requirement:** <br>
+- Prototype: def only_diff_elements(set_1, set_2):
+- You are not allowed to import any module
+
