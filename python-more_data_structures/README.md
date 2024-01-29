@@ -83,3 +83,16 @@ Each value should be the square of the value of the input
 - Prototype: def number_keys(a_dictionary):
 - You are not allowed to import any module
 
+
+### 6. Print sorted dictionary
+
+**File:** [6-print_sorted_dictionary.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-more_data_structures/6-print_sorted_dictionary.py)<br>
+**Description:** Write a function that prints a dictionary by ordered keys.<br>
+**Requirement:** <br>
+- Prototype: def print_sorted_dictionary(a_dictionary):
+- You can assume that all keys are strings
+- Keys should be sorted by alphabetic order
+- Only sort keys of the first level (don’t sort keys of a dictionary inside the main dictionary)
+- Dictionary values can have any type
+- You are not allowed to import any module
+
