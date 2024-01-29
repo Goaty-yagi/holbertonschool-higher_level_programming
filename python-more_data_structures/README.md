@@ -120,3 +120,14 @@ Each value should be the square of the value of the input
 - If a key doesn’t exist, the dictionary won’t change
 - You are not allowed to import any module
 
+
+### 9. Multiply by 2
+
+**File:** [9-multiply_by_2.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-more_data_structures/9-multiply_by_2.py)<br>
+**Description:** Write a function that returns a new dictionary with all values multiplied by 2.<br>
+**Requirement:** <br>
+- Prototype: def multiply_by_2(a_dictionary):
+- You can assume that all values are only integers
+- Returns a new dictionary
+- You are not allowed to import any module
+
