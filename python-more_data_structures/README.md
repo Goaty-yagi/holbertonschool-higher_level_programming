@@ -38,3 +38,15 @@ Each value should be the square of the value of the input
 - You are allowed to use regular loops, map, etc.
 
 
+### 1. Search and replace
+
+**File:** [1-search_replace.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-more_data_structures/1-search_replace.py)<br>
+**Description:** Write a function that replaces all occurrences of an element by another in a new list.<br>
+**Requirement:** <br>
+- Prototype: def search_replace(my_list, search, replace):
+- my_list is the initial list
+- search is the element to replace in the list
+- replace is the new element
+- You are not allowed to import any module
+
+
