@@ -79,4 +79,15 @@ def use_method(file_path, method_name):
 
     return False
 
+def use_function(filename, function_name):
+    with open(filename, 'r') as file:
+        code = file.read()
+        tree = ast.parse(code)
+
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == function_name:
+                return True
+
+    return False
+
 
