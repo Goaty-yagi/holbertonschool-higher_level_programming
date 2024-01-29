@@ -9,7 +9,7 @@ This Python repository focuses on exploring more advanced data structures, speci
 - [Tests](#tests)
 ## Learning Objectives
 
-This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]() file for details.
+This project is based on the learning objectives - see the [LEARNING_OBJECTIVES](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-more_data_structures/LEANING_OBJECTIVES.md) file for details.
 
 ## Requirements
 - Allowed editors: vi, vim, emacs
@@ -23,6 +23,18 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 
 ## Practice Exercises
 
+### 0. Squared simple
 
+**File:** [0-square_matrix_simple.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-more_data_structures/0-square_matrix_simple.py)<br>
+**Description:** Write a function that computes the square value of all integers of a matrix.<br>
+**Requirement:** <br>
+- Prototype: def square_matrix_simple(matrix=[]):
+- matrix is a 2 dimensional array
+- Returns a new matrix:
+Same size as matrix
+Each value should be the square of the value of the input
+- Initial matrix should not be modified
+- You are not allowed to import any module
+- You are allowed to use regular loops, map, etc.
 
 

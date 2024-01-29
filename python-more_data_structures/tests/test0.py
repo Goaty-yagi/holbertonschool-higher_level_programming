@@ -1,0 +1,35 @@
+import unittest, importlib
+
+from parent_test import ParentTest
+
+filename = "0-square_matrix_simple.py"
+module = "0-main.py"
+
+class TestTask0(ParentTest):
+    def test_common_test(self):
+        """ Testing a common stuff. check abstract_test/commontest"""
+
+        self.common_test(filename)
+
+    def test_script_output(self):
+        """ Testing a line in the file is modified and output is expected. """
+
+        expected_output = "[[1, 4, 9], [16, 25, 36], [49, 64, 81]]\n[[1, 2, 3], [4, 5, 6], [7, 8, 9]]" 
+        
+        self.script_output_expected(module, expected_output)
+
+    def test_count_import(self):
+        """ Testing if import is not used in the file. """
+
+        target_construct = "import"
+        self.construct_in_use(filename, target_construct)
+
+    def test_map_in_use(self):
+        """ Testing themap method is not used. """
+
+        method_name = "map"
+        self.method_not_in_use(filename, method_name)
+        
+
+if __name__ == "__main__":
+    unittest.main()

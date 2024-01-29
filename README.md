@@ -24,7 +24,7 @@ You can find more details from [Conventional Commits](https://github.com/Goaty-y
 
 - **[Python - Data Structures: Lists, Tuples](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-data_structures):** This project contains Python code examples and explanations for working with two fundamental data structures: Lists and Tuples.
 
-- **[Python - More Data Structures: Set, Dictionary]():** This project contains Python code examples and explanations for working with two fundamental data structures: Lists and Tuples.
+- **[Python - More Data Structures: Set, Dictionary](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-more_data_structures):** This project contains Python code examples and explanations for working with two fundamental data structures: Lists and Tuples.
 
 - **[Test_assets](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/test_assets):** This Python repository focuses on exploring more advanced data structures, specifically sets and dictionaries.
 
