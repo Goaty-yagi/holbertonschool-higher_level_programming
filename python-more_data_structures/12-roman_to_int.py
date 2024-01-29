@@ -4,6 +4,7 @@ def roman_to_int(roman_string):
     if isinstance(roman_string, str) is False or roman_string is None:
         return 0
     total = 0
+    prev_value = 0
     ROMAN_NUMBER = {
         "I": 1,
         "V": 5,
@@ -13,10 +14,14 @@ def roman_to_int(roman_string):
         "D": 500,
         "M": 1000
     }
-    for i in range(len(roman_string)):
-        if roman_string[i] in ("X", "V"):
-            if (i > 0 and roman_string[i-1] == "I"):
-                total -= 2
-        total += ROMAN_NUMBER[roman_string[i]]
+    for symbol in roman_string:
+        value = ROMAN_NUMBER.get(symbol, 0)
+        if value == 0:
+            return 0
+        if value > prev_value:
+            total += value - 2 * prev_value
+        else:
+            total += value
+        prev_value = value
 
     return total
