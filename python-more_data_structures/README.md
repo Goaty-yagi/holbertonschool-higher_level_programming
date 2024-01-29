@@ -143,3 +143,17 @@ Each value should be the square of the value of the input
 - You can assume all students have a different score
 - You are not allowed to import any module
 
+
+### 11. Multiply by using map
+
+**File:** [11-multiply_list_map.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-more_data_structures/11-multiply_list_map.py)<br>
+**Description:** Write a function that returns a key with the biggest integer value.<br>
+**Requirement:** <br>
+- Prototype: def multiply_list_map(my_list=[], number=0):
+- Returns a new list:
+Same length as my_list
+Each value should be multiplied by number
+- Initial list should not be modified
+- You are not allowed to import any module
+- You have to use map
+- Your file should be max 3 lines
