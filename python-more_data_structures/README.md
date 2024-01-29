@@ -57,5 +57,11 @@ Each value should be the square of the value of the input
 - Prototype: def uniq_add(my_list=[]):
 - You are not allowed to import any module
 
+### 3. Present in both
 
+**File:** [3-common_elements.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-more_data_structures/3-common_elements.py)<br>
+**Description:** Write a function that returns a set of common elements in two sets.<br>
+**Requirement:** <br>
+- Prototype: def common_elements(set_1, set_2):
+- You are not allowed to import any module
 
