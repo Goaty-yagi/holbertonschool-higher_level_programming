@@ -24,7 +24,9 @@ You can find more details from [Conventional Commits](https://github.com/Goaty-y
 
 - **[Python - Data Structures: Lists, Tuples](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-data_structures):** This project contains Python code examples and explanations for working with two fundamental data structures: Lists and Tuples.
 
-- **[Test_assets](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/test_assets):** This directory contains an abstract test class for standardized testing and a set of utility functions to enhance efficiency in various testing tasks. It ensures a structured and scalable approach to testing within the project.
+- **[Python - More Data Structures: Set, Dictionary]():** This project contains Python code examples and explanations for working with two fundamental data structures: Lists and Tuples.
+
+- **[Test_assets](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/test_assets):** This Python repository focuses on exploring more advanced data structures, specifically sets and dictionaries.
 
 
 
