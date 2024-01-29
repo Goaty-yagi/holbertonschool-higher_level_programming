@@ -96,3 +96,16 @@ Each value should be the square of the value of the input
 - Dictionary values can have any type
 - You are not allowed to import any module
 
+
+### 7. Update dictionary
+
+**File:** [7-update_dictionary.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-more_data_structures/7-update_dictionary.py)<br>
+**Description:** Write a function that prints a dictionary by ordered keys.<br>
+**Requirement:** <br>
+- Prototype: def update_dictionary(a_dictionary, key, value):
+- key argument will be always a string
+- value argument will be any type
+- If a key exists in the dictionary, the value will be replaced
+- If a key doesn’t exist in the dictionary, it will be created
+- You are not allowed to import any module
+
