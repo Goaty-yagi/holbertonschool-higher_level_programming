@@ -60,8 +60,9 @@ class TestTask1(ParentTest):
         self.function_not_used(filename, target_construct)
 
     def test_specifier_used(self):
+        """Not working"""
         specifier = ":d"
-        self.format_with_specifier(filename, specifier)
+        self.format_with_specifier_used(filename, specifier)
         
 
 if __name__ == "__main__":

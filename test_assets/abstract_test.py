@@ -150,6 +150,8 @@ class AbstractTest(unittest.TestCase):
 
         self.assertFalse(result, f"function {function_name} is used.")
 
-    def format_with_specifier(self, path, specifier):
-        is_format_method_used_with_specifier(path, specifier)
+    def format_with_specifier_used(self, path, specifier):
+        result = is_format_method_used_with_specifier(path, specifier)
+
+        self.assertFalse(result, f"function {specifier} is not used.")
 
