@@ -26,6 +26,8 @@ You can find more details from [Conventional Commits](https://github.com/Goaty-y
 
 - **[Python - More Data Structures: Set, Dictionary](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-more_data_structures):** This project contains Python code examples and explanations for working with two fundamental data structures: Lists and Tuples.
 
+- **[Python - Exceptions](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-exceptions):** "This repository provides examples and explanations for handling exceptions in Python. 
+
 - **[Test_assets](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/test_assets):** This Python repository focuses on exploring more advanced data structures, specifically sets and dictionaries.
 
 

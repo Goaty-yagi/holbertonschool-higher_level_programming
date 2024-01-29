@@ -3,8 +3,9 @@ import os
 import sys
 import io
 import importlib
+import ast
 
-from .utils import count_constructs, get_original_line, run_script, run_pycodestyle, use_method, replace_line
+from .utils import use_function, count_constructs, get_original_line, run_script, run_pycodestyle, use_method, replace_line
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
 
@@ -97,7 +98,7 @@ class AbstractTest(unittest.TestCase):
 
         count_obj = count_constructs(path, [target])
         self.assertGreaterEqual(count_obj[target], 1,
-                         f"There shouldn be <{target}> statement in use.")
+                                f"There shouldn be <{target}> statement in use.")
 
     def method_in_use(self, path, method_name):
         """ Testing the format method is used in the file. """
@@ -138,3 +139,14 @@ class AbstractTest(unittest.TestCase):
         # Assert that the actual line count matches the expected line count
         self.assertEqual(len(lines), expected,
                          "Line count mismatch")
+
+    def function_used(self, path, function_name):
+        result = use_function(path, function_name)
+
+        self.assertTrue(result, f"function {function_name} is not used.")
+
+    def function_not_used(self, path, function_name):
+        result = use_function(path, function_name)
+
+        self.assertFalse(result, f"function {function_name} is used.")
+
