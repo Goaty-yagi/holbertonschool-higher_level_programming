@@ -91,3 +91,18 @@ def use_function(filename, function_name):
     return False
 
 
+import ast
+
+def is_format_method_used_with_specifier(filename, specifier):
+    with open(filename, 'r') as file:
+        code = file.read()
+        tree = ast.parse(code)
+        
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and node.func.attr == 'format':
+                for arg in node.args:
+                    if isinstance(arg, ast.Str) and specifier in arg.s:
+                        return True
+    return False
+
+
