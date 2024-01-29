@@ -157,3 +157,12 @@ Each value should be multiplied by number
 - You are not allowed to import any module
 - You have to use map
 - Your file should be max 3 lines
+
+### 12. Roman to Integer
+
+**File:** [12-roman_to_int.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-more_data_structures/12-roman_to_int.py)<br>
+**Description:** Create a function def roman_to_int(roman_string): that converts a Roman numeral to an integer.<br>
+**Requirement:** <br>
+- You can assume the number will be between 1 to 3999.
+- def roman_to_int(roman_string) must return an integer
+- If the roman_string is not a string or None, return 0
