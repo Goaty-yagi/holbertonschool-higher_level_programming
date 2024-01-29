@@ -5,11 +5,11 @@ import os
 
 from parent_test import ParentTest
 
-filename = "2-safe_print_list_integers.py"
-module = "2-main.py"
+filename = "3-safe_print_division.py"
+module = "3-main.py"
 
 
-class TestTask2(ParentTest):
+class TestTask3(ParentTest):
     def test_common_test(self):
         """ Testing a common stuff. check abstract_test/commontest"""
 
@@ -20,23 +20,14 @@ class TestTask2(ParentTest):
         sys.path.append(os.path.abspath(
             os.path.join(os.path.dirname(__file__), "..")))
 
-        module = importlib.import_module("2-safe_print_list_integers")
-        list = [1, 2, 3, "School", 4, 5, [1, 2, 3], 90, "o", None]
-        expected = 6
+        module = importlib.import_module("3-safe_print_division")
+        a = 50
+        b = 0
+        expected = None
 
-        result = module.safe_print_list_integers(list, 9)
+        result = module.safe_print_division(a, b)
 
         self.assertEqual(result, expected)
-    
-    def test_error_handle(self):
-        sys.path.append(os.path.abspath(
-            os.path.join(os.path.dirname(__file__), "..")))
-
-        list = [1, 2, 3, "School", 4, 5, [1, 2, 3], 90, "o", None]
-        module = importlib.import_module("2-safe_print_list_integers")
-        error_type = IndexError
-        with self.assertRaises(error_type):
-            module.safe_print_list_integers(list, 90)
 
     def test_count_import(self):
         """ Testing if import is used in the file. """
@@ -51,10 +42,14 @@ class TestTask2(ParentTest):
     def test_except_in_use(self):
         target_construct = "except"
         self.construct_not_in_use(filename, target_construct)
+
+    def test_fainally_in_use(self):
+        target_construct = "finally"
+        self.construct_not_in_use(filename, target_construct)
     
-    def test_len_not_used(self):
-        target_construct = "len"
-        self.function_not_used(filename, target_construct)
+    def test_format_used(self):
+        target_construct = "format"
+        self.method_in_use(filename, target_construct)
         
 
 if __name__ == "__main__":
