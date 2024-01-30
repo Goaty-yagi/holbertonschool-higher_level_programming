@@ -30,7 +30,7 @@ You can find more details from [Conventional Commits](https://github.com/Goaty-y
 
 - **[Python - Classes and Objects](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-classes):** This repository is dedicated to exploring the fundamentals and advanced concepts of object-oriented programming (OOP) in Python..
 
-- **[Test_assets](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/test_assets):** This Python repository focuses on exploring more advanced data structures, specifically sets and dictionaries.
+- **[Test_assets](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/test_assets):** This "Test_assets" directory houses abstract test classes and utility modules essential for efficient testing within the project.
 
 
 

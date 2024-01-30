@@ -31,3 +31,10 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 
 ## Practice Exercises
 
+### 0. My first square
+
+**File:** [0-square.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-classes/0-square.py)<br>
+**Description:** Write an empty class Square that defines a square.<br>
+**Requirement:** <br>
+- You are not allowed to import any module
+
