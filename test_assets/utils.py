@@ -48,6 +48,7 @@ def get_original_line(file_path, line_number):
 def count_constructs(file_path, constructs):
     with open(file_path, 'r') as script_file:
         script_content = script_file.read()
+    script_content = remove_comments_and_docstrings(script_content)
     counts = {construct: len(re.findall(
         rf'\b{re.escape(construct)}\b', script_content)) for construct in constructs}
     return counts
@@ -90,9 +91,6 @@ def use_function(filename, function_name):
 
     return False
 
-
-import ast
-
 def is_format_method_used_with_specifier(filename, specifier):
     with open(filename, 'r') as file:
         code = file.read()
@@ -105,4 +103,17 @@ def is_format_method_used_with_specifier(filename, specifier):
                         return True
     return False
 
+def remove_comments_and_docstrings(code):
+    # Remove single-line comments
+    code = re.sub(r'#.*', '', code)
+
+    # Remove multi-line comments
+    code = re.sub(r'""".*?"""', '', code, flags=re.DOTALL)
+    code = re.sub(r"'''.*?'''", '', code, flags=re.DOTALL)
+
+    # Remove docstrings
+    code = re.sub(r'""".*?"""', '', code, flags=re.DOTALL)
+    code = re.sub(r"'''.*?'''", '', code, flags=re.DOTALL)
+
+    return code
 
