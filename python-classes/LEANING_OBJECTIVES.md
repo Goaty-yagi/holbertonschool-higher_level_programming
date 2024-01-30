@@ -120,6 +120,7 @@ class MyClass:
 obj = MyClass()
 # Accessing a private attribute using name mangling
 print(obj._MyClass__private_attribute)  # Output: I am private
+
 # Directly accessing a private attribute (outside the class) will raise an AttributeError.
 print(obj.__private_attribute)
 

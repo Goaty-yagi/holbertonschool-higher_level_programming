@@ -38,3 +38,13 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 **Requirement:** <br>
 - You are not allowed to import any module
 
+
+### 1. Square with size
+
+**File:** [1-square.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-classes/1-square.py)<br>
+**Description:** Write a class Square that defines a square by: (based on 0-square.py).<br>
+**Requirement:** <br>
+- Private instance attribute: size
+- Instantiation with size (no type/value verification)
+- You are not allowed to import any module
+
