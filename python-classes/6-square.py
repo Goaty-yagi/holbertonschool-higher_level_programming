@@ -19,13 +19,16 @@ class Square:
         None
 
     Methods:
-        - __init__(self, size=0, position=(0, 0)): Initializes a square with a given size and position.
+        - __init__(self, size=0, position=(0, 0)):
+        Initializes a square with a given size and position.
         - size: Property to get or set the size of the square.
         - position: Property to get or set the position of the square.
         - setter(self, new_value): Sets the size of the square with validation.
-        - position_setter(self, new_value): Sets the position of the square with validation.
+        - position_setter(self, new_value):
+        Sets the position of the square with validation.
         - area(self): Computes and returns the area of the square.
-        - my_print(self): Prints the square with '#' characters at the specified position.
+        - my_print(self): Prints the square with '#' characters
+        at the specified position.
 
     Usage:
         # Create a square object
