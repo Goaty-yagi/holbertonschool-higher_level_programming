@@ -90,6 +90,7 @@ class AbstractTest(unittest.TestCase):
         """ Testing number of construct in use in the file. """
 
         count_obj = count_constructs(path, [target])
+        
         self.assertEqual(count_obj[target], 0,
                          f"There shouldn't be <{target}> statement in use.")
 

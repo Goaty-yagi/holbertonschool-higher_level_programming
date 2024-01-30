@@ -35,12 +35,11 @@ class TestTask0(ParentTest):
 
         self.assertTrue(module.Square.__doc__)
 
-    # def test_count_import(self):
-    #     """ Testing if import is used in the file. """
+    def test_count_import(self):
+        """ Testing if import is used in the file. """
 
-    #     target_construct = "import"
-    #     self.construct_in_use(filename, target_construct)
-    #     # not woring if documentation have "import"
+        target_construct = "import"
+        self.construct_in_use(filename, target_construct)
         
 
 if __name__ == "__main__":
