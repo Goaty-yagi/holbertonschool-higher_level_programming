@@ -5,11 +5,11 @@ import os
 
 from parent_test import ParentTest
 
-filename = "3-square.py"
-module = "3-main.py"
+filename = "4-square.py"
+module = "4-main.py"
 
 
-class TestTask3(ParentTest):
+class TestTask4(ParentTest):
     def test_common_test(self):
         """ Testing a common stuff. check abstract_test/commontest"""
 
@@ -19,10 +19,11 @@ class TestTask3(ParentTest):
         sys.path.append(os.path.abspath(
             os.path.join(os.path.dirname(__file__), "..")))
 
-        module = importlib.import_module("3-square")
+        module = importlib.import_module("4-square")
         instance = module.Square(10)
+        instance.size = 50
         result = instance.area()
-        expected = 100
+        expected = 2500
 
         self.assertEqual(result, expected)
 
@@ -32,7 +33,7 @@ class TestTask3(ParentTest):
         sys.path.append(os.path.abspath(
             os.path.join(os.path.dirname(__file__), "..")))
 
-        module = importlib.import_module("3-square")
+        module = importlib.import_module("4-square")
 
         self.assertTrue(module.__doc__)
 
@@ -42,7 +43,7 @@ class TestTask3(ParentTest):
         sys.path.append(os.path.abspath(
             os.path.join(os.path.dirname(__file__), "..")))
 
-        module = importlib.import_module("3-square")
+        module = importlib.import_module("4-square")
 
         self.assertTrue(module.Square.__doc__)
 
