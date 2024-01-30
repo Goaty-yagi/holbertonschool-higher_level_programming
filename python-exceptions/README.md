@@ -104,3 +104,12 @@ print: division by 0
 print: out of range
 - You have to use try: / except: / finally:
 - You are not allowed to import any module
+
+
+### 5. Raise exception
+
+**File:** [5-raise_exception.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-data_structures/5-raise_exception.py)<br>
+**Description:** Write a function that raises a type exception.<br>
+**Requirement:** <br>
+- Prototype: def raise_exception():
+- You are not allowed to import any module
