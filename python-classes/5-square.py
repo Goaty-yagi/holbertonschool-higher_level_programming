@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-"""Module: 0-square.py
-
+"""
 This module provides a simple implementation of a Square class.
 
 Classes:
@@ -16,17 +15,20 @@ Usage:
 
 
 class Square:
-    """Represents a square shape.
+    """
+    Represents a square shape.
 
     Attributes:
         None
 
     Methods:
-        None
+        - __init__(self, size=0): Initializes a square with a given size.
+        - size: Property to get or set the size of the square.
+        - setter(self, new_value): Sets the size of the square with validation.
+        - area(self): Computes and returns the area of the square.
+        - my_print(self): Prints the square as a set of '#' characters.
 
     Usage:
-        from square import Square
-
         # Create a square object
         square = Square()
     """
