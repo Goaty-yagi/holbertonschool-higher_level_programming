@@ -1,37 +1,48 @@
 #!/usr/bin/python3
 
-"""Module: 0-square.py
-
-This module provides a simple implementation of a Square class.
-
-Classes:
-    Square: Represents a square shape.
+""""
+The Square module provides a class to represent square shapes.
 
 Usage:
-    Square = __import__('0-square').Square
+    from square import Square
 
-    # Example usage
+    # Create a square object
     square = Square()
 """
 
 
 class Square:
-    """Represents a square shape.
+    """
+    Represents a square shape.
 
     Attributes:
         None
 
     Methods:
-        None
+        - __init__(self, size=0, position=(0, 0)):
+        Initializes a square with a given size and position.
+        - size: Property to get or set the size of the square.
+        - position: Property to get or set the position of the square.
+        - setter(self, new_value): Sets the size of the square with validation.
+        - position_setter(self, new_value):
+        Sets the position of the square with validation.
+        - area(self): Computes and returns the area of the square.
+        - my_print(self): Prints the square with '#' characters
+        at the specified position.
 
     Usage:
-        from square import Square
-
         # Create a square object
         square = Square()
     """
 
     def __init__(self, size=0, position=(0, 0)):
+        """
+        Initializes a square with a given size and position.
+
+        Args:
+            size (int): The size of the square. Defaults to 0.
+            position (tuple): The position of the square. Defaults to (0, 0).
+        """
         self.__size = 0
         self.__position = (0, 0)
         self.setter(size)
@@ -39,21 +50,55 @@ class Square:
 
     @property
     def size(self):
+        """
+        Property to get or set the size of the square.
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
+        """
+        Sets the size of the square with validation.
+
+        Args:
+            value (int): The size to set.
+
+        Raises:
+            ValueError: If the size is less than 0.
+            TypeError: If the size is not an integer.
+        """
         return self.setter(value)
 
     @property
     def position(self):
+        """
+        Property to get or set the position of the square.
+        """
         return self.__position
 
     @position.setter
     def position(self, value):
+        """
+        Sets the position of the square with validation.
+
+        Args:
+            value (tuple): The position to set.
+
+        Raises:
+            TypeError: If the position is not a tuple of 2 positive integers.
+        """
         return self.position_setter(value)
 
     def position_setter(self, new_value):
+        """
+        Sets the position of the square with validation.
+
+        Args:
+            new_value (tuple): The position to set.
+
+        Raises:
+            TypeError: If the position is not a tuple of 2 positive integers.
+        """
         if isinstance(new_value, tuple) and len(new_value) == 2:
             if all(value >= 0 for value in new_value):
                 self.__position = new_value
@@ -61,6 +106,16 @@ class Square:
         raise TypeError("position must be a tuple of 2 positive integers")
 
     def setter(self, new_value):
+        """
+        Sets the size of the square with validation.
+
+        Args:
+            new_value (int): The size to set.
+
+        Raises:
+            ValueError: If the size is less than 0.
+            TypeError: If the size is not an integer.
+        """
         if isinstance(new_value, int):
             if new_value < 0:
                 raise ValueError("size must be >= 0")
@@ -69,18 +124,18 @@ class Square:
             raise TypeError("size must be an integer")
 
     def area(self):
+        """
+        Computes and returns the area of the square.
+
+        Returns:
+            int: The area of the square.
+        """
         return self.__size ** 2
 
     def my_print(self):
-        if self.__size == 0:
-            print()
-            return
-        for i in range(self.__size):
-            for k in range(self.__size):
-                print("#", end="")
-            print()
-
-    def my_print(self):
+        """
+        Prints the square with '#' characters at the specified position.
+        """
         if self.__size == 0:
             print()
             return
