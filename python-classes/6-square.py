@@ -99,13 +99,13 @@ class Square:
         Raises:
             TypeError: If the position is not a tuple of 2 positive integers.
         """
-        try:
-            if isinstance(new_value, tuple) and len(new_value) == 2:
-                if all(value >= 0 and isinstance(value, int) for value in new_value):
+        
+        if isinstance(new_value, tuple) and len(new_value) == 2:
+            if all(isinstance(value, int) for value in new_value):
+                if all(value >= 0 for value in new_value):
                     self.__position = new_value
                     return
-        except TypeError:
-            raise TypeError("position must be a tuple of 2 positive integers")
+        raise TypeError("position must be a tuple of 2 positive integers")
 
     def setter(self, new_value):
         """
