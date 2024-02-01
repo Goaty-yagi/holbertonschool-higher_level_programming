@@ -1,0 +1,60 @@
+"""
+Prints a square of the specified size using '#' characters.
+
+First import ``print_square'' from the ``4-print_square`` file:
+    >>> print_square = __import__('4-print_square').print_square
+
+
+Parameters:
+    size (int): The size of the square to be printed.
+    
+
+Returns:
+    None
+
+Raises:
+    TypeError: size must be an integer.
+    ValueError: size must be >= 0.
+
+Examples:
+    test - Proper arg
+
+    >>> print_square(2)
+    ##
+    ##
+
+    test - arg is 0
+
+    >>> print_square(0)
+
+
+Error case:
+    test - No arg
+
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+    test - arg is float
+
+    >>> print_square(0.3)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    test - arg is less than 0
+
+    >>> print_square(-10)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+    test - arg is float and less than 0
+
+    >>> print_square(-0.4)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+"""
