@@ -27,14 +27,20 @@ class TestTask0(ParentTest):
 
     def test_func_doc(self):
         """ Testing class doc exists. """
-        
+
         sys.path.append(os.path.abspath(
             os.path.join(os.path.dirname(__file__), "..")))
 
         module = importlib.import_module("0-add_integer")
 
         self.assertTrue(module.add_integer.__doc__)
-        
+
+    def test_count_import(self):
+        """ Testing if import is used in the file. """
+
+        target_construct = "import"
+        self.construct_in_use(filename, target_construct)
+
 
 if __name__ == "__main__":
     unittest.main()
