@@ -6,6 +6,7 @@ import subprocess
 def run_pycodestyle(file_path):
     """ Run pycodestyle on the specified script and return the result. """
     command = ["pycodestyle", file_path]
+    # CompletedProcess object returned
     result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
     return result
