@@ -3,7 +3,6 @@ import os
 import sys
 import io
 import importlib
-import ast
 
 from .utils import use_function,is_format_method_used_with_specifier, count_constructs, get_original_line, run_script, run_pycodestyle, use_method, replace_line
 
@@ -132,13 +131,13 @@ class AbstractTest(unittest.TestCase):
         """ Testing line number of the file is expected. """
 
         with open(path, 'r') as file:
-            script_content = file.read()
+            script_content = file.readlines()
 
         # Count the lines using splitlines() method
-        lines = script_content.splitlines()
+        total_lines = len(script_content)
 
         # Assert that the actual line count matches the expected line count
-        self.assertEqual(len(lines), expected,
+        self.assertEqual(total_lines, expected,
                          "Line count mismatch")
 
     def function_used(self, path, function_name):

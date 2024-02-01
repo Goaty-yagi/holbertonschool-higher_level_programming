@@ -28,7 +28,9 @@ You can find more details from [Conventional Commits](https://github.com/Goaty-y
 
 - **[Python - Exceptions](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-exceptions):** "This repository provides examples and explanations for handling exceptions in Python. 
 
-- **[Python - Classes and Objects](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-classes):** This repository is dedicated to exploring the fundamentals and advanced concepts of object-oriented programming (OOP) in Python..
+- **[Python - Classes and Objects](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-classes):** This repository is dedicated to exploring the fundamentals and advanced concepts of object-oriented programming (OOP) in Python.
+
+- **[Python - Test-driven development](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-test_driven_development):** This repository serves as a comprehensive guide to Test-driven Development (TDD) in Python.
 
 - **[Test_assets](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/test_assets):** This "Test_assets" directory houses abstract test classes and utility modules essential for efficient testing within the project.
 
