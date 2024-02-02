@@ -35,7 +35,7 @@ class TestMaxInteger(unittest.TestCase):
         Test that the max_integer function returns the correct
         maximum value where in the middle of the list
         """
-        list = [1, 2, 3000, -4]
+        list = [1, 3000, -4]
         actual_value = max_integer(list)
         expected = 3000
         self.assertEqual(actual_value, expected)
