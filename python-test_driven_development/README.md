@@ -102,3 +102,17 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - text must be a string, otherwise raise a TypeError exception with the message text must be a string
 - There should be no space at the beginning or at the end of each printed line
 - You are not allowed to import any module
+
+
+### 5. Max integer - Unittest
+
+**File:** [tests/6-max_integer_test.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-test_driven_development/tests/6-max_integer_test.py)<br>
+**Description:** Write unittests for the function def max_integer(list=[]):.<br>
+**Requirement:** <br>
+- Your test file should be inside a folder tests
+- You have to use the unittest module
+- Your test file should be python files (extension: .py)
+- Your test file should be executed by using this command: python3 -m unittest tests.6-max_integer_test
+- All tests you make must be passable by the function below
+- We strongly encourage you to work together on test cases, so that you don’t miss any edge case
+
