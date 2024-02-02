@@ -30,17 +30,27 @@ class TestMaxInteger(unittest.TestCase):
         expected = -1
         self.assertEqual(actual_value, expected)
 
-    def test_return_value(self):
+    def test_return_value3(self):
         """
         Test that the max_integer function returns the correct
-        maximum value where in the middle of the list
+        maximum value from the list include a negative integer.
         """
         list = [1, 3000, -4]
         actual_value = max_integer(list)
         expected = 3000
         self.assertEqual(actual_value, expected)
 
-    def test_return_value(self):
+    def test_max_in_middle(self):
+        """
+        Test that the max_integer function returns the correct
+        maximum value where in the middle of the list
+        """
+        list = [1, 2, 600, 67, 3000, 4, 5, 9, 90]
+        actual_value = max_integer(list)
+        expected = 3000
+        self.assertEqual(actual_value, expected)
+
+    def test_return_value4(self):
         """
         Test that the max_integer function returns the correct
         maximum value if the list has just one value.
