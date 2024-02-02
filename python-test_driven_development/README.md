@@ -90,3 +90,15 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - if size is less than 0, raise a ValueError exception with the message size - must be >= 0
 - if size is a float and is less than 0, raise a TypeError exception with the message size must be an integer
 - You are not allowed to import any module
+
+
+### 4. Text indentation
+
+**File:** [5-text_indentation.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-test_driven_development/5-text_indentation.py)<br>
+**Description:** Write a function that prints a text with 2 new lines after each of these characters: ., ? and :.<br>
+**Requirement:** <br>
+
+- Prototype: def text_indentation(text):
+- text must be a string, otherwise raise a TypeError exception with the message text must be a string
+- There should be no space at the beginning or at the end of each printed line
+- You are not allowed to import any module
