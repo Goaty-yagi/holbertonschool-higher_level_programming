@@ -4,7 +4,7 @@ import sys
 import io
 import importlib
 
-from .utils import use_function,is_format_method_used_with_specifier, count_constructs, get_original_line, run_script, run_pycodestyle, use_method, replace_line
+from .utils import use_function, is_format_method_used_with_specifier, count_constructs, get_original_line, run_script, run_pycodestyle, use_method, replace_line
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
 
@@ -89,7 +89,7 @@ class AbstractTest(unittest.TestCase):
         """ Testing number of construct in use in the file. """
 
         count_obj = count_constructs(path, [target])
-        
+
         self.assertEqual(count_obj[target], 0,
                          f"There shouldn't be <{target}> statement in use.")
 
@@ -159,4 +159,3 @@ class AbstractTest(unittest.TestCase):
         # Testing that the function raises expected error
         with self.assertRaises(error_type):
             function()
-

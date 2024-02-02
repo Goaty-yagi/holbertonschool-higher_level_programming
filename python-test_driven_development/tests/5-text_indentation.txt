@@ -1,0 +1,71 @@
+"""
+Print a given text into
+paragraphs based on the presence of '.', '?', or ':' characters.
+
+First import ``text_indentation`` from the ``5-text_indentation`` file:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Parameters:
+    text (str): The input text to be processed.
+    
+
+Returns:
+    None
+
+Raises:
+    TypeError: If the input 'text' is not a string.
+
+Examples:
+    test - text with :
+    >>> text_indentation("abcd: efg")
+    abcd:
+    <BLANKLINE>
+    efg
+
+    test - text with .
+    >>> text_indentation("abcd. efg")
+    abcd.
+    <BLANKLINE>
+    efg
+
+    test - text with ?
+    >>> text_indentation("abcd? efg")
+    abcd?
+    <BLANKLINE>
+    efg
+
+    test - Leading whitespace
+    >>> text_indentation("   abcd? efg")
+    abcd?
+    <BLANKLINE>
+    efg
+
+    test - trailing whitespace
+    >>> text_indentation("abcd? efg        ")
+    abcd?
+    <BLANKLINE>
+    efg
+
+    test - empty text
+    >>> text_indentation("")
+
+    test - only space
+    >>> text_indentation("          ")
+    
+
+Error case:
+    test - test is not str
+
+    >>> text_indentation(100)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    test - No arg
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+"""
