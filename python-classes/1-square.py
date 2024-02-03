@@ -31,5 +31,5 @@ class Square:
         square = Square()
     """
 
-    def __init__(self, size):
+    def __init__(self, size:int):
         self.__size = size
