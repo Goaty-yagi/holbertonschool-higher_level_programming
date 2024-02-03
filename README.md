@@ -14,6 +14,9 @@ This repository is designed to provide hands-on practice for higher-level progra
 This project follows the conventional commits specification for commit messages.
 You can find more details from [Conventional Commits](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/CONVENTIONAL_COMMITS.md).
 
+## Code Formatting and Style
+This project follows the Pycodestyle (formerly known as pep8) code style guidelines to maintain consistent and readable code. Pycodestyle is a tool to check your Python code against some of the style conventions in [PEP 8](https://www.python.org/dev/peps/pep-0008/).
+
 ## Features
 
 - **[Python - Hello, World](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-hello_world):** Explore a wide range of exercises covering fundamental syntax, data structures, algorithms, and more.
