@@ -9,7 +9,7 @@ from .utils import use_function, is_format_method_used_with_specifier, count_con
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
 
 
-class AbstractTest(unittest.TestCase):
+class CustomTest(unittest.TestCase):
     def file_exist(self, path):
         """ Testing the target file exists. """
 
@@ -133,11 +133,10 @@ class AbstractTest(unittest.TestCase):
         with open(path, 'r') as file:
             script_content = file.readlines()
 
-        # Count the lines using splitlines() method
-        total_lines = len(script_content)
+        total_line = len(script_content)
 
         # Assert that the actual line count matches the expected line count
-        self.assertEqual(total_lines, expected,
+        self.assertEqual(total_line, expected,
                          "Line count mismatch")
 
     def function_used(self, path, function_name):
@@ -151,6 +150,7 @@ class AbstractTest(unittest.TestCase):
         self.assertFalse(result, f"function {function_name} is used.")
 
     def format_with_specifier_used(self, path, specifier):
+        """ not working """
         result = is_format_method_used_with_specifier(path, specifier)
 
         self.assertFalse(result, f"function {specifier} is not used.")

@@ -32,7 +32,7 @@ You can find more details from [Conventional Commits](https://github.com/Goaty-y
 
 - **[Python - Test-driven development](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-test_driven_development):** This repository serves as a comprehensive guide to Test-driven Development (TDD) in Python.
 
-- **[Test_assets](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/test_assets):** This "Test_assets" directory houses abstract test classes and utility modules essential for efficient testing within the project.
+- **[Test_assets](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/test_assets):** Test_assets" directory houses custom test class and utility modules essential for efficient testing within the project.
 
 
 
