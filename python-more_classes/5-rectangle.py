@@ -55,8 +55,6 @@ class Rectangle:
         self.__width = self.attributes_setter(
             width, Rectangle.ATTR_NAMES["WIDTH"])
 
-        Rectangle.number_of_instances += 1
-
     def __str__(self) -> str:
         if any(value == 0 for value in (self.__width, self.__height)):
             return ""
