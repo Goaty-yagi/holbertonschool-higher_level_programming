@@ -30,6 +30,10 @@ class Rectangle:
         Getter method for the rectangle's height attribute.
         - height(self, value: int) -> None:
         Setter method for the rectangle's height attribute.
+        - area(self) -> int:
+        Method to calculate the area of the rectangle.
+        - perimeter(self) -> int:
+        Method to calculate the perimeter of the rectangle.
     """
 
     ATTR_NAMES = {
@@ -71,3 +75,11 @@ class Rectangle:
     @height.setter
     def height(self, value) -> None:
         self.attributes_setter(value, Rectangle.ATTR_NAMES["HEIGHT"])
+
+    def area(self) -> int:
+        return self.__width * self.__height
+
+    def perimeter(self) -> int:
+        if any(value == 0 for value in (self.__width, self.__height)):
+            return 0
+        return self.__width * 2 + self.__height * 2
