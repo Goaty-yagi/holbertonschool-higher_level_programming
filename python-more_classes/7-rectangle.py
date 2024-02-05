@@ -18,6 +18,8 @@ class Rectangle:
         their string representations.
         - number_of_instances (int) : an integer representing
         number of existing instants
+        - print_symbol (any) : a symbol to be used
+        for string representation
 
     Methods:
         - __init__(self, width: int = 0, height: int = 0) -> None:
@@ -27,7 +29,7 @@ class Rectangle:
         sequence of "#" characters forming a rectangle.
         - __repr__(self) -> str:
         Formal string representation of the rectangle.
-         - __del__(self) -> None:
+        - __del__(self) -> None:
         Print when an instance is deleted.
         - attributes_setter(self, value: int, name: str) -> int:
         Helper method to set and validate attribute values.
@@ -51,6 +53,7 @@ class Rectangle:
     }
 
     number_of_instances: int = 0
+    print_symbol: any = "#"
 
     def __init__(self, width: int = 0, height: int = 0) -> None:
         self.__height = self.attributes_setter(
@@ -64,8 +67,9 @@ class Rectangle:
     def __str__(self) -> str:
         if any(value == 0 for value in (self.__width, self.__height)):
             return ""
-        map_obj = map(lambda x: "#\n" if self.area() != x and x %
-                      self.__width == 0 else "#", range(1, self.area() + 1))
+        map_obj = map(lambda x: "{}\n".format(self.print_symbol)
+                      if self.area() != x and x % self.__width == 0 else "{}"
+                      .format(self.print_symbol), range(1, self.area() + 1))
         return "".join(map_obj)
 
     def __repr__(self) -> str:
