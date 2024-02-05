@@ -23,6 +23,8 @@ class Rectangle:
         - __str__(self) -> str:
         String representation of the rectangle, representing it as a
         sequence of "#" characters forming a rectangle.
+        - __repr__(self) -> str:
+        Formal string representation of the rectangle.
         - attributes_setter(self, value: int, name: str) -> int:
         Helper method to set and validate attribute values.
         - width(self) -> int:
@@ -57,6 +59,9 @@ class Rectangle:
         map_obj = map(lambda x: "#\n" if self.area() != x and x %
                       self.__width == 0 else "#", range(1, self.area() + 1))
         return "".join(map_obj)
+
+    def __repr__(self) -> str:
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def attributes_setter(self, value: int, name: str) -> int:
         if isinstance(value, int):
