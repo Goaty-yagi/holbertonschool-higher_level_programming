@@ -45,14 +45,14 @@ class Rectangle:
             width, Rectangle.ATTRIBUTES_NAME["WIDTH"])
 
     def attributes_setter(self, value: int, name: str) -> int:
-        if isinstance(value, int) and not value < 0:
+        if isinstance(value, int):
+            if value < 0:
+                raise ValueError("{} must be >= 0".format(name))
             if name == Rectangle.ATTRIBUTES_NAME["WIDTH"]:
                 self.__width = value
             else:
                 self.__height = value
             return value
-        elif value < 0:
-            raise ValueError("{} must be >= 0".format(name))
         else:
             raise TypeError("{} must be an integer".format(name))
 
