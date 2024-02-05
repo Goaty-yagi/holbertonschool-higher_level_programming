@@ -29,3 +29,10 @@ No Shebang on the first line (i.e. “#!/usr/bin/python3”)
 All your files should end with a new line
 
 ## Practice Exercises
+
+### 0. Who am I?
+
+**File:** [0-answer.txt](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-everything_is_object/0-answer.txt)<br>
+**Description:** What function would you use to print the type of an object?.<br>
+
+
