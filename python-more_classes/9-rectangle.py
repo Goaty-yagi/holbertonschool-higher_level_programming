@@ -61,11 +61,12 @@ class Rectangle:
     print_symbol: any = "#"
 
     def __init__(self, width: int = 0, height: int = 0) -> None:
-        self.__height = self.attributes_setter(
-            height, Rectangle.ATTR_NAMES["HEIGHT"])
 
         self.__width = self.attributes_setter(
             width, Rectangle.ATTR_NAMES["WIDTH"])
+
+        self.__height = self.attributes_setter(
+            height, Rectangle.ATTR_NAMES["HEIGHT"])
 
         Rectangle.number_of_instances += 1
 
