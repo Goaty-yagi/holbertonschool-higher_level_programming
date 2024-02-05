@@ -35,6 +35,9 @@ class Rectangle:
         Helper method to set and validate attribute values.
         - bigger_or_equal(rect_1, rect_2) -> 'Rectangle':
         Static method to compare two rectangles and return the larger one.
+        - square(cls, size) -> 'Rectangle':
+        Class method to make a new instance with
+        each attribute equal to size, and return it.
         - width(self) -> int:
         Getter method for the rectangle's width attribute.
         - width(self, value: int) -> None:
@@ -106,6 +109,10 @@ class Rectangle:
             raise TypeError(error_arg + error_message)
 
         return rect_1 if rect_1.area() >= rect_2.area() else rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        return cls(size, size)
 
     @property
     def width(self) -> int:
