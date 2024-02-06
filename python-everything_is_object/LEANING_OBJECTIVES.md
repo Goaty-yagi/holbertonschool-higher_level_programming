@@ -12,6 +12,9 @@
 - [What are the built-in immutable types](#what-are-the-built-in-immutable-types)
 - [How does Python pass variables to functions](#how-does-python-pass-variables-to-functions)
 
+### Extra
+- [What is Interning](#what-is-interning)
+
 ## 1, What is the difference between immutable object and mutable object
 The main difference between immutable objects and mutable objects in programming lies in whether their state (i.e., their data) can be modified after they are created.
 ## 2, What is a reference
@@ -93,6 +96,24 @@ An alias typically refers to an alternative name assigned to an existing variabl
 ```python
 original_name = 42
 alias_name = original_name  # alias_name is an alias for original_name
+alias_name is original_name # True
+alias_name += 1 # with + op will reasssign and make a new reference
+alias_name # 43
+original_name # 42
+
+```
+
+- List Alias:
+```python
+list_1 = [1, 2, 3]
+list_2 = list_1
+print(list_1 is list_2) # True
+
+list_1 += [5]
+print(list_1 is list_2)
+
+list_1 = list_1 + [5]
+print(list_1 is list_2)
 
 ```
 
@@ -163,6 +184,10 @@ my_bytearray[0] = 65  # Mutable: elements can be modified
 - Integer
 - Float
 - Tuple
+```python
+a = (1) # will be integer
+a = (1,) # will be tuple
+```
 - String
 - Frozenset
 Frozensets are immutable sets.
@@ -212,5 +237,24 @@ def reassign_variable(x):
 original_value = 10
 reassign_variable(original_value)
 print(original_value)  # Output: 10
+
+```
+
+## 12, What is Interning
+
+In Python, small integers and short strings are subject to a feature called "interning," which means that some commonly used values are stored in memory in a way that promotes reusing the same object for efficiency. However, this behavior is implementation-dependent, and it should not be relied upon for all cases.
+
+For integers in a certain range and short strings, Python may choose to intern them, making multiple variables reference the same object in memory. This is more likely to occur with small integers and short strings that appear in your code.
+```python
+a = 42
+b = 42
+
+print(a is b)  # This may evaluate to True due to integer interning
+
+str1 = "hello"
+str2 = "hello"
+
+print(str1 is str2)  # This may evaluate to True due to string interning
+
 
 ```
