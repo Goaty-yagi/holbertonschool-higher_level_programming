@@ -55,6 +55,18 @@ my_list = [1, 2, 3]
 modify_list(my_list)
 print(my_list)  # Output: [1, 2, 3, 42]
 
+def assign_value(n, v):
+    n = v # reassign in function doesn't change the original
+
+    # This works
+    n.clear()  # Clears the contents of the list pointed to by n
+    n.extend(v)  # Appends the elements of v to the list pointed to by n
+
+l1 = [1, 2, 3]
+l2 = [4, 5, 6]
+assign_value(l1, l2)
+print(l1) # Output: [1, 2, 3] 
+
 ```
 ## 3, What is an assignment
 An assignment is a statement that associates a value with a variable or a name. It is the process of binding a name to an object.
