@@ -1,0 +1,2 @@
+def copy_list(a_list):
+    return [ i for i in a_list]

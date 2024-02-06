@@ -121,6 +121,7 @@ print(a is b)  # Output: False (different objects in memory)
 print(a == b)  # Output: True (values are equal)
 
 ```
+In CPython (the standard implementation of Python), small integers (typically in the range of -5 to 256) are cached and reused for performance optimization. 
 ## 6, How to know if two variables are linked to the same object
 Same as above
 ## 7, How to display the variable identifier (which is the memory address in the CPython implementation)
