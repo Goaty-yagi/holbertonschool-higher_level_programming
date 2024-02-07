@@ -1,0 +1,47 @@
+"""
+ integer_validator method test in BaseGeometry class. 
+
+First import ``BaseGeometry`` from the ``7-base_geometry`` file:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Parameters:
+    integer_validator (name: str, value: int): assume that name is always str.
+
+Returns:
+    None
+
+Examples:
+    test - proper args
+    >>> instance = BaseGeometry()
+    >>> instance.integer_validator("name", 900)
+
+Errro_case:
+    test - value is not int
+    >>> instance = BaseGeometry()
+    >>> instance.integer_validator("name", "900")
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+    test - value is less than or equal to 0
+    >>> instance = BaseGeometry()
+    >>> instance.integer_validator("name", -190)
+    Traceback (most recent call last):
+    ...
+    ValueError: name must be greater than 0
+
+    test - no arg
+    >>> instance = BaseGeometry()
+    >>> instance.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    test - one arg
+    >>> instance = BaseGeometry()
+    >>> instance.integer_validator("name")
+    Traceback (most recent call last):
+    ...
+    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
+"""

@@ -90,3 +90,15 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 **Requirement:** <br>
 - Public instance method: def area(self): that raises an Exception with the message area() is not implemented
 - You are not allowed to import any module
+
+### 7. Integer validator
+
+**File:** [7-base_geometry.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-inheritance/7-base_geometry.py)<br>
+**Description:** Write a class BaseGeometry (based on 6-base_geometry.py).<br>
+**Requirement:** <br>
+- Public instance method: def area(self): that raises an Exception with the message area() is not implemented
+- Public instance method: def integer_validator(self, name, value): that validates value:
+-- you can assume name is always a string
+-- if value is not an integer: raise a TypeError exception, with the message <name> must be an integer
+-- if value is less or equal to 0: raise a ValueError exception with the message <name> must be greater than 0
+- You are not allowed to import any module
