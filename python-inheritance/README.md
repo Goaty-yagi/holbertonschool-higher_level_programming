@@ -59,3 +59,11 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 **Requirement:** <br>
 - Prototype: def is_same_class(obj, a_class):
 - You are not allowed to import any module
+
+### 3. Same class or inherit from
+
+**File:** [3-is_kind_of_class.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-inheritance/3-is_kind_of_class.py)<br>
+**Description:** Write a function that returns True if the object is an instance of, or if the object is an instance of a class that inherited from, the specified class ; otherwise False.<br>
+**Requirement:** <br>
+- Prototype: def is_kind_of_class(obj, a_class):
+- You are not allowed to import any module

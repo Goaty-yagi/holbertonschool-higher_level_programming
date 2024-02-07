@@ -9,7 +9,7 @@ def is_same_class(obj, a_class):
     This function checks if obj is an instance of a_class.
 
     Parameter:
-    - obj: The obj to be chacked.
+    - obj(type:any): The obj to be chacked.
     - a_class: The class to check against.
 
     Return:
