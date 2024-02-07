@@ -133,3 +133,14 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 -- size must be private. No getter or setter
 -- size must be a positive integer, validated by integer_validator
 - the area() method must be implemented
+
+### 11. Square #2
+
+**File:** [11-square.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-inheritance/11-square.py)<br>
+**Description:** Write a class Square that inherits from Rectangle (9-rectangle.py). (task based on 10-square.py).<br>
+**Requirement:** <br>
+- Instantiation with size: def __init__(self, size)::
+-- size must be private. No getter or setter
+-- size must be a positive integer, validated by integer_validator
+- the area() method must be implemented
+- print() should print, and str() should return, the square description: [Square] <width>/<height>

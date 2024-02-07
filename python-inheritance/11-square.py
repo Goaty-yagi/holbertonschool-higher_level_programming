@@ -13,6 +13,7 @@ class Square(Rectangle):
 
     Methods:
     - init(self, width: int, height: int): create a new instance.
+    - __str__(self) -> str: return [Square] self.__width, self.__height
     - area(self) -> int: return area of rectangle
     - integer_validator(self, name: str, value: int): valid args
     """
@@ -23,6 +24,11 @@ class Square(Rectangle):
         super().__init__(size, size)
         self.__size = self.integer_validator(
             Square.ATTR_NAMES["SIZE"], size)
+
+    def __str__(self) -> str:
+        return "[{}] {}/{}".format(self.__class__.__name__,
+                                   self._Rectangle__width,
+                                   self._Rectangle__height)
 
     def area(self) -> int:
         return self.__size ** 2
