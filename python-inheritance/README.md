@@ -67,3 +67,11 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 **Requirement:** <br>
 - Prototype: def is_kind_of_class(obj, a_class):
 - You are not allowed to import any module
+
+### 4. Only sub class of
+
+**File:** [4-inherits_from.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-inheritance/4-inherits_from.py)<br>
+**Description:** Write a function that returns True if the object is an instance of a class that inherited (directly or indirectly) from the specified class ; otherwise False.<br>
+**Requirement:** <br>
+- Prototype: def inherits_from(obj, a_class):
+- You are not allowed to import any module
