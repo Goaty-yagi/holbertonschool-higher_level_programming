@@ -10,7 +10,7 @@ This repository provides examples and explanations for handling exceptions in Py
 
 ## Learning Objectives
 
-This project is based on the learning objectives - see the [LEARNING_OBJECTIVES](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/LEANING_OBJECTIVES.md) file for details.
+This project is based on the learning objectives - see the [LEARNING_OBJECTIVES](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/LEARNING_OBJECTIVES.md) file for details.
 
 ## Requirements
 - Allowed editors: vi, vim, emacs

@@ -9,7 +9,7 @@ This Python repository focuses on exploring more advanced data structures, speci
 - [Tests](#tests)
 ## Learning Objectives
 
-This project is based on the learning objectives - see the [LEARNING_OBJECTIVES](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-more_data_structures/LEANING_OBJECTIVES.md) file for details.
+This project is based on the learning objectives - see the [LEARNING_OBJECTIVES](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-more_data_structures/LEARNING_OBJECTIVES.md) file for details.
 
 ## Requirements
 - Allowed editors: vi, vim, emacs

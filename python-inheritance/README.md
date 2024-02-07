@@ -8,7 +8,7 @@ This repository focuses on the concept of inheritance. Inheritance is a key feat
 - [Practice Exercises](#practice-exercises)
 ## Learning Objectives
 
-This project is based on the learning objectives - see the [LEARNING_OBJECTIVES](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-inheritance/LEANING_OBJECTIVES.md) file for details.
+This project is based on the learning objectives - see the [LEARNING_OBJECTIVES](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-inheritance/LEARNING_OBJECTIVES.md) file for details.
 
 ## Requirements
 - Allowed editors: vi, vim, emacs
