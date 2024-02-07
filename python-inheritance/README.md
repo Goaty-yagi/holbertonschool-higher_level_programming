@@ -75,3 +75,10 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 **Requirement:** <br>
 - Prototype: def inherits_from(obj, a_class):
 - You are not allowed to import any module
+
+### 5. Geometry module
+
+**File:** [5-base_geometry.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-inheritance/5-base_geometry.py)<br>
+**Description:** Write an empty class BaseGeometry.<br>
+**Requirement:** <br>
+- You are not allowed to import any module
