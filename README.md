@@ -39,6 +39,8 @@ This project follows the Pycodestyle (formerly known as pep8) code style guideli
 
 - **[Python - Everything is object](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-everything_is_object):** This repository explores the fundamental concept in Python that everything is an object.
 
+- **[Python - Inheritance](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-inheritance):** This repository focuses on exploring the fundamental concept of inheritance.
+
 - **[Test_assets](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/test_assets):** Test_assets" directory houses custom test class and utility modules essential for efficient testing within the project.
 
 
