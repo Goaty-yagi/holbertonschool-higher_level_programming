@@ -102,3 +102,12 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 -- if value is not an integer: raise a TypeError exception, with the message <name> must be an integer
 -- if value is less or equal to 0: raise a ValueError exception with the message <name> must be greater than 0
 - You are not allowed to import any module
+
+### 8. Rectangle
+
+**File:** [8-rectangle.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-inheritance/8-rectangle.py)<br>
+**Description:** Write a class Rectangle that inherits from BaseGeometry (7-base_geometry.py).<br>
+**Requirement:** <br>
+- Instantiation with width and height: def __init__(self, width, height):
+-- width and height must be private. No getter or setter
+-- width and height must be positive integers, validated by integer_validator
