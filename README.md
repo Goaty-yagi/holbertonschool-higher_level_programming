@@ -41,6 +41,8 @@ This project follows the Pycodestyle (formerly known as pep8) code style guideli
 
 - **[Python - Inheritance](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-inheritance):** This repository focuses on exploring the fundamental concept of inheritance.
 
+- **[Python - Input/Output](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-input_output):** A Python Input/Output project typically involves creating a program that interacts with external data or users through various input and output mechanisms.
+
 - **[Test_assets](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/test_assets):** Test_assets" directory houses custom test class and utility modules essential for efficient testing within the project.
 
 
