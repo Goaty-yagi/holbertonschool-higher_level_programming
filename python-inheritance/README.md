@@ -82,3 +82,11 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 **Description:** Write an empty class BaseGeometry.<br>
 **Requirement:** <br>
 - You are not allowed to import any module
+
+### 6. Improve Geometry
+
+**File:** [6-base_geometry.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-inheritance/6-base_geometry.py)<br>
+**Description:** Write a class BaseGeometry (based on 5-base_geometry.py).<br>
+**Requirement:** <br>
+- Public instance method: def area(self): that raises an Exception with the message area() is not implemented
+- You are not allowed to import any module
