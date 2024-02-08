@@ -4,7 +4,7 @@ MyList = __import__('1-my_list').MyList
 my_list = MyList()
 my_list.append(1)
 my_list.append(4)
-my_list.append(2)
+my_list.append(-2)
 my_list.append(3)
 my_list.append(-55)
 print(my_list)

@@ -36,6 +36,23 @@ Examples:
     [10, 20, 90]
     >>> print(list)
     [20, 10, 90]
+
+    test - append minus int
+    >>> list = MyList()
+    >>> list.append(20)
+    >>> list.append(-10)
+    >>> list.append(90)
+    >>> list.print_sorted()
+    [-10, 20, 90]
+    >>> print(list)
+    [20, -10, 90]
+
+    test - empty list
+    >>> list = MyList()
+    >>> list.print_sorted()
+    []
+    >>> print(list)
+    []
     
 
 """
