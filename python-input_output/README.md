@@ -69,3 +69,11 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You don’t need to manage file permission or file doesn't exist exceptions.
 - You are not allowed to import any module
 
+### 3. To JSON string
+
+**File:** [3-to_json_string.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-input_output/3-to_json_string.py)<br>
+**Description:** Write a function that returns the JSON representation of an object (string).<br>
+**Requirement:** <br>
+- Prototype: def to_json_string(my_obj):
+- You don’t need to manage exceptions if the object can’t be serialized.
+
