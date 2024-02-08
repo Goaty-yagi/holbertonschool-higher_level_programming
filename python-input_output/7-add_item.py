@@ -14,7 +14,10 @@ python_list = []
 try:
     python_list = load_from_json_file(filename)
     python_list += args[1:]
-except (FileNotFoundError, IndexError):
+except FileNotFoundError:
+    if len(args) > 1:
+        python_list = args[1:]
+except IndexError:
     pass
 finally:
     save_to_json_file(python_list,  filename)
