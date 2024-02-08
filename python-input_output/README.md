@@ -34,3 +34,13 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 
 ## Practice Exercises
 
+### 0. Read file
+
+**File:** [0-read_file.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-input_output/0-read_file.py)<br>
+**Description:** Write a function that reads a text file (UTF8) and prints it to stdout.<br>
+**Requirement:** <br>
+- Prototype: def read_file(filename=""):
+- You must use the with statement
+- You don’t need to manage file permission or file doesn't exist exceptions.
+- You are not allowed to import any module
+
