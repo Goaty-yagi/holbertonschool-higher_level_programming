@@ -57,3 +57,15 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - Your function should overwrite the content of the file if it already exists.
 - You are not allowed to import any module
 
+
+### 2. Append to a file
+
+**File:** [2-append_write.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-input_output/2-append_write.py)<br>
+**Description:** Write a function that appends a string at the end of a text file (UTF8) and returns the number of characters added.<br>
+**Requirement:** <br>
+- Prototype: def append_write(filename="", text=""):
+- If the file doesn’t exist, it should be created
+- You must use the with statement
+- You don’t need to manage file permission or file doesn't exist exceptions.
+- You are not allowed to import any module
+

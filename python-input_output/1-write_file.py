@@ -14,6 +14,8 @@ def write_file(filename: str = "", text: str = "") -> int:
         to be read and printed. Defaults to "".
         - text(str, optional): The text to be written in
         the file.
+    Return:
+        - int ->: Number of char written in the file.
     """
     with open(filename, mode='w', encoding="utf-8") as file:
         count = file.write(text)

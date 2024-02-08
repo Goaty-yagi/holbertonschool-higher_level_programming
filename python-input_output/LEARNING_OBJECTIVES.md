@@ -28,7 +28,7 @@ Here are some common modes:
 'w': Write. Opens the file for writing. Creates a new file or truncates an existing file to zero length.
 'a': Append. Opens the file for writing at the end of the file. Creates a new file if it does not exist.
 'b': Binary mode. Opens the file in binary mode.
-
+'+': Open for updating (reading and writing)
 ```python
 # Open a file named 'example.txt' for reading
 with open('example.txt', 'r') as file:
