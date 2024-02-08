@@ -6,6 +6,11 @@ This module provides Rectangle class
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+ATTR_NAMES = {
+    "WIDTH": "width",
+    "HEIGHT": "height"
+}
+
 
 class Rectangle(BaseGeometry):
     """
@@ -18,16 +23,11 @@ class Rectangle(BaseGeometry):
     - integer_validator(self, name: str, value: int): valid args
     """
 
-    ATTR_NAMES = {
-        "WIDTH": "width",
-        "HEIGHT": "height"
-    }
-
     def __init__(self, width: int, height: int) -> None:
         self.__width = self.integer_validator(
-            Rectangle.ATTR_NAMES["WIDTH"], width)
+            ATTR_NAMES["WIDTH"], width)
         self.__height = self.integer_validator(
-            Rectangle.ATTR_NAMES["HEIGHT"], height)
+            ATTR_NAMES["HEIGHT"], height)
 
     def __str__(self) -> str:
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
