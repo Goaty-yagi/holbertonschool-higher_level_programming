@@ -97,3 +97,14 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You don’t need to manage exceptions if the object can’t be serialized.
 - You don’t need to manage file permission exceptions.
 
+
+### 6. Create object from a JSON file
+
+**File:** [6-load_from_json_file.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-input_output/6-load_from_json_file.py)<br>
+**Description:** Write a function that creates an Object from a “JSON file”.<br>
+**Requirement:** <br>
+- Prototype: def load_from_json_file(filename):
+- You must use the with statement
+- You don’t need to manage exceptions if the JSON string doesn’t represent an object.
+- You don’t need to manage file permissions / exceptions.
+
