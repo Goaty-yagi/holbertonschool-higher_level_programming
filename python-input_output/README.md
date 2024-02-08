@@ -77,3 +77,12 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - Prototype: def to_json_string(my_obj):
 - You don’t need to manage exceptions if the object can’t be serialized.
 
+
+### 4. From JSON string to Object
+
+**File:** [4-from_json_string.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-input_output/4-from_json_string.py)<br>
+**Description:** Write a function that returns an object (Python data structure) represented by a JSON string.<br>
+**Requirement:** <br>
+- Prototype: def from_json_string(my_str):
+- You don’t need to manage exceptions if the JSON string doesn’t represent an object.
+

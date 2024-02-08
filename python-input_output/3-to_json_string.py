@@ -5,13 +5,13 @@
 import json
 
 
-def to_json_string(my_obj):
+def to_json_string(my_obj: object) -> str:
     """ This function serialize the my_obj, and return json formatted string.
 
     Args:
-        my_obj (any): The obj to be serialized.
+        - my_obj (any): The obj to be serialized.
 
     Returns:
-        str: json formatted string.
+        - str: json formatted string.
     """
     return json.dumps(my_obj)
