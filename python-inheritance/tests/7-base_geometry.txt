@@ -32,6 +32,48 @@ Errro_case:
     ...
     ValueError: name must be greater than 0
 
+    test - value is 0
+    >>> instance.integer_validator("name", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: name must be greater than 0
+
+    test - value is tuple
+    >>> instance.integer_validator("name", (90,))
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+    test - value is tuple with multiple values
+    >>> instance.integer_validator("name", (90, 80))
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+    test - value is boolean
+    >>> instance.integer_validator("name", True)
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+    test - value is None
+    >>> instance.integer_validator("name", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+    test - value is set
+    >>> instance.integer_validator("name", {3, 4})
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+    test - value is list
+    >>> instance.integer_validator("name", [90])
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
     test - area raise error
     >>> instance.area()
     Traceback (most recent call last):
