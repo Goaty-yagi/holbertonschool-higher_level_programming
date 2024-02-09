@@ -14,9 +14,11 @@ class Student:
         - to_json(self, attrs: any): If attrs is a list of strings, only
         attribute names contained in this list must be retrieved.
         Otherwise, all attributes must be retrieved
+        - reload_from_json(self, json: dict): Retrieve key value pairs
+        from json attr and set them to self.
     """
 
-    def __init__(self, first_name, last_name, age):
+    def __init__(self, first_name: str, last_name: str, age: int):
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
@@ -28,3 +30,19 @@ class Student:
             retrieve_dict = {key: value for key,
                              value in retrieve_dict.items() if key in attrs}
         return retrieve_dict
+
+    def reload_from_json(self, json: dict) -> None:
+        ATTR_NAMES = {
+            "FIRST_NAME": "first_name",
+            "LAST_NAME": "last_name",
+            "AGE": "age"
+        }
+        keys = self.__dict__.keys()
+        for key, value in json.items():
+            if key in keys:
+                if key == ATTR_NAMES["FIRST_NAME"]:
+                    self.first_name = value
+                elif key == ATTR_NAMES["LAST_NAME"]:
+                    self.last_name = value
+                elif key == ATTR_NAMES["AGE"]:
+                    self.age = value
