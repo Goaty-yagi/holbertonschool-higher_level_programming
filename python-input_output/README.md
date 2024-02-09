@@ -179,3 +179,13 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 -- A dictionary key will be the public attribute name
 -- A dictionary value will be the value of the public attribute
 - You are not allowed to import any module
+
+
+### 12. Pascal's Triangle
+
+**File:** [12-pascal_triangle.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-input_output/12-pascal_triangle.py)<br>
+**Description:** Create a function def pascal_triangle(n): that returns a list of lists of integers representing the Pascal’s triangle of n.<br>
+**Requirement:** <br>
+- Returns an empty list if n <= 0
+- You can assume n will be always an integer
+- You are not allowed to import any module
