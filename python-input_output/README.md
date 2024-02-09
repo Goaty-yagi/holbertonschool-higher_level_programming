@@ -131,3 +131,16 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - All attributes of the obj Class are serializable: list, dictionary, string, integer and boolean
 - You are not allowed to import any module
 
+
+### 9. Student to JSON
+
+**File:** [9-student.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-input_output/9-student.py)<br>
+**Description:** Write a class Student that defines a student by:<br>
+**Requirement:** <br>
+- Public instance attributes:
+ `first_name`
+ `last_name`
+ `age`
+- Instantiation with first_name, last_name and age: def __init__(self, first_name, last_name, age):
+- Public method def to_json(self): that retrieves a dictionary representation of a Student instance (same as 8-class_to_json.py)
+- You are not allowed to import any module

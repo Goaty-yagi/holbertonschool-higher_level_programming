@@ -4,7 +4,7 @@
 """
 
 
-def class_to_json(obj):
+def class_to_json(obj: object) -> dict:
     """ This function retrieve dict from the object, and return it.
 
     Args:
