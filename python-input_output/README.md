@@ -120,3 +120,14 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - If the file doesn’t exist, it should be created
 - You don’t need to manage file permissions / exceptions.
 
+
+### 8. Class to JSON
+
+**File:** [8-class_to_json.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-input_output/8-class_to_json.py)<br>
+**Description:** Write a function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object.<br>
+**Requirement:** <br>
+- Prototype: def class_to_json(obj):
+- obj is an instance of a Class
+- All attributes of the obj Class are serializable: list, dictionary, string, integer and boolean
+- You are not allowed to import any module
+
