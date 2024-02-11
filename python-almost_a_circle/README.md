@@ -1,0 +1,49 @@
+<p align="center">
+<img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-higher-level_programming+/331/giphy.mp4" alt="thumbnail">
+</p>
+
+# Python - Almost a circle
+
+This is a versatile repository that not only generates an approximation of a circle but also serves as an educational hub for various Python topics. Explore unit testing implementation in large projects, learn the ins and outs of serializing and deserializing classes, master the art of working with JSON files, and delve into the power of *args, **kwargs, and named arguments in functions.   
+
+## Table of Contents
+- [Learning Objectives](#learning-objectives)
+- [Requirements](#requirements)
+- [Practice Exercises](#practice-exercises)
+- [Tests](#tests)
+## Learning Objectives
+
+This project is based on the learning objectives - see the [LEARNING_OBJECTIVES](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/LEARNING_OBJECTIVES.md) file for details.
+
+## Requirements
+
+### Python Scripts
+
+- Allowed editors: vi, vim, emacs
+- All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+- All your files should end with a new line
+- The first line of all your files should be exactly #!/usr/bin/python3
+- A README.md file, at the root of the folder of the project, is mandatory
+- Your code should use the pycodestyle (version 2.7.*)
+- All your files must be executable
+- The length of your files will be tested using wc
+- All your modules should be documented: python3 -c 'print(__import__("my_module").__doc__)'
+- All your classes should be documented: python3 -c 'print(__import__("my_module").MyClass.__doc__)'
+- All your functions (inside and outside a class) should be documented: python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
+- A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+
+### Python Unit Tests
+
+- Allowed editors: vi, vim, emacs
+- All your files should end with a new line
+- All your test files should be inside a folder tests
+- You have to use the unittest module
+- All your test files should be python files (extension: .py)
+- All your test files and folders should start with test_
+- Your file organization in the tests folder should be the same as your project: ex: for models/base.py, unit tests must be in: tests/test_models/test_base.py
+- All your tests should be executed by using this command: python3 -m unittest discover tests
+- You can also test file by file by using this command: python3 -m unittest tests/test_models/test_base.py
+- We strongly encourage you to work together on test cases so that you don’t miss any edge case
+
+
+## Practice Exercises
