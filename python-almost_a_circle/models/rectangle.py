@@ -24,14 +24,14 @@ class Rectangle(Base):
 
     def __init__(self, width: int, height: int, x: int = 0,
                  y: int = 0, id: int = None) -> None:
-        self.__validator(**{"width": width, "height": height, 'x': x, 'y': y})
+        self.validator(**{"width": width, "height": height, 'x': x, 'y': y})
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
         super().__init__(id)
 
-    def __validator(self, **kwargs: dict) -> None:
+    def validator(self, **kwargs: dict) -> None:
         for key, val in kwargs.items():
             if type(val) != int:
                 raise TypeError(
@@ -47,7 +47,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value: int) -> None:
-        self.__validator(**{"width": value})
+        self.validator(**{"width": value})
         self.__width = value
 
     @property
@@ -56,7 +56,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value: int) -> None:
-        self.__validator(**{"height": value})
+        self.validator(**{"height": value})
         self.__height = value
 
     @property
@@ -65,7 +65,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value: int) -> None:
-        self.__validator(**{'x': value})
+        self.validator(**{'x': value})
         self.__x = value
 
     @property
@@ -74,5 +74,5 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value: int) -> None:
-        self.__validator(**{'y': value})
+        self.validator(**{'y': value})
         self.__y = value
