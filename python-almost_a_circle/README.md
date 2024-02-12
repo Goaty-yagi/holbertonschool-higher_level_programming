@@ -97,3 +97,8 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 
 **File:** [models/rectangle.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/rectangle.py)<br>
 **Description:** Update the class Rectangle by adding the public method def display(self): that prints in stdout the Rectangle instance with the character # - you don’t need to handle x and y here.<br>
+
+
+### 6. __str__
+**File:** [models/rectangle.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/rectangle.py)<br>
+**Description:** Update the class Rectangle by overriding the __str__ method so that it returns [Rectangle] (<id>) <x>/<y> - <width>/<height>.<br>

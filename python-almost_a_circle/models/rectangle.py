@@ -20,6 +20,8 @@ class Rectangle(Base):
         - height: this is property to return and set __height attribute.
         - x: this is property to return and set __x attribute.
         - y: this is property to return and set __y attribute.
+        - area(self) -> int: calculate width and height and return the area.
+        - display(self) -> None: print rectangle with #.
     """
 
     def __init__(self, width: int, height: int, x: int = 0,
@@ -40,6 +42,10 @@ class Rectangle(Base):
                 raise ValueError("{} must be > 0".format(key))
             if key in ('x', 'y') and val < 0:
                 raise ValueError("{} must be >= 0".format(key))
+
+    def __str__(self) -> str:
+        return "[{}] ({}) {}/{} - {}/{}".format(__class__.__name__, self.id, self.__x,
+                                                self.__y, self.__width, self.__height)
 
     @property
     def width(self):
