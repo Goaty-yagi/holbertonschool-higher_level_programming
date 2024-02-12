@@ -6,17 +6,6 @@
 from .base import Base
 
 
-def validator(**kwargs: dict) -> None:
-    for key, val in kwargs.items():
-        if type(val) != int:
-            raise TypeError(
-                "{} must be an integer".format(key))
-        if key in ("width", "height") and val <= 0:
-            raise ValueError("{} must be > 0".format(key))
-        if key in ('x', 'y') and val < 0:
-            raise ValueError("{} must be >= 0".format(key))
-
-
 class Rectangle(Base):
     """
     This class inherits Base class, and create
@@ -35,12 +24,22 @@ class Rectangle(Base):
 
     def __init__(self, width: int, height: int, x: int = 0,
                  y: int = 0, id: int = None) -> None:
-        validator(**{"width": width, "height": height, 'x': x, 'y': y})
+        self.validator(**{"width": width, "height": height, 'x': x, 'y': y})
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
         super().__init__(id)
+
+    def validator(self, **kwargs: dict) -> None:
+        for key, val in kwargs.items():
+            if type(val) != int:
+                raise TypeError(
+                    "{} must be an integer".format(key))
+            if key in ("width", "height") and val <= 0:
+                raise ValueError("{} must be > 0".format(key))
+            if key in ('x', 'y') and val < 0:
+                raise ValueError("{} must be >= 0".format(key))
 
     @property
     def width(self):
@@ -48,7 +47,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value: int) -> None:
-        validator(**{"width": value})
+        self.validator(**{"width": value})
         self.__width = value
 
     @property
@@ -57,7 +56,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value: int) -> None:
-        validator(**{"height": value})
+        self.validator(**{"height": value})
         self.__height = value
 
     @property
@@ -66,7 +65,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value: int) -> None:
-        validator(**{'x': value})
+        self.validator(**{'x': value})
         self.__x = value
 
     @property
@@ -75,8 +74,14 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value: int) -> None:
-        validator(**{'y': value})
+        self.validator(**{'y': value})
         self.__y = value
 
-    def area(self):
+    def area(self) -> int:
         return self.__height * self.__width
+
+    def display(self) -> None:
+        map_obj = map(lambda x: "{}\n".format('#')
+                      if self.area() != x and x % self.__width == 0 else "{}"
+                      .format('#'), range(1, self.area() + 1))
+        print("".join(map_obj))

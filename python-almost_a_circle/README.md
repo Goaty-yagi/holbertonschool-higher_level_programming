@@ -92,3 +92,8 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 
 **File:** [models/rectangle.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/rectangle.py)<br>
 **Description:** Update the class Rectangle by adding the public method def area(self): that returns the area value of the Rectangle instance.<br>
+
+### 5. Display #0
+
+**File:** [models/rectangle.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/rectangle.py)<br>
+**Description:** Update the class Rectangle by adding the public method def display(self): that prints in stdout the Rectangle instance with the character # - you don’t need to handle x and y here.<br>
