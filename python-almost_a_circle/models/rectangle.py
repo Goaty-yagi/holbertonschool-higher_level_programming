@@ -20,33 +20,15 @@ class Rectangle(Base):
         - height: this is property to return and set __height attribute.
         - x: this is property to return and set __x attribute.
         - y: this is property to return and set __y attribute.
-        - area(self) -> int: calculate width and height and return the area.
-        - display(self) -> None: print rectangle with #.
     """
 
     def __init__(self, width: int, height: int, x: int = 0,
                  y: int = 0, id: int = None) -> None:
-        # self.validator(**{"width": width, "height": height, 'x': x, 'y': y})
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
         super().__init__(id)
-
-    # def validator(self, **kwargs: dict) -> None:
-    #     for key, val in kwargs.items():
-    #         if type(val) != int:
-    #             raise TypeError(
-    #                 "{} must be an integer".format(key))
-    #         if key in ("width", "height") and val <= 0:
-    #             raise ValueError("{} must be > 0".format(key))
-    #         if key in ('x', 'y') and val < 0:
-    #             raise ValueError("{} must be >= 0".format(key))
-
-    def __str__(self) -> str:
-        return "[{}] ({}) {}/{} - {}/{}".format(
-            __class__.__name__, self.id, self.__x,
-            self.__y, self.__width, self.__height)
 
     @property
     def width(self):
@@ -54,7 +36,6 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value: int) -> None:
-        # self.validator(**{"width": value})
         self.__width = value
 
     @property
@@ -63,7 +44,6 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value: int) -> None:
-        # self.validator(**{"height": value})
         self.__height = value
 
     @property
@@ -72,7 +52,6 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value: int) -> None:
-        # self.validator(**{'x': value})
         self.__x = value
 
     @property
@@ -81,18 +60,4 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value: int) -> None:
-        # self.validator(**{'y': value})
         self.__y = value
-
-    def area(self) -> int:
-        return self.__height * self.__width
-
-    def display(self) -> None:
-        for _ in range(self.__y):
-            print()
-        x = ' ' * self.__x
-        for _ in range(self.__height):
-            print(x, end='')
-            for _ in range(self.__width):
-                print('#', end='')
-            print()
