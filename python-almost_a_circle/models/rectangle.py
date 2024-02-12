@@ -40,16 +40,6 @@ class Rectangle(Base):
         self.__y = y
         super().__init__(id)
 
-    def validator(self, **kwargs: dict) -> None:
-        for key, val in kwargs.items():
-            if type(val) != int:
-                raise TypeError(
-                    "{} must be an integer".format(key))
-            if key in ("width", "height") and val <= 0:
-                raise ValueError("{} must be > 0".format(key))
-            if key in ('x', 'y') and val < 0:
-                raise ValueError("{} must be >= 0".format(key))
-
     @property
     def width(self):
         return self.__width
