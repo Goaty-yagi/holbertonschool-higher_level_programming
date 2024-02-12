@@ -26,22 +26,22 @@ class Rectangle(Base):
 
     def __init__(self, width: int, height: int, x: int = 0,
                  y: int = 0, id: int = None) -> None:
-        self.validator(**{"width": width, "height": height, 'x': x, 'y': y})
+        # self.validator(**{"width": width, "height": height, 'x': x, 'y': y})
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
         super().__init__(id)
 
-    def validator(self, **kwargs: dict) -> None:
-        for key, val in kwargs.items():
-            if type(val) != int:
-                raise TypeError(
-                    "{} must be an integer".format(key))
-            if key in ("width", "height") and val <= 0:
-                raise ValueError("{} must be > 0".format(key))
-            if key in ('x', 'y') and val < 0:
-                raise ValueError("{} must be >= 0".format(key))
+    # def validator(self, **kwargs: dict) -> None:
+    #     for key, val in kwargs.items():
+    #         if type(val) != int:
+    #             raise TypeError(
+    #                 "{} must be an integer".format(key))
+    #         if key in ("width", "height") and val <= 0:
+    #             raise ValueError("{} must be > 0".format(key))
+    #         if key in ('x', 'y') and val < 0:
+    #             raise ValueError("{} must be >= 0".format(key))
 
     def __str__(self) -> str:
         return "[{}] ({}) {}/{} - {}/{}".format(
@@ -54,7 +54,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value: int) -> None:
-        self.validator(**{"width": value})
+        # self.validator(**{"width": value})
         self.__width = value
 
     @property
@@ -63,7 +63,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value: int) -> None:
-        self.validator(**{"height": value})
+        # self.validator(**{"height": value})
         self.__height = value
 
     @property
@@ -72,7 +72,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value: int) -> None:
-        self.validator(**{'x': value})
+        # self.validator(**{'x': value})
         self.__x = value
 
     @property
@@ -81,7 +81,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value: int) -> None:
-        self.validator(**{'y': value})
+        # self.validator(**{'y': value})
         self.__y = value
 
     def area(self) -> int:
