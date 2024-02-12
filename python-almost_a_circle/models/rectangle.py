@@ -24,14 +24,8 @@ class Rectangle(Base):
 
     def __init__(self, width: int, height: int, x: int = 0,
                  y: int = 0, id: int = None) -> None:
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
-        super().__init__(id)
-
-    def validator(self, **kwargs: dict) -> None:
-        for key, val in kwargs.items():
+        dict = {"width": width, "height": height, 'x': x, 'y': y}
+        for key, val in dict.items():
             if type(val) != int:
                 raise TypeError(
                     "{} must be an integer".format(key))
@@ -39,11 +33,11 @@ class Rectangle(Base):
                 raise ValueError("{} must be > 0".format(key))
             if key in ('x', 'y') and val < 0:
                 raise ValueError("{} must be >= 0".format(key))
-
-    def __str__(self) -> str:
-        return "[{}] ({}) {}/{} - {}/{}".format(
-            __class__.__name__, self.id, self.__x,
-            self.__y, self.__width, self.__height)
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
+        super().__init__(id)
 
     @property
     def width(self):
@@ -51,6 +45,13 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value: int) -> None:
+        dict = {"width": value}
+        for key, val in dict.items():
+            if type(val) != int:
+                raise TypeError(
+                    "{} must be an integer".format(key))
+            if key in ("width", "height") and val <= 0:
+                raise ValueError("{} must be > 0".format(key))
         self.__width = value
 
     @property
@@ -59,6 +60,13 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value: int) -> None:
+        dict = {"height": value}
+        for key, val in dict.items():
+            if type(val) != int:
+                raise TypeError(
+                    "{} must be an integer".format(key))
+            if key in ("width", "height") and val <= 0:
+                raise ValueError("{} must be > 0".format(key))
         self.__height = value
 
     @property
@@ -67,6 +75,15 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value: int) -> None:
+        dict = {'x': value}
+        for key, val in dict.items():
+            if type(val) != int:
+                raise TypeError(
+                    "{} must be an integer".format(key))
+            if key in ("width", "height") and val <= 0:
+                raise ValueError("{} must be > 0".format(key))
+            if key in ('x', 'y') and val < 0:
+                raise ValueError("{} must be >= 0".format(key))
         self.__x = value
 
     @property
@@ -75,4 +92,14 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value: int) -> None:
+        dict = {'y': value}
+        for key, val in dict.items():
+            if type(val) != int:
+                raise TypeError(
+                    "{} must be an integer".format(key))
+            if key in ("width", "height") and val <= 0:
+                raise ValueError("{} must be > 0".format(key))
+            if key in ('x', 'y') and val < 0:
+                raise ValueError("{} must be >= 0".format(key))
         self.__y = value
+
