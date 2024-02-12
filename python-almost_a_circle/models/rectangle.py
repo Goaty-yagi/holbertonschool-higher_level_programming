@@ -102,4 +102,3 @@ class Rectangle(Base):
             if key in ('x', 'y') and val < 0:
                 raise ValueError("{} must be >= 0".format(key))
         self.__y = value
-
