@@ -20,6 +20,7 @@ class Rectangle(Base):
         - height: this is property to return and set __height attribute.
         - x: this is property to return and set __x attribute.
         - y: this is property to return and set __y attribute.
+        - area(self) -> int: calculate width and height and return the area.
     """
 
     def __init__(self, width: int, height: int, x: int = 0,
@@ -38,6 +39,16 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
         super().__init__(id)
+
+    def validator(self, **kwargs: dict) -> None:
+        for key, val in kwargs.items():
+            if type(val) != int:
+                raise TypeError(
+                    "{} must be an integer".format(key))
+            if key in ("width", "height") and val <= 0:
+                raise ValueError("{} must be > 0".format(key))
+            if key in ('x', 'y') and val < 0:
+                raise ValueError("{} must be >= 0".format(key))
 
     @property
     def width(self):
@@ -103,3 +114,5 @@ class Rectangle(Base):
                 raise ValueError("{} must be >= 0".format(key))
         self.__y = value
 
+    def area(self) -> int:
+        return self.__height * self.__width
