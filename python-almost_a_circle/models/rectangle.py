@@ -44,8 +44,9 @@ class Rectangle(Base):
                 raise ValueError("{} must be >= 0".format(key))
 
     def __str__(self) -> str:
-        return "[{}] ({}) {}/{} - {}/{}".format(__class__.__name__, self.id, self.__x,
-                                                self.__y, self.__width, self.__height)
+        return "[{}] ({}) {}/{} - {}/{}".format(
+            __class__.__name__, self.id, self.__x,
+            self.__y, self.__width, self.__height)
 
     @property
     def width(self):
@@ -87,7 +88,11 @@ class Rectangle(Base):
         return self.__height * self.__width
 
     def display(self) -> None:
-        map_obj = map(lambda x: "{}\n".format('#')
-                      if self.area() != x and x % self.__width == 0 else "{}"
-                      .format('#'), range(1, self.area() + 1))
-        print("".join(map_obj))
+        for _ in range(self.__y):
+            print()
+        x = ' ' * self.__x
+        for _ in range(self.__height):
+            print(x, end='')
+            for _ in range(self.__width):
+                print('#', end='')
+            print()
