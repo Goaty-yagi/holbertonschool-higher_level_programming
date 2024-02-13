@@ -58,12 +58,15 @@ class Rectangle(Base):
         Validates input values for specific attributes.
 
         Parameters:
-        - **kwargs (dict): Keyword arguments representing attribute names and their values.
+        - **kwargs (dict): Keyword arguments representing
+        attribute names and their values.
 
         Raises:
-        - TypeError: If the value is not an integer for the specified attribute.
-        - ValueError: If the value is less than or equal to 0 for 'width' or 'height', 
-                    or less than 0 for 'x' or 'y'.
+        - TypeError: If the value is not an integer for
+        the specified attribute.
+        - ValueError: If the value is less than or equal
+        to 0 for 'width' or 'height',
+        or less than 0 for 'x' or 'y'.
 
         Returns:
         None
