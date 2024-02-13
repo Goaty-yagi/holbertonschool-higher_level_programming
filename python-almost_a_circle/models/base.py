@@ -94,6 +94,11 @@ class Base:
         Returns:
         cls instance
         """
-        dummy = cls(1, 1)
+        classname = cls.__name__
+        dummy = {}
+        if classname == "Square":
+            dummy = cls(1)
+        else:
+            dummy = cls(1, 1)
         dummy.update(**dictionary)
         return dummy
