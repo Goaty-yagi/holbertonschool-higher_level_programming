@@ -103,6 +103,7 @@ class Square(Rectangle):
                     self.y = args[i]
         elif len(kwargs.keys()):
             for key, val in kwargs.items():
+                print("CHECK" ,key, val, self)
                 if key == ATTR_NAMES["ID"]:
                     self.id = val
                 elif key == ATTR_NAMES["X"]:
