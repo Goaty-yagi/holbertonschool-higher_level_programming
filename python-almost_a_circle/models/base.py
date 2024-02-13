@@ -110,7 +110,8 @@ class Base:
         list_objs = []
         try:
             with open(filename, "r") as file:
-                loaded_data = json.load(file)
+                file_content = file.read()
+                loaded_data = cls.from_json_string(file_content)
                 list_objs = [cls.create(**obj) for obj in loaded_data]
                 return list_objs
         except FileNotFoundError:
