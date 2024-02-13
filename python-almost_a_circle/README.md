@@ -240,3 +240,14 @@ Call update instance method to this “dummy” instance to apply your real valu
 - You must use the method def update(self, *args, **kwargs)
 - **dictionary must be used as **kwargs of the method update
 - You are not allowed to use eval
+
+
+### 19. File to instances
+
+**File:** [models/base.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/base.py)<br>
+**Description:** Update the class Base by adding the class method def load_from_file(cls): that returns a list of instances:<br>
+**Requirement:** <br>
+- The filename must be: <Class name>.json - example: Rectangle.json
+- If the file doesn’t exist, return an empty list
+- Otherwise, return a list of instances - the type of these instances depends on cls (current class using this method)
+- You must use the from_json_string and create methods (implemented previously)

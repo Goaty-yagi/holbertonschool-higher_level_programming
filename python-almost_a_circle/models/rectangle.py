@@ -248,26 +248,26 @@ class Rectangle(Base):
                 if i == 0:
                     self.id = args[i]
                 elif i == 1:
-                    self.__width = args[i]
+                    self.width = args[i]
                 elif i == 2:
-                    self.__height = args[i]
+                    self.height = args[i]
                 elif i == 3:
-                    self.__x = args[i]
+                    self.x = args[i]
                 elif i == 4:
-                    self.__y = args[i]
+                    self.y = args[i]
 
         if len(kwargs.keys()):
             for key, val in kwargs.items():
                 if key == ATTR_NAMES["ID"]:
                     self.id = val
                 elif key == ATTR_NAMES["X"]:
-                    self.__x = val
+                    self.x = val
                 elif key == ATTR_NAMES["Y"]:
-                    self.__y = val
+                    self.y = val
                 elif key == ATTR_NAMES["WIDTH"]:
-                    self.__width = val
+                    self.width = val
                 elif key == ATTR_NAMES["HEIGHT"]:
-                    self.__height = val
+                    self.height = val
 
     def to_dictionary(self):
         """
