@@ -49,6 +49,11 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 
 ## Practice Exercises
 
+### 0. If it's not tested it doesn't work
+
+**File:** [tests/](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/tests)<br>
+**Description:** All your files, classes and methods must be unit tested and be PEP 8 validated.<br>
+
 ### 1. Base class
 
 **File:** [models/base.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/base.py)<br>
@@ -190,63 +195,64 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 **Description:** Update the class Square by adding the public method def to_dictionary(self): that returns the dictionary representation of a Square:<br>
 **Requirement:** <br>
 This dictionary must contain:
+
 - id
 - size
 - x
 - y
-
 
 ### 15. Dictionary to JSON string
 
 **File:** [models/base.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/base.py)<br>
 **Description:** Update the class Base by adding the static method def to_json_string(list_dictionaries): that returns the JSON string representation of list_dictionaries:<br>
 **Requirement:** <br>
+
 - ist_dictionaries is a list of dictionaries
 - f list_dictionaries is None or empty, return the string: "[]"
 - therwise, return the JSON string representation of list_dictionaries
-
 
 ### 16. JSON string to file
 
 **File:** [models/base.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/base.py)<br>
 **Description:** Update the class Base by adding the class method def save_to_file(cls, list_objs): that writes the JSON string representation of list_objs to a file:<br>
 **Requirement:** <br>
+
 - list_objs is a list of instances who inherits of Base - example: list of Rectangle or list of Square instances
 - If list_objs is None, save an empty list
 - The filename must be: <Class name>.json - example: Rectangle.json
 - You must use the static method to_json_string (created before)
 - You must overwrite the file if it already exists
 
-
 ### 17. JSON string to dictionary
 
 **File:** [models/base.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/base.py)<br>
 **Description:** Update the class Base by adding the static method def from_json_string(json_string): that returns the list of the JSON string representation json_string:<br>
 **Requirement:** <br>
+
 - son_string is a string representing a list of dictionaries
 - f json_string is None or empty, return an empty list
 - therwise, return the list represented by json_string
-
 
 ### 18. Dictionary to Instance
 
 **File:** [models/base.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/base.py)<br>
 **Description:** Update the class Base by adding the class method def create(cls, **dictionary): that returns an instance with all attributes already set:<br>
-**Requirement:** <br>
-- **dictionary can be thought of as a double pointer to a dictionary
+**Requirement:\*\* <br>
+
+- \*\*dictionary can be thought of as a double pointer to a dictionary
 - To use the update method to assign all attributes, you must create a “dummy” instance before:
-Create a Rectangle or Square instance with “dummy” mandatory attributes (width, height, size, etc.)
-Call update instance method to this “dummy” instance to apply your real values
-- You must use the method def update(self, *args, **kwargs)
+  Create a Rectangle or Square instance with “dummy” mandatory attributes (width, height, size, etc.)
+  Call update instance method to this “dummy” instance to apply your real values
+- You must use the method def update(self, \*args, \*\*kwargs)
 - **dictionary must be used as **kwargs of the method update
 - You are not allowed to use eval
-
 
 ### 19. File to instances
 
 **File:** [models/base.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/base.py)<br>
 **Description:** Update the class Base by adding the class method def load_from_file(cls): that returns a list of instances:<br>
 **Requirement:** <br>
+
 - The filename must be: <Class name>.json - example: Rectangle.json
 - If the file doesn’t exist, return an empty list
 - Otherwise, return a list of instances - the type of these instances depends on cls (current class using this method)
