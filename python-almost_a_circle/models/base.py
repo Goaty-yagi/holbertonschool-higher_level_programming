@@ -17,7 +17,8 @@ class Base:
         Initializes an instance of the Base class.
 
         Parameters:
-        - id (int): The identifier for the instance. If not provided, it is auto-generated.
+        - id (int): The identifier for the instance. If not
+        provided, it is auto-generated.
 
         Returns:
         None
@@ -37,9 +38,10 @@ class Base:
         - list_dictionaries (list): List of dictionaries to be converted.
 
         Returns:
-        str: JSON-formatted string representing the list of dictionaries.
+        str: JSON-formatted string representing
+        the list of dictionaries.
         """
-        if list_dictionaries == None:
+        if not list_dictionaries:
             return "[]"
         return json.dumps(list_dictionaries)
 
@@ -49,12 +51,13 @@ class Base:
         Converts a JSON-formatted string to a list of dictionaries.
 
         Parameters:
-        - json_string (str): JSON-formatted string to be converted.
+        - json_string (str): JSON-formatted string
+        to be converted.
 
         Returns:
         list: List of dictionaries.
         """
-        if json_string == None:
+        if not json_string:
             return []
         return json.loads(json_string)
 
@@ -70,7 +73,7 @@ class Base:
         None
         """
 
-        if list_objs == None:
+        if not list_objs:
             list_objs = []
         filename = cls.__name__ + ".json"
 
