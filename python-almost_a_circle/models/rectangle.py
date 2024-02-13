@@ -223,7 +223,7 @@ class Rectangle(Base):
                 print('#', end='')
             print()
 
-    def update(self, *args, **kwargs):
+    def update(self, *args, **kwargs) -> None:
         """
         Updates attributes of the rectangle based
         on positional and keyword arguments.

@@ -73,7 +73,7 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
-    def update(self, *args, **kwargs):
+    def update(self, *args, **kwargs) -> None:
         """
         Updates attributes of the square based on positional
         and keyword arguments.

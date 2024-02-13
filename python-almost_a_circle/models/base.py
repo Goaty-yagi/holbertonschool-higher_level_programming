@@ -81,3 +81,19 @@ class Base:
             temp_list = [obj.to_dictionary() for obj in list_objs]
             json_string = Base.to_json_string(temp_list)
             file.write(json_string)
+
+    @classmethod
+    def create(cls, **dictionary) -> object:
+        """
+        Create a new obj from dictionary
+
+        Parameters:
+        - cls: class where this method call.
+        - dictionary (dict): the dictionary to be obj
+
+        Returns:
+        cls instance
+        """
+        dummy = cls(1, 1)
+        dummy.update(**dictionary)
+        return dummy
