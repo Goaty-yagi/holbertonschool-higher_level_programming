@@ -54,6 +54,23 @@ class Rectangle(Base):
         super().__init__(id)
 
     def validator(self, **kwargs: dict) -> None:
+        """
+        Validates input values for specific attributes.
+
+        Parameters:
+        - **kwargs (dict): Keyword arguments representing
+        attribute names and their values.
+
+        Raises:
+        - TypeError: If the value is not an integer for
+        the specified attribute.
+        - ValueError: If the value is less than or equal
+        to 0 for 'width' or 'height',
+        or less than 0 for 'x' or 'y'.
+
+        Returns:
+        None
+        """
         for key, val in kwargs.items():
             if type(val) != int:
                 raise TypeError(
