@@ -98,11 +98,145 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 **File:** [models/rectangle.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/rectangle.py)<br>
 **Description:** Update the class Rectangle by adding the public method def display(self): that prints in stdout the Rectangle instance with the character # - you don’t need to handle x and y here.<br>
 
+### 6. **str**
 
-### 6. __str__
 **File:** [models/rectangle.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/rectangle.py)<br>
-**Description:** Update the class Rectangle by overriding the __str__ method so that it returns [Rectangle] (<id>) <x>/<y> - <width>/<height>.<br>
+**Description:** Update the class Rectangle by overriding the **str** method so that it returns [Rectangle] (<id>) <x>/<y> - <width>/<height>.<br>
 
 ### 7. Display #1
+
 **File:** [models/rectangle.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/rectangle.py)<br>
 **Description:** Update the class Rectangle by improving the public method def display(self): to print in stdout the Rectangle instance with the character # by taking care of x and y.<br>
+
+### 8. Update #0
+
+**File:** [models/rectangle.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/rectangle.py)<br>
+**Description:** Update the class Rectangle by adding the public method def update(self, \*args): that assigns an argument to each attribute.<br>
+**Requirement:** <br>
+
+- 1st argument should be the id attribute
+- 2nd argument should be the width attribute
+- 3rd argument should be the height attribute
+- 4th argument should be the x attribute
+- 5th argument should be the y attribute
+
+### 9. Update #1
+
+**File:** [models/rectangle.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/rectangle.py)<br>
+**Description:** Update the class Rectangle by updating the public method def update(self, *args): by changing the prototype to update(self, *args, **kwargs) that assigns a key/value argument to attributes.<br>
+**Requirement:\*\* <br>
+
+- **kwargs can be thought of as a double pointer to a dictionary: key/value
+  -- As Python doesn’t have pointers, **kwargs is not literally a double pointer – describing it as such is just a way of explaining its behavior in terms you’re already familiar with
+  -- \**kwargs must be skipped if *args exists and is not empty
+  -- Each key in this dictionary represents an attribute to the instance
+
+### 10. And now, the Square!
+
+**File:** [models/square.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/square.py)<br>
+**Description:** Write the class Square that inherits from Rectangle.<br>
+**Requirement:** <br>
+
+- In the file models/square.py
+- Class Square inherits from Rectangle
+- Class constructor: def **init**(self, size, x=0, y=0, id=None)::
+  -- Call the super class with id, x, y, width and height - this super call will use the logic of the **init** of the Rectangle class. The width and height must be assigned to the value of size
+  -- You must not create new attributes for this class, use all attributes of Rectangle - As reminder: a Square is a Rectangle with the same width and height
+  -- All width, height, x and y validation must inherit from Rectangle - same behavior in case of wrong data
+- The overloading **str** method should return [Square] (<id>) <x>/<y> - <size> - in our case, width or height
+
+### 11. Square size
+
+**File:** [models/square.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/square.py)<br>
+**Description:** Update the class Square by adding the public getter and setter size.<br>
+**Requirement:** <br>
+
+- The setter should assign (in this order) the width and the height - with the same value
+- The setter should have the same value validation as the Rectangle for width and height - No need to change the exception error message (It should be the one from width)
+
+### 12. Square update
+
+**File:** [models/square.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/square.py)<br>
+**Description:** Update the class Square by adding the public method def update(self, \*args, **kwargs) that assigns attributes.<br>
+**Requirement:\*\* <br>
+
+- \*args is the list of arguments - no-keyworded arguments
+  -- 1st argument should be the id attribute
+  -- 2nd argument should be the size attribute
+  -- 3rd argument should be the x attribute
+  -- 4th argument should be the y attribute
+- \*\*kwargs can be thought of as a double pointer to a dictionary: key/value (keyworded arguments)
+- \**kwargs must be skipped if *args exists and is not empty
+- Each key in this dictionary represents an attribute to the instance
+
+### 13. Rectangle instance to dictionary representation
+
+**File:** [models/rectangle.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/rectangle.py)<br>
+**Description:** Update the class Rectangle by adding the public method def to_dictionary(self): that returns the dictionary representation of a Rectangle, This dictionary must contain.<br>
+**Requirement:** <br>
+
+- Update the class Rectangle by adding the public method def to_dictionary(self): that returns the dictionary representation of a Rectangle:
+- This dictionary must contain:
+
+-- id
+-- width
+-- height
+-- x
+-- y
+
+### 14. Square instance to dictionary representation
+
+**File:** [models/square.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/square.py)<br>
+**Description:** Update the class Square by adding the public method def to_dictionary(self): that returns the dictionary representation of a Square:<br>
+**Requirement:** <br>
+This dictionary must contain:
+- id
+- size
+- x
+- y
+
+
+### 15. Dictionary to JSON string
+
+**File:** [models/base.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/base.py)<br>
+**Description:** Update the class Base by adding the static method def to_json_string(list_dictionaries): that returns the JSON string representation of list_dictionaries:<br>
+**Requirement:** <br>
+- ist_dictionaries is a list of dictionaries
+- f list_dictionaries is None or empty, return the string: "[]"
+- therwise, return the JSON string representation of list_dictionaries
+
+
+### 16. JSON string to file
+
+**File:** [models/base.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/base.py)<br>
+**Description:** Update the class Base by adding the class method def save_to_file(cls, list_objs): that writes the JSON string representation of list_objs to a file:<br>
+**Requirement:** <br>
+- list_objs is a list of instances who inherits of Base - example: list of Rectangle or list of Square instances
+- If list_objs is None, save an empty list
+- The filename must be: <Class name>.json - example: Rectangle.json
+- You must use the static method to_json_string (created before)
+- You must overwrite the file if it already exists
+
+
+### 17. JSON string to dictionary
+
+**File:** [models/base.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/base.py)<br>
+**Description:** Update the class Base by adding the static method def from_json_string(json_string): that returns the list of the JSON string representation json_string:<br>
+**Requirement:** <br>
+- son_string is a string representing a list of dictionaries
+- f json_string is None or empty, return an empty list
+- therwise, return the list represented by json_string
+
+
+### 18. Dictionary to Instance
+
+**File:** [models/base.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/base.py)<br>
+**Description:** Update the class Base by adding the class method def create(cls, **dictionary): that returns an instance with all attributes already set:<br>
+**Requirement:** <br>
+- **dictionary can be thought of as a double pointer to a dictionary
+- To use the update method to assign all attributes, you must create a “dummy” instance before:
+Create a Rectangle or Square instance with “dummy” mandatory attributes (width, height, size, etc.)
+Call update instance method to this “dummy” instance to apply your real values
+- You must use the method def update(self, *args, **kwargs)
+- **dictionary must be used as **kwargs of the method update
+- You are not allowed to use eval
