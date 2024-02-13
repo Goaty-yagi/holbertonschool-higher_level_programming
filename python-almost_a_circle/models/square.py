@@ -37,7 +37,6 @@ class Square(Rectangle):
         None
         """
         super().__init__(size, size, x, y, id)
-        self.__size = size
 
     def __str__(self) -> str:
         """
@@ -58,7 +57,7 @@ class Square(Rectangle):
         Returns:
         int: The side length of the square.
         """
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -71,7 +70,6 @@ class Square(Rectangle):
         Returns:
         None
         """
-        self.__size = value
         self.width = value
         self.height = value
 
