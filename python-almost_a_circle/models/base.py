@@ -4,6 +4,7 @@
 """
 
 import json
+import turtle
 
 
 class Base:
@@ -106,6 +107,12 @@ class Base:
 
     @classmethod
     def load_from_file(cls) -> list:
+        """
+        Load objects from a JSON file and create instances of the class.
+
+        Returns:
+            list: A list of created instances.
+        """
         filename = cls.__name__ + ".json"
         list_objs = []
         try:
@@ -116,3 +123,58 @@ class Base:
                 return list_objs
         except FileNotFoundError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        Draw squares and rectangles using turtle graphics.
+
+        Args:
+            list_rectangles (list): List of Rectangle objects.
+            list_squares (list): List of Square objects.
+        """
+        turtle.color("red")
+        turtle.bgcolor("cyan")
+        turtle.width(5)
+        turtle.speed(1)
+        turtle.penup()
+        turtle.goto(-300, 0)
+        turtle.pendown()
+        Base.draw_square(list_squares)
+        Base.draw_rectangle(list_rectangles)
+        turtle.done()
+
+    @staticmethod
+    def draw_rectangle(list_rectangles):
+        """
+        Draw rectangles using turtle graphics.
+
+        Args:
+            list_rectangles (list): List of Rectangle objects.
+        """
+        counter = 0
+        for obj in list_rectangles:
+            for i in range(4):
+                turtle.forward(obj.width if i % 2 == 0 else obj.height)
+                turtle.left(90)
+            counter += 1
+            if counter != len(list_rectangles):
+                turtle.penup()
+                turtle.forward(50 + obj.width)
+                turtle.pendown()
+
+    @staticmethod
+    def draw_square(list_squares):
+        """
+        Draw squares using turtle graphics.
+
+        Args:
+            list_squares (list): List of Square objects.
+        """
+        for obj in list_squares:
+            for _ in range(4):
+                turtle.forward(obj.size)
+                turtle.left(90)
+            turtle.penup()
+            turtle.forward(50 + obj.size)
+            turtle.pendown()

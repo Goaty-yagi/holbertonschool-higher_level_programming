@@ -257,3 +257,15 @@ This dictionary must contain:
 - If the file doesn’t exist, return an empty list
 - Otherwise, return a list of instances - the type of these instances depends on cls (current class using this method)
 - You must use the from_json_string and create methods (implemented previously)
+
+
+### 20. Let's draw it
+
+**File:** [models/base.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-almost_a_circle/models/base.py)<br>
+**Description:** Update the class Base by adding the static method def draw(list_rectangles, list_squares): that opens a window and draws all the Rectangles and Squares:<br>
+**Requirement:** <br>
+
+- You must use the Turtle graphics module
+- To install it: sudo apt-get install python3-tk
+- To make the GUI available outside your vagrant machine, add this line in your Vagrantfile: config.ssh.forward_x11 = true
+- No constraints for color, shape etc… be creative!
