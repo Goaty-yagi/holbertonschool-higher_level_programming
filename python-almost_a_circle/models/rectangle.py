@@ -20,12 +20,28 @@ class Rectangle(Base):
         - height: this is property to return and set __height attribute.
         - x: this is property to return and set __x attribute.
         - y: this is property to return and set __y attribute.
+        - area(self) -> int: calculate width and height and return the area.
+        - display(self) -> None: print rectangle with #.
     """
+    ATTR_NAMES = {
+        "ID": "id",
+        "WIDTH": "width",
+        "HEIGHT": "height",
+        "X": 'x',
+        "Y": 'y'
+    }
 
     def __init__(self, width: int, height: int, x: int = 0,
                  y: int = 0, id: int = None) -> None:
-        dict = {"width": width, "height": height, 'x': x, 'y': y}
-        for key, val in dict.items():
+        self.validator(**{"width": width, "height": height, 'x': x, 'y': y})
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
+        super().__init__(id)
+
+    def validator(self, **kwargs: dict) -> None:
+        for key, val in kwargs.items():
             if type(val) != int:
                 raise TypeError(
                     "{} must be an integer".format(key))
@@ -33,11 +49,11 @@ class Rectangle(Base):
                 raise ValueError("{} must be > 0".format(key))
             if key in ('x', 'y') and val < 0:
                 raise ValueError("{} must be >= 0".format(key))
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
-        super().__init__(id)
+
+    def __str__(self) -> str:
+        return "[{}] ({}) {}/{} - {}/{}".format(
+            __class__.__name__, self.id, self.__x,
+            self.__y, self.__width, self.__height)
 
     @property
     def width(self):
@@ -45,13 +61,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value: int) -> None:
-        dict = {"width": value}
-        for key, val in dict.items():
-            if type(val) != int:
-                raise TypeError(
-                    "{} must be an integer".format(key))
-            if key in ("width", "height") and val <= 0:
-                raise ValueError("{} must be > 0".format(key))
+        self.validator(**{"width": value})
         self.__width = value
 
     @property
@@ -60,13 +70,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value: int) -> None:
-        dict = {"height": value}
-        for key, val in dict.items():
-            if type(val) != int:
-                raise TypeError(
-                    "{} must be an integer".format(key))
-            if key in ("width", "height") and val <= 0:
-                raise ValueError("{} must be > 0".format(key))
+        self.validator(**{"height": value})
         self.__height = value
 
     @property
@@ -75,15 +79,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value: int) -> None:
-        dict = {'x': value}
-        for key, val in dict.items():
-            if type(val) != int:
-                raise TypeError(
-                    "{} must be an integer".format(key))
-            if key in ("width", "height") and val <= 0:
-                raise ValueError("{} must be > 0".format(key))
-            if key in ('x', 'y') and val < 0:
-                raise ValueError("{} must be >= 0".format(key))
+        self.validator(**{'x': value})
         self.__x = value
 
     @property
@@ -92,13 +88,58 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value: int) -> None:
-        dict = {'y': value}
-        for key, val in dict.items():
-            if type(val) != int:
-                raise TypeError(
-                    "{} must be an integer".format(key))
-            if key in ("width", "height") and val <= 0:
-                raise ValueError("{} must be > 0".format(key))
-            if key in ('x', 'y') and val < 0:
-                raise ValueError("{} must be >= 0".format(key))
+        self.validator(**{'y': value})
         self.__y = value
+
+    def area(self) -> int:
+        return self.__height * self.__width
+
+    def display(self) -> None:
+        for _ in range(self.__y):
+            print()
+        x = ' ' * self.__x
+        for _ in range(self.__height):
+            print(x, end='')
+            for _ in range(self.__width):
+                print('#', end='')
+            print()
+
+    def update(self, *args, **kwargs):
+        ATTR_NAMES = {
+            "ID": "id",
+            "WIDTH": "width",
+            "HEIGHT": "height",
+            "X": 'x',
+            "Y": 'y'
+        }
+        if len(args):
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[i]
+                elif i == 1:
+                    self.__width = args[i]
+                elif i == 2:
+                    self.__height = args[i]
+                elif i == 3:
+                    self.__x = args[i]
+                elif i == 4:
+                    self.__y = args[i]
+
+        if len(kwargs.keys()):
+            for key, val in kwargs.items():
+                if key == ATTR_NAMES["ID"]:
+                    self.id = val
+                elif key == ATTR_NAMES["X"]:
+                    self.__x = val
+                elif key == ATTR_NAMES["Y"]:
+                    self.__y = val
+                elif key == ATTR_NAMES["WIDTH"]:
+                    self.__width = val
+                elif key == ATTR_NAMES["HEIGHT"]:
+                    self.__height = val
+
+    def to_dictionary(self):
+        temp_dict = {}
+        for i in Rectangle.ATTR_NAMES.values():
+            temp_dict[i] = getattr(self, i)
+        return temp_dict
