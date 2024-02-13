@@ -13,6 +13,15 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id: int = None) -> None:
+        """
+        Initializes an instance of the Base class.
+
+        Parameters:
+        - id (int): The identifier for the instance. If not provided, it is auto-generated.
+
+        Returns:
+        None
+        """
         if id:
             self.id = id
         else:
@@ -21,19 +30,45 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries) -> str:
+        """
+        Converts a list of dictionaries to a JSON-formatted string.
+
+        Parameters:
+        - list_dictionaries (list): List of dictionaries to be converted.
+
+        Returns:
+        str: JSON-formatted string representing the list of dictionaries.
+        """
         if list_dictionaries == None:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @staticmethod
     def from_json_string(json_string: str) -> list:
+        """
+        Converts a JSON-formatted string to a list of dictionaries.
+
+        Parameters:
+        - json_string (str): JSON-formatted string to be converted.
+
+        Returns:
+        list: List of dictionaries.
+        """
         if json_string == None:
             return []
         return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs: list) -> None:
-        filename = ""
+        """
+        Saves a list of instances to a JSON file.
+
+        Parameters:
+        - list_objs (list): List of instances to be saved.
+
+        Returns:
+        None
+        """
 
         if list_objs == None:
             list_objs = []
@@ -43,6 +78,3 @@ class Base:
             temp_list = [obj.to_dictionary() for obj in list_objs]
             json_string = Base.to_json_string(temp_list)
             file.write(json_string)
-
-    def create(cls, **dictionary):
-        pass
