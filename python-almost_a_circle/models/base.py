@@ -94,6 +94,7 @@ class Base:
         Returns:
         cls instance
         """
+
         classname = cls.__name__
         dummy = {}
         if classname == "Square":
@@ -102,3 +103,15 @@ class Base:
             dummy = cls(1, 1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls) -> list:
+        filename = cls.__name__ + ".json"
+        list_objs = []
+        try:
+            with open(filename, "r") as file:
+                loaded_data = json.load(file)
+                list_objs = [cls.create(**obj) for obj in loaded_data]
+                return list_objs
+        except FileNotFoundError:
+            return []
