@@ -72,7 +72,7 @@ class Rectangle(Base):
         None
         """
         for key, val in kwargs.items():
-            if type(val) != int:
+            if type(val) is not int:
                 raise TypeError(
                     "{} must be an integer".format(key))
             if key in ("width", "height") and val <= 0:
