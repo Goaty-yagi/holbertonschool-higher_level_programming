@@ -45,6 +45,8 @@ This project follows the Pycodestyle (formerly known as pep8) code style guideli
 
 - **[Python - Almost a circle](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-almost_a_circle):** This repository is not only generates an approximation of a circle but also serves as an educational hub for various Python topics
 
+- **[SQL - Introduction](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/SQL_introduction):** This repository is designed to provide an introduction to SQL (Structured Query Language), a powerful language for managing and manipulating relational databases.
+
 - **[Test_assets](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/test_assets):** Test_assets" directory houses custom test class and utility modules essential for efficient testing within the project.
 
 
