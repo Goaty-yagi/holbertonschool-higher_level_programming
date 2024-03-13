@@ -138,3 +138,11 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - Results should display both the score and the name (in this order)
 - Records should be ordered by score (top first)
 - The database name will be passed as an argument of the mysql command
+
+### 12. Cheating is bad
+
+**File:** [12-no_cheating.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/12-no_cheating.sql)<br>
+**Description:** Write a script that updates the score of Bob to 10 in the table second_table.<br>
+**Requirements:** <br>
+- You are not allowed to use Bob’s id value, only the name field
+- The database name will be passed as an argument of the mysql command
