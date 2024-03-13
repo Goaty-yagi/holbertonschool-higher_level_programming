@@ -40,4 +40,14 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - The user_0d_1 password should be set to user_0d_1_pwd
 - If the user user_0d_1 already exists, your script should not fail
 
+### 2. Read user
+
+**File:** [2-create_read_user.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_more_queries/2-create_read_user.sql)<br>
+**Description:** Write a script that creates the database hbtn_0d_2 and the user user_0d_2.<br>
+**Requirements:** <br>
+- user_0d_2 should have only SELECT privilege in the database hbtn_0d_2
+- The user_0d_2 password should be set to user_0d_2_pwd
+- If the database hbtn_0d_2 already exists, your script should not fail
+- If the user user_0d_2 already exists, your script should not fail
+
 
