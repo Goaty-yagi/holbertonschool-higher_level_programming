@@ -116,5 +116,15 @@ name VARCHAR(256) can’t be null
 - You are not allowed to use the JOIN keyword
 - The database name will be passed as an argument of the mysql command
 
+### 9. Cities by States
+
+**File:** [8-cities_of_california_subquery.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_more_queries/8-cities_of_california_subquery.sql)<br>
+**Description:** Write a script that lists all cities contained in the database hbtn_0d_usa.<br>
+**Requirements:** <br>
+- Each record should display: cities.id - cities.name - states.name
+- Results must be sorted in ascending order by cities.id
+- You can use only one SELECT statement
+- The database name will be passed as an argument of the mysql command
+
 
 
