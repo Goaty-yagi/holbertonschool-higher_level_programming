@@ -31,4 +31,13 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 **File:** [0-privileges.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_more_queries/0-privileges.sql)<br>
 **Description:** Write a script that lists all privileges of the MySQL users user_0d_1 and user_0d_2 on your server (in localhost). <br>
 
+### 1. Root user
+
+**File:** [1-create_user.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_more_queries/1-create_user.sql)<br>
+**Description:** Write a script that creates the MySQL server user user_0d_1.<br>
+**Requirements:** <br>
+- user_0d_1 should have all privileges on your MySQL server
+- The user_0d_1 password should be set to user_0d_1_pwd
+- If the user user_0d_1 already exists, your script should not fail
+
 
