@@ -83,3 +83,13 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - All fields should be printed
 - The database name will be passed as an argument of the mysql command
 
+### 7. First add
+
+**File:** [7-insert_value.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/7-insert_value.sql)<br>
+**Description:** Write a script that inserts a new row in the table first_table (database hbtn_0c_0) in your MySQL server. <br>
+**Requirements:** <br>
+- New row:
+-- id = 89
+-- name = Best School
+- The database name will be passed as an argument of the mysql command
+
