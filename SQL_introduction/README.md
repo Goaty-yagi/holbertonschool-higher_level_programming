@@ -153,3 +153,11 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 **Description:** Write a script that removes all records with a score <= 5 in the table second_table of the database hbtn_0c_0 in your MySQL server.<br>
 **Requirements:** <br>
 - The database name will be passed as an argument of the mysql command
+
+### 14. Average
+
+**File:** [14-average.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/14-average.sql)<br>
+**Description:** Write a script that computes the score average of all records in the table second_table of the database hbtn_0c_0 in your MySQL server.<br>
+**Requirements:** <br>
+- The result column name should be average
+- The database name will be passed as an argument of the mysql command
