@@ -146,3 +146,10 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 **Requirements:** <br>
 - You are not allowed to use Bob’s id value, only the name field
 - The database name will be passed as an argument of the mysql command
+
+### 13. Score too low
+
+**File:** [13-change_class.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/13-change_class.sql)<br>
+**Description:** Write a script that removes all records with a score <= 5 in the table second_table of the database hbtn_0c_0 in your MySQL server.<br>
+**Requirements:** <br>
+- The database name will be passed as an argument of the mysql command
