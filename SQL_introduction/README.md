@@ -172,3 +172,14 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
  -- the number of records for this score with the label number
 - The list should be sorted by the number of records (descending)
 - The database name will be passed as an argument to the mysql command
+
+
+### 16. Say my name
+
+**File:** [16-no_link.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/16-no_link.sql)<br>
+**Description:** Write a script that lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server.<br>
+**Requirements:** <br>
+- Don’t list rows without a name value
+- Results should display the score and the name (in this order)
+- Records should be listed by descending score
+- The database name will be passed as an argument to the mysql command
