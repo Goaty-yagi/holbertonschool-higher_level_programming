@@ -30,3 +30,27 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 
 **File:** [0-list_databases.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/0-list_databases.sql)<br>
 **Description:** Write a script that lists all databases of your MySQL server. <br>
+
+
+### 1. Create a database
+
+**File:** [1-create_database_if_missing.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/1-create_database_if_missing.sql)<br>
+**Description:** Write a script that creates the database hbtn_0c_0 in your MySQL server. <br>
+**Requirements:** <br>
+- If the database hbtn_0c_0 already exists, your script should not fail
+- You are not allowed to use the SELECT or SHOW statements
+
+### 2. Delete a database
+
+**File:** [2-remove_database.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/2-remove_database.sql)<br>
+**Description:** Write a script that deletes the database hbtn_0c_0 in your MySQL server. <br>
+**Requirements:** <br>
+- If the database hbtn_0c_0 doesn’t exist, your script should not fail
+- You are not allowed to use the SELECT or SHOW statements
+
+### 3. List tables
+
+**File:** [3-list_tables.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/3-list_tables.sql)<br>
+**Description:** Write a script that lists all the tables of a database in your MySQL server. <br>
+**Requirements:** <br>
+- The database name will be passed as argument of mysql command (in the following example: mysql is the name of the database)

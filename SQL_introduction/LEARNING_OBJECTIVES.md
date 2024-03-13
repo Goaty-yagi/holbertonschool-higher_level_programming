@@ -49,6 +49,9 @@ MySQL is an open-source relational database management system (RDBMS) that is wi
 ### Check status
 `service mysql status`
 ### Start Sql shell
+`mysql`
+### Type command below
+`SHOW DATABASES`
 
 ## What does DDL and DML stand for
 
