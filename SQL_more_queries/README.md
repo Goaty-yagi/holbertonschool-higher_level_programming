@@ -118,11 +118,22 @@ name VARCHAR(256) can’t be null
 
 ### 9. Cities by States
 
-**File:** [8-cities_of_california_subquery.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_more_queries/8-cities_of_california_subquery.sql)<br>
+**File:** [9-cities_by_state_join.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_more_queries/9-cities_by_state_join.sql)<br>
 **Description:** Write a script that lists all cities contained in the database hbtn_0d_usa.<br>
 **Requirements:** <br>
 - Each record should display: cities.id - cities.name - states.name
 - Results must be sorted in ascending order by cities.id
+- You can use only one SELECT statement
+- The database name will be passed as an argument of the mysql command
+
+### 10. Genre ID by show
+
+**File:** [10-genre_id_by_show.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_more_queries/10-genre_id_by_show.sql)<br>
+**Description:** Import the database dump from hbtn_0d_tvshows to your MySQL server: download<br>
+Write a script that lists all shows contained in hbtn_0d_tvshows that have at least one genre linked.<br>
+**Requirements:** <br>
+- Each record should display: tv_shows.title - tv_show_genres.genre_id
+- Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
 - You can use only one SELECT statement
 - The database name will be passed as an argument of the mysql command
 
