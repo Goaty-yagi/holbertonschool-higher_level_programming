@@ -94,5 +94,17 @@ name VARCHAR(256) can’t be null
 - If the database hbtn_0d_usa already exists, your script should not fail
 - If the table states already exists, your script should not fail
 
+### 7. Cities table
+
+**File:** [7-cities.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_more_queries/7-cities.sql)<br>
+**Description:** Write a script that creates the database hbtn_0d_usa and the table cities (in the database hbtn_0d_usa) on your MySQL server.<br>
+**Requirements:** <br>
+- cities description:
+ -- id INT unique, auto generated, can’t be null and is a primary key
+ -- state_id INT, can’t be null and must be a FOREIGN KEY that references to id of the states table
+ -- name VARCHAR(256) can’t be null
+- If the database hbtn_0d_usa already exists, your script should not fail
+- If the table cities already exists, your script should not fail
+
 
 
