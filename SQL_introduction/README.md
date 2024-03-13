@@ -119,3 +119,13 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
  -- id = 2, name = “Alex”, score = 3
  -- id = 3, name = “Bob”, score = 14
  -- id = 4, name = “George”, score = 8
+
+
+### 10. List by best
+
+**File:** [10-top_score.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/10-top_score.sql)<br>
+**Description:** Write a script that lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server. <br>
+**Requirements:** <br>
+- Results should display both the score and the name (in this order)
+- Records should be ordered by score (top first)
+- The database name will be passed as an argument of the mysql command
