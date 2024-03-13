@@ -54,3 +54,15 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 **Description:** Write a script that lists all the tables of a database in your MySQL server. <br>
 **Requirements:** <br>
 - The database name will be passed as argument of mysql command (in the following example: mysql is the name of the database)
+
+### 4. First table
+
+**File:** [4-first_table.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/4-first_table.sql)<br>
+**Description:** Write a script that creates a table called first_table in the current database in your MySQL server. <br>
+**Requirements:** <br>
+- first_table description:
+ -- id INT
+ -- name VARCHAR(256)
+- The database name will be passed as an argument of the mysql command
+- If the table first_table already exists, your script should not fail
+- You are not allowed to use the SELECT or SHOW statements
