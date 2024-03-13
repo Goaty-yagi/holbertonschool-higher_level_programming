@@ -101,3 +101,21 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 **Requirements:** <br>
 - The database name will be passed as an argument of the mysql command
 
+### 9. Full creation
+
+
+**File:** [9-full_creation.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/9-full_creation.sql)<br>
+**Description:** Write a script that creates a table second_table in the database hbtn_0c_0 in your MySQL server and add multiples rows. <br>
+**Requirements:** <br>
+- second_table description:
+ -- id INT
+ -- name VARCHAR(256)
+ -- score INT
+- The database name will be passed as an argument to the mysql command
+- If the table second_table already exists, your script should not fail
+- You are not allowed to use the SELECT and SHOW statements
+- Your script should create these records:
+ -- id = 1, name = “John”, score = 10
+ -- id = 2, name = “Alex”, score = 3
+ -- id = 3, name = “Bob”, score = 14
+ -- id = 4, name = “George”, score = 8
