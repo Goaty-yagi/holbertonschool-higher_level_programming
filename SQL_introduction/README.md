@@ -26,3 +26,7 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 
 ## Practice Exercises
 
+### 0. List databases
+
+**File:** [0-list_databases.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/0-list_databases.sql)<br>
+**Description:** Write a script that lists all databases of your MySQL server. <br>
