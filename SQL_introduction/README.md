@@ -93,3 +93,11 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 -- name = Best School
 - The database name will be passed as an argument of the mysql command
 
+### 8. Count 89
+
+
+**File:** [8-count_89.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/8-count_89.sql)<br>
+**Description:** Write a script that displays the number of records with id = 89 in the table first_table of the database hbtn_0c_0 in your MySQL server. <br>
+**Requirements:** <br>
+- The database name will be passed as an argument of the mysql command
+
