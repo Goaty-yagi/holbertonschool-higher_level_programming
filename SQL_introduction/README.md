@@ -66,3 +66,12 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - The database name will be passed as an argument of the mysql command
 - If the table first_table already exists, your script should not fail
 - You are not allowed to use the SELECT or SHOW statements
+
+### 5. Full description
+
+**File:** [5-full_table.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/5-full_table.sql)<br>
+**Description:** Write a script that prints the following description of the table first_table from the database hbtn_0c_0 in your MySQL server. <br>
+**Requirements:** <br>
+- The database name will be passed as an argument of the mysql command
+- You are not allowed to use the DESCRIBE or EXPLAIN statements
+
