@@ -75,3 +75,11 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - The database name will be passed as an argument of the mysql command
 - You are not allowed to use the DESCRIBE or EXPLAIN statements
 
+### 6. List all in table
+
+**File:** [6-list_values.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/6-list_values.sql)<br>
+**Description:** Write a script that lists all rows of the table first_table from the database hbtn_0c_0 in your MySQL server. <br>
+**Requirements:** <br>
+- All fields should be printed
+- The database name will be passed as an argument of the mysql command
+
