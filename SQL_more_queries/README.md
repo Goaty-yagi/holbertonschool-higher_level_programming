@@ -26,9 +26,9 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 
 ## Practice Exercises
 
-### 0. List databases
+### 0. My privileges!
 
-**File:** [0-list_databases.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/0-list_databases.sql)<br>
-**Description:** Write a script that lists all databases of your MySQL server. <br>
+**File:** [0-privileges.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_more_queries/0-privileges.sql)<br>
+**Description:** Write a script that lists all privileges of the MySQL users user_0d_1 and user_0d_2 on your server (in localhost). <br>
 
 
