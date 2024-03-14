@@ -10,7 +10,9 @@ This repository serves as a beginner-friendly introduction to SQL.
 
 ## Learning Objectives
 
-This project is based on the learning objectives - see the [LEARNING_OBJECTIVES](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/LEARNING_OBJECTIVES.md) file for details.
+This project is based on the learning objectives - see the [LEARNING_OBJECTIVES](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/LEARNING_OBJECTIVES.md) file for details.<br>
+
+[EXTRA_LEARNING_OBJECTIVES](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/EXTRA_LEARNING_OBJECTIVES.md) file for details.
 
 ## Requirements
 
@@ -183,3 +185,14 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - Results should display the score and the name (in this order)
 - Records should be listed by descending score
 - The database name will be passed as an argument to the mysql command
+
+
+### 17. Go to UTF8
+
+**File:** [100-move_to_utf8.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/100-move_to_utf8.sql)<br>
+**Description:** Write a script that converts hbtn_0c_0 database to UTF8 (utf8mb4, collate utf8mb4_unicode_ci) in your MySQL server.<br>
+**Requirements:** <br>
+- You need to convert all of the following to UTF8:
+ -- Database hbtn_0c_0
+ -- Table first_table
+ -- Field name in first_table
