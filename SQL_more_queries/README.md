@@ -172,3 +172,15 @@ Write a script that lists all shows contained in hbtn_0d_tvshows that have at le
 - The database name will be passed as an argument of the mysql command
 
 
+### 14. My genres
+
+**File:** [14-my_genres.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_more_queries/14-my_genres.sql)<br>
+**Description:** Write a script that uses the hbtn_0d_tvshows database to lists all genres of the show Dexter.<br>
+**Requirements:** <br>
+- The tv_shows table contains only one record where title = Dexter (but the id can be different)
+- Each record should display: tv_genres.name
+- Results must be sorted in ascending order by the genre name
+- You can use only one SELECT statement
+- The database name will be passed as an argument of the mysql command
+
+
