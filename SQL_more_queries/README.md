@@ -137,5 +137,16 @@ Write a script that lists all shows contained in hbtn_0d_tvshows that have at le
 - You can use only one SELECT statement
 - The database name will be passed as an argument of the mysql command
 
+### 11. Genre ID for all shows
+
+**File:** [11-genre_id_all_shows.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_more_queries/11-genre_id_all_shows.sql)<br>
+**Description:** Write a script that lists all shows contained in the database hbtn_0d_tvshows.<br>
+**Requirements:** <br>
+- Each record should display: tv_shows.title - tv_show_genres.genre_id
+- Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
+- If a show doesn’t have a genre, display NULL
+- You can use only one SELECT statement
+- The database name will be passed as an argument of the mysql command
+
 
 
