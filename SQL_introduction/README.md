@@ -198,7 +198,7 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
  -- Field name in first_table
 
 
- ### 18. Temperatures #0
+### 18. Temperatures #0
 
 **File:** [101-avg_temperatures.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/101-avg_temperatures.sql)<br>
 **Description:** Write a script that displays the average temperature (Fahrenheit) by city ordered by temperature (descending).<br>
@@ -224,3 +224,8 @@ Naperville  68.1029
 Tempe   67.0441
 Peoria  66.5392
 ```
+
+### 19. Temperatures #1
+
+**File:** [102-top_city.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/102-top_city.sql)<br>
+**Description:** Write a script that displays the top 3 of cities temperature during July and August ordered by temperature (descending).<br>
