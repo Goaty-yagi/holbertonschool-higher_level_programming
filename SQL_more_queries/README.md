@@ -183,4 +183,15 @@ Write a script that lists all shows contained in hbtn_0d_tvshows that have at le
 - You can use only one SELECT statement
 - The database name will be passed as an argument of the mysql command
 
+### 15. Only Comedy
+
+**File:** [15-comedy_only.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_more_queries/15-comedy_only.sql)<br>
+**Description:** Write a script that lists all Comedy shows in the database hbtn_0d_tvshows.<br>
+**Requirements:** <br>
+- The tv_genres table contains only one record where name = Comedy (but the id can be different)
+- Each record should display: tv_shows.title
+- Results must be sorted in ascending order by the show title
+- You can use only one SELECT statement
+- The database name will be passed as an argument of the mysql command
+
 
