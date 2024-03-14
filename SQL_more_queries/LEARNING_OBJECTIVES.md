@@ -141,6 +141,7 @@ SELECT tv_genres.name AS genre, COUNT(tv_show_genres.genre_id) AS number_of_show
 FROM tv_genres
 LEFT JOIN tv_show_genres ON tv_genres.id = tv_show_genres.genre_id
 GROUP BY tv_genres.id
+HAVING number_of_shows > 0
 ORDER BY number_of_shows DESC;
 ```
 - 1, SELECT:
@@ -152,3 +153,5 @@ GROUP BY tv_genres.id: This groups the rows by the id column in the tv_genres ta
 - 3, Aggregation:
 
 Within each group created by the GROUP BY clause, the COUNT() function is applied to count the number of occurrences of genre_id from the tv_show_genres table. This count represents the number of shows linked to each genre.
+
+- 4 Having: The HAVING clause filters out genres that don't have any shows linked to them.
