@@ -229,3 +229,8 @@ Peoria  66.5392
 
 **File:** [102-top_city.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/102-top_city.sql)<br>
 **Description:** Write a script that displays the top 3 of cities temperature during July and August ordered by temperature (descending).<br>
+
+### 20. Temperatures #2
+
+**File:** [103-max_state.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_introduction/103-max_state.sql)<br>
+**Description:** Write a script that displays the max temperature of each state (ordered by State name).<br>
