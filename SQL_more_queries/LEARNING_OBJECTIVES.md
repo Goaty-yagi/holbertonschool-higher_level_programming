@@ -9,6 +9,9 @@
 - [What are subqueries](#What-are-subqueries)
 - [What are JOIN and UNION](#What-are-JOIN-and-UNION)
 
+EXTRA_LO
+- [How GROUP BY clause works](#How-GROUP-BY-clause-works)
+
 ## How to create a new MySQL user
 `CREATE USER 'username'@'host' IDENTIFIED WITH authentication_plugin BY 'password';`
 ## How to manage privileges for a user to a database or table
@@ -82,3 +85,70 @@ SELECT vendor_id, vendor_name FROM vendors;
 In this example, the UNION operator is used to combine the results of two SELECT statements, each retrieving data from different tables. The result set contains unique rows from both SELECT statements.
 
 It's important to note that UNION removes duplicate rows from the result set. If you want to include duplicate rows, you can use UNION ALL.
+
+
+## How GROUP BY clause works
+The GROUP BY clause in SQL is used to group rows that have the same values into summary rows, like "total" or "count". It is often used with aggregate functions (such as COUNT, SUM, AVG, MAX, MIN) to perform operations on each group of rows.
+
+### EXAMPLE
+```sql
+-- tv_genres
+id      name
+1       Drama
+2       Mystery
+3       Adventure
+4       Fantasy
+5       Comedy
+6       Crime
+7       Suspense
+8       Thriller
+
+-- tv_show_genres
+show_id genre_id
+1       1
+1       2
+2       3
+2       1
+2       4
+3       5
+4       5
+5       5
+6       6
+6       1
+6       7
+6       8
+8       6
+8       1
+8       2
+8       7
+8       8
+10      5
+10      1
+
+-- Expected output
+genre   number_of_shows
+Drama   5
+Comedy  4
+Mystery 2
+Crime   2
+Suspense        2
+Thriller        2
+Adventure       1
+Fantasy 1
+
+-- Codes
+SELECT tv_genres.name AS genre, COUNT(tv_show_genres.genre_id) AS number_of_shows
+FROM tv_genres
+LEFT JOIN tv_show_genres ON tv_genres.id = tv_show_genres.genre_id
+GROUP BY tv_genres.id
+ORDER BY number_of_shows DESC;
+```
+- 1, SELECT:
+COUNT(tv_show_genres.genre_id) AS number_of_shows: This uses the COUNT() function to count the number of occurrences of genre_id from the tv_show_genres table. It counts the number of times each genre appears in the tv_show_genres table. The result of this count is aliased as number_of_shows.
+
+- 2 GROUP BY:
+GROUP BY tv_genres.id: This groups the rows by the id column in the tv_genres table. Each group represents a distinct genre.
+
+- 3, Aggregation:
+
+Within each group created by the GROUP BY clause, the COUNT() function is applied to count the number of occurrences of genre_id from the tv_show_genres table. This count represents the number of shows linked to each genre.
