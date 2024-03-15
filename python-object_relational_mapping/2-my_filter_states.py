@@ -27,7 +27,7 @@ def list_states(
         with connection.cursor() as cursor:
             query = """
             SELECT * FROM states
-            WHERE name = '{}'
+            WHERE BINARY name = '{}'
             ORDER BY id""".format(state)
             cursor.execute(query)
             states = cursor.fetchall()
