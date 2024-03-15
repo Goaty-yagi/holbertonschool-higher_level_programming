@@ -25,21 +25,14 @@ def list_cities(
     ) as connection:
 
         with connection.cursor() as cursor:
-            query = """
-            SELECT cities.name FROM states\
-            JOIN cities ON states.id = cities.state_id\
-            WHERE states.name = %s\
-            ORDER BY cities.id ASC;"""
-            
+            query = "SELECT cities.name\
+                FROM cities\
+                JOIN states ON cities.state_id = states.id\
+                WHERE states.name = %s\
+                ORDER BY cities.id ASC;"
             cursor.execute(query, (state,))
             cities = cursor.fetchall()
-            index = 0
-            if len(cities):
-                for city in cities:
-                    print(
-                        city[0], end=", " if index != len(cities) - 1 else "\n"
-                    )
-                    index += 1
+            print(", ".join([city[0] for city in cities]))
 
 
 if __name__ == "__main__":
