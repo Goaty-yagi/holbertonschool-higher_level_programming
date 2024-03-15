@@ -204,3 +204,14 @@ Write a script that lists all shows contained in hbtn_0d_tvshows that have at le
 - Results must be sorted in ascending order by the show title and genre name
 - You can use only one SELECT statement
 - The database name will be passed as an argument of the mysql command
+
+### 17. Not my genre
+
+**File:** [100-not_my_genres.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_more_queries/100-not_my_genres.sql)<br>
+**Description:** Write a script that uses the hbtn_0d_tvshows database to list all genres not linked to the show Dexter.<br>
+**Requirements:** <br>
+- The tv_shows table contains only one record where title = Dexter (but the id can be different)
+- Each record should display: tv_genres.name
+- Results must be sorted in ascending order by the genre name
+- You can use a maximum of two SELECT statement
+- The database name will be passed as an argument of the mysql command
