@@ -37,6 +37,11 @@ connection = MySQLdb.connect(
     )
 ```
 ## How to SELECT rows in a MySQL table from a Python script
+Make a cursor from the connection above, and set SQL script
+```python
+with connection.cursor() as cursor:
+            cursor.execute("SELECT * FROM states ORDER BY states.id")
+```
 ## How to INSERT rows in a MySQL table from a Python script
 ## What ORM means
 ORM stands for Object-Relational Mapping. It's a programming technique used to convert data between incompatible type systems – in particular, between relational databases and object-oriented programming languages like Python, Java, or C#.
