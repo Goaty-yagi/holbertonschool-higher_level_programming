@@ -107,3 +107,17 @@ Yes, it’s an SQL injection to delete all records of a table…
 - You can use only execute() once
 - Results must be displayed as they are in the example below
 - Your code should not be executed when imported
+
+
+### 5. All cities by state
+
+**File:** [5-filter_cities.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-object_relational_mapping/5-filter_cities.py)<br>
+**Description:** Write a script that takes in the name of a state as an argument and lists all cities of that state, using the database hbtn_0e_4_usa<br>
+**Requirement:** <br>
+- Your script should take 4 arguments: mysql username, mysql password, database name and state name (SQL injection free!)
+- You must use the module MySQLdb (import MySQLdb)
+- Your script should connect to a MySQL server running on localhost at port 3306
+- Results must be sorted in ascending order by cities.id
+- You can use only execute() once
+- The results must be displayed as they are in the example below
+- Your code should not be executed when imported
