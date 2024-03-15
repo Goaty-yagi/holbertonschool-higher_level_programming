@@ -34,8 +34,9 @@ def list_cities(
             """
             cursor.execute(query, (state,))
             states = cursor.fetchall()
-            for index, state in enumerate(states):
-                print(state[0], end=", " if index != len(states) - 1 else "\n")
+            if len(states):
+                for index, state in enumerate(states):
+                    print(state[0], end=", " if index != len(states) - 1 else "\n")
 
 
 if __name__ == "__main__":
