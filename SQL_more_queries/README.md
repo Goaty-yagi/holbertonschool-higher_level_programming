@@ -237,3 +237,14 @@ Write a script that lists all shows contained in hbtn_0d_tvshows that have at le
 - Results must be sorted in descending order by the rating
 - You can use only one SELECT statement
 - The database name will be passed as an argument of the mysql command
+
+
+### 20. Best genre
+
+**File:** [103-rating_genres.sql](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/SQL_more_queries/103-rating_genres.sql)<br>
+**Description:** Write a script that lists all genres in the database hbtn_0d_tvshows_rate by their rating.<br>
+**Requirements:** <br>
+- Each record should display: tv_genres.name - rating sum
+- Results must be sorted in descending order by their rating
+- You can use only one SELECT statement
+- The database name will be passed as an argument of the mysql command
