@@ -49,6 +49,8 @@ This project follows the Pycodestyle (formerly known as pep8) code style guideli
 
 - **[SQL - SQL - More queries](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/SQL_more_queries):** This repository contains advanced SQL queries and examples to understand SQL.
 
+- **[Python - Object-relational mapping](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/python-object_relational_mapping):** This repository serves as a demonstration of using ORM frameworks in Python for interacting with relational databases.
+
 - **[Test_assets](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/tree/main/test_assets):** Test_assets" directory houses custom test class and utility modules essential for efficient testing within the project.
 
 
