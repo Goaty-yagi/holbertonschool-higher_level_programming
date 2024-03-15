@@ -26,12 +26,11 @@ def list_cities(
 
         with connection.cursor() as cursor:
             query = """
-                SELECT cities.name
-                FROM cities
-                JOIN states ON cities.state_id = states.id
-                WHERE states.name = %s
-                ORDER BY cities.id
-            """
+            SELECT cities.name FROM states\
+            JOIN cities ON states.id = cities.state_id\
+            WHERE states.name = %s\
+            ORDER BY cities.id ASC;"""
+            
             cursor.execute(query, (state,))
             cities = cursor.fetchall()
             index = 0
