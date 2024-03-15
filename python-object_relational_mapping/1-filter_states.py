@@ -21,7 +21,8 @@ def list_states(username: str, password: str, database: str) -> None:
 
         with connection.cursor() as cursor:
             cursor.execute(
-                "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id")
+                """SELECT * FROM states WHERE BINARY
+                name LIKE 'N%' ORDER BY states.id""")
             states = cursor.fetchall()
             for state in states:
                 print(state)
