@@ -34,21 +34,20 @@ def list_cities(
             """
             cursor.execute(query, (state,))
             cities = cursor.fetchall()
+            index = 0
             if len(cities):
-                for index, city in enumerate(cities):
-                    print(city[0], end=", " if index != len(cities) - 1 else "\n")
+                for city in cities:
+                    print(
+                        city[0], end=", " if index != len(cities) - 1 else "\n"
+                    )
+                    index += 1
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        print(
-            "Usage: python script.py <username> <password> <database> <state>"
-        )
-        sys.exit(1)
+    if len(sys.argv) == 5:
+        username = sys.argv[1]
+        password = sys.argv[2]
+        database = sys.argv[3]
+        state = sys.argv[4]
 
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
-    state = sys.argv[4]
-
-    list_cities(username, password, database, state)
+        list_cities(username, password, database, state)
