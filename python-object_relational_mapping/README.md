@@ -164,3 +164,16 @@ Yes, it’s an SQL injection to delete all records of a table…
 - The results must be displayed as they are in the example below
 If the table states is empty, print Nothing followed by a new line
 - Your code should not be executed when imported
+
+### 9. Contains `a`
+
+**File:** [9-model_state_filter_a.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-object_relational_mapping/9-model_state_filter_a.py)<br>
+**Description:** Write a script that lists all State objects that contain the letter a from the database hbtn_0e_6_usa<br>
+**Requirement:** <br>
+- Your script should take 3 arguments: mysql username, mysql password and database name
+- You must use the module SQLAlchemy
+- You must import State and Base from model_state - from model_state import Base, State
+- Your script should connect to a MySQL server running on localhost at port 3306
+- Results must be sorted in ascending order by states.id
+- The results must be displayed as they are in the example below
+- Your code should not be executed when imported
