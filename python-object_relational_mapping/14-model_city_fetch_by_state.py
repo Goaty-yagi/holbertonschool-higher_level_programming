@@ -22,7 +22,6 @@ if __name__ == "__main__":
     with Session() as session:
         query = session\
             .query(City, State)\
-            .join(State, City.state_id == State.id)\
-            .order_by(City.id)
+            .filter(State.id == City.state_id)
         for city, state in query:
             print(f"{state.name}: ({city.id}) {city.name}")
