@@ -11,7 +11,7 @@ class BaseTest(unittest.TestCase):
         all_filenames = os.listdir(".")
 
         def recursion(all_file):
-            exceptions = ['__init__.py', '__pycache__', 'db', 'tests','LEARNING_OBJECTIVES.md', 'README.md']
+            exceptions = ['__init__.py', '__pycache__', 'db', 'tests','LEARNING_OBJECTIVES.md', 'EXTRA_LEARNING_OBJECTIVES.md', 'README.md']
             for filename in all_file:
                 if filename not in exceptions:
                     print(filename)
