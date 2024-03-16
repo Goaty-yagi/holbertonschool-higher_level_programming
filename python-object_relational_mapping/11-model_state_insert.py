@@ -23,7 +23,6 @@ if __name__ == "__main__":
     # Create new State object
     new_state = State(name='Louisiana')
 
-
     with Session() as session:
         # Add the new State object to the session
         session.add(new_state)
