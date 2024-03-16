@@ -3,7 +3,7 @@
 """
 import sys
 
-from sqlalchemy.orm import sessionmaker, joinedload
+from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
 
 from model_state import Base, State
@@ -18,8 +18,7 @@ if __name__ == "__main__":
         .format(username, password, database), pool_pre_ping=True
     )
     Base.metadata.create_all(engine)
-    Session = sessionmaker(bind=engine)
-    with Session() as session:
+    with Session(engine) as session:
         new_state = State(name="California")
         new_city = City(name="San Francisco", state=new_state)
         session.add(new_state, new_city)
