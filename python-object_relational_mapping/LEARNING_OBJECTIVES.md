@@ -46,4 +46,31 @@ with connection.cursor() as cursor:
 ## What ORM means
 ORM stands for Object-Relational Mapping. It's a programming technique used to convert data between incompatible type systems – in particular, between relational databases and object-oriented programming languages like Python, Java, or C#.
 ## How to map a Python Class to a MySQL table
+- 1, import sqlalchemy
+- 2, make Base class from declarative_base
+- 3, create class inherited from the Base class
+- 4, set columns with certain arguments
+- 5, create engine with username, passwords and db name
+- 6, create DB with the engine by Base.metadata.create_all method
+
+Example
+```python
+from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy.ext.declarative import declarative_base
+
+Base = declarative_base()
+
+
+class State(Base):
+    __tablename__ = 'states'
+
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
+    name = Column(String(128), nullable=False)
+
+
+if __name__ == "__main__":
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+    Base.metadata.create_all(engine)
+
+```
 
