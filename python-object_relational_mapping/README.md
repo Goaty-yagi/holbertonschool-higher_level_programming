@@ -148,3 +148,19 @@ Yes, it’s an SQL injection to delete all records of a table…
 - Results must be sorted in ascending order by states.id
 - The results must be displayed as they are in the example below
 - Your code should not be executed when imported
+
+
+### 8. First state
+
+**File:** [8-model_state_fetch_first.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-object_relational_mapping/8-model_state_fetch_first.py)<br>
+**Description:** Write a script that prints the first State object from the database hbtn_0e_6_usa<br>
+**Requirement:** <br>
+- Your script should take 3 arguments: mysql username, mysql password and database name
+- You must use the module SQLAlchemy
+- You must import State and Base from model_state - from model_state import Base, State
+- Your script should connect to a MySQL server running on localhost at port 3306
+- The state you display must be the first in states.id
+- You are not allowed to fetch all states from the database before displaying the result
+- The results must be displayed as they are in the example below
+If the table states is empty, print Nothing followed by a new line
+- Your code should not be executed when imported
