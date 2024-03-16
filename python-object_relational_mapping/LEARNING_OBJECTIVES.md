@@ -43,6 +43,24 @@ with connection.cursor() as cursor:
             cursor.execute("SELECT * FROM states ORDER BY states.id")
 ```
 ## How to INSERT rows in a MySQL table from a Python script
+- 1, create new object
+- 2, open session
+- 3, add the obj to session by add method
+- 4, session commit by commit method
+
+Example
+
+```python
+# Create new State object
+    new_state = State(name='Louisiana')
+
+
+    with Session() as session:
+        # Add the new State object to the session
+        session.add(new_state)
+        session.commit()
+```
+
 ## What ORM means
 ORM stands for Object-Relational Mapping. It's a programming technique used to convert data between incompatible type systems – in particular, between relational databases and object-oriented programming languages like Python, Java, or C#.
 ## How to map a Python Class to a MySQL table

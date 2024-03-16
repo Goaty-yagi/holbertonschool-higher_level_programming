@@ -191,3 +191,16 @@ If the table states is empty, print Nothing followed by a new line
 - Results must display the states.id
 - If no state has the name you searched for, display Not found
 - Your code should not be executed when imported
+
+
+### 11. Add a new state
+
+**File:** [11-model_state_insert.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-object_relational_mapping/11-model_state_insert.py)<br>
+**Description:** Write a script that adds the State object “Louisiana” to the database hbtn_0e_6_usa<br>
+**Requirement:** <br>
+- Your script should take 3 arguments: mysql username, mysql password and database name
+- You must use the module SQLAlchemy
+- You must import State and Base from model_state - from model_state import Base, State
+- Your script should connect to a MySQL server running on localhost at - port 3306
+- Print the new states.id after creation
+- Your code should not be executed when imported
