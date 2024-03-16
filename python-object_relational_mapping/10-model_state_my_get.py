@@ -23,5 +23,5 @@ if __name__ == "__main__":
         found_state = session.query(
             State).filter(State.name == state_name).first()
         print_text = found_state.id \
-            if found_state else "Nothing"
+            if found_state else "Not found"
         print(print_text)
