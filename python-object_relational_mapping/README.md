@@ -252,3 +252,24 @@ If the table states is empty, print Nothing followed by a new line
  -- Results must be sorted in ascending order by cities.id
  -- Results must be display as they are in the example below (<state name>: (<city id>) <city name>)
  -- Your code should not be executed when imported
+
+### 15. City relationship
+
+**File:** [100-relationship_states_cities.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-object_relational_mapping/100-relationship_states_cities.py)<br>
+[relationship_city.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-object_relational_mapping/relationship_city.py)<br>
+[relationship_state.py](https://github.com/Goaty-yagi/holbertonschool-higher_level_programming/blob/main/python-object_relational_mapping/relationship_state.py)<br>
+**Description:** Improve the files model_city.py and model_state.py, and save them as relationship_city.py and relationship_state.py:<br>
+**Requirement:** <br>
+- City class:
+ -- No change
+- State class:
+ -- In addition to previous requirements, the class attribute cities must represent a relationship with the class City. If the State object is deleted, all linked City objects must be automatically deleted. Also, the reference from a City object to his State should be named state
+- You must use the module SQLAlchemy
+<br>
+- Write a script that creates the State “California” with the City “San Francisco” from the database hbtn_0e_100_usa: (100-relationship_states_cities.py)
+
+ -- Your script should take 3 arguments: mysql username, mysql password and database name
+ -- You must use the module SQLAlchemy
+ -- Your script should connect to a MySQL server running on localhost at port 3306
+ -- You must use the cities relationship for all State objects
+ -- Your code should not be executed when imported
