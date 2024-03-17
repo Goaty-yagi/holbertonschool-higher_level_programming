@@ -6,8 +6,7 @@ import sys
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
 
-from relationship_state import State, Base
-from relationship_city import City
+from relationship_state import Base, State, City
 
 if __name__ == "__main__":
     username = sys.argv[1]
@@ -17,6 +16,7 @@ if __name__ == "__main__":
         'mysql+mysqldb://{}:{}@localhost/{}'
         .format(username, password, database), pool_pre_ping=True
     )
+    Base.metadata.create_all(engine)
     Base.metadata.create_all(engine)
     with Session(engine) as session:
         new_city = City(name="San Francisco")

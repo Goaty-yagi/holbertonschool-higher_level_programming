@@ -2,7 +2,7 @@
 """
 This module provides State class
 """
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -17,4 +17,15 @@ class State(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
-    cities = relationship("City", back_populates="state", cascade='all')
+    cities = relationship("City", cascade='all')
+
+
+class City(Base):
+    """
+    This class inherited from Base class to represent a table named City
+    """
+    __tablename__ = 'cities'
+
+    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
+    name = Column(String(128), nullable=False)
+    state_id = Column(Integer, ForeignKey('states.id'))
