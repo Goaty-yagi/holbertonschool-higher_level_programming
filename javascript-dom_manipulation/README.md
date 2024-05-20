@@ -78,5 +78,12 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You must use the Fetch API.
 - You probably should read something about usign Promises later.
 
+### 7. Star Wars movies
+
+**File:** [7-script.js](https://github.com/Goaty-yagi/holbertonschool-web_back_end/blob/main/javascript-dom_manipulation/7-script.js)<br>
+**Description:** Write a JavaScript script that fetches and lists the title for all movies by using this URL: https://swapi-api.hbtn.io/api/films/?format=json<br>
+**Requirement:** <br>
+- All movie titles must be list in the HTML ul element with id list_movies
+- You must use the Fetch API.
 
 
