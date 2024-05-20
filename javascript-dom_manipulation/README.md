@@ -87,3 +87,14 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You must use the Fetch API.
 
 
+### 8. Say Hello!
+
+**File:** [8-script.js](https://github.com/Goaty-yagi/holbertonschool-web_back_end/blob/main/javascript-dom_manipulation/8-script.js)<br>
+**Description:** Write a JavaScript script that fetches from https://hellosalut.stefanbohacek.dev/?lang=fr and displays the value of hello from that fetch in the HTML element with id hello.
+<br>
+
+**Requirement:** <br>
+- The translation of “hello” must be displayed in the HTML element with id hello
+- Your script must work when it is imported from the <head> tag
+
+
