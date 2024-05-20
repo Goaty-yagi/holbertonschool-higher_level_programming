@@ -33,3 +33,18 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - You must use document.querySelector to select the HTML tag.
 
 
+### 1. Click and turn red
+
+**File:** [1-script.js](https://github.com/Goaty-yagi/holbertonschool-web_back_end/blob/main/javascript-dom_manipulation/1-script.js)<br>
+**Description:** Write a JavaScript script that updates the text color of the header element to red (#FF0000) when the user clicks on the tag with id red_header:<br>
+**Requirement:** <br>
+
+
+
+### 2. Add `.red` class
+
+**File:** [2-script.js](https://github.com/Goaty-yagi/holbertonschool-web_back_end/blob/main/javascript-dom_manipulation/2-script.js)<br>
+**Description:** Write a JavaScript script that adds the class red to the header element when the user clicks on the tag with id red_header<br>
+**Requirement:** <br>
+
+
