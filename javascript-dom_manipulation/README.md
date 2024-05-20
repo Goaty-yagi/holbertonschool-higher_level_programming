@@ -63,5 +63,12 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - The new element must be: <li>Item</li> The new element must be added to the ul element with class my_list.
 
 
+### 5. Change the text
+
+**File:** [5-script.js](https://github.com/Goaty-yagi/holbertonschool-web_back_end/blob/main/javascript-dom_manipulation/5-script.js)<br>
+**Description:** Write a JavaScript script that updates the text of the header element to New Header!!! when the user clicks on the element with id update_header<br>
+
+
+
 
 

@@ -268,6 +268,24 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 ```javascript
 element.addEventListener(event, handler, options);
 
+
+```
+```javascript
+<button id="myButton">Click Me!</button>
+
+<script>
+  const button = document.getElementById('myButton');
+  
+  const handleClick = () => {
+    alert('Button was clicked!');
+  };
+  
+  button.addEventListener('click', handleClick);
+  
+  // Later, remove the event listener
+  button.removeEventListener('click', handleClick);
+</script>
+
 ```
 - element: The DOM element you want to bind the event to.
 - event: A string representing the event type (e.g., 'click', 'mouseover', 'keydown').
