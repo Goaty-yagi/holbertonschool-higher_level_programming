@@ -55,5 +55,13 @@ This project is based on the learning objectives - see the [LEARNING_OBJECTIVES]
 - The header element must always have one class: red or green, never both in the same time and never empty. If the current class is red, when the user click on id toggle_header element, the class must be updated to green ; and the reverse.
 
 
+### 4. List of elements
+
+**File:** [4-script.js](https://github.com/Goaty-yagi/holbertonschool-web_back_end/blob/main/javascript-dom_manipulation/4-script.js)<br>
+**Description:** Write a JavaScript script that adds a li element to a list when the user clicks on the element with id add_item<br>
+**Requirement:** <br>
+- The new element must be: <li>Item</li> The new element must be added to the ul element with class my_list.
+
+
 
 
